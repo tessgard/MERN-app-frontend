@@ -80,3 +80,8 @@
 .footerBox h3 {
   margin: 20px;
 }
+
+.admin-link {
+  text-decoration: none;
+  color: black;
+}
