@@ -1,0 +1,27 @@
+.sideNavBar {
+  height: 100vh;
+  width: 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: fixed;
+}
+
+.companyLogo {
+  width: 100%;
+  height: 80px;
+  padding-top: 10px;
+}
+
+.menuLogo {
+  width: 100%;
+}
+
+.donationLogo {
+  width: 100%;
+  padding-bottom: 10px;
+}

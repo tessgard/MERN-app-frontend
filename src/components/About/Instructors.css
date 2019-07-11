@@ -1,0 +1,54 @@
+.instructorMainContainer {
+  height: 100%;
+  width: 100%;
+  margin-left: 120px;
+  background-color: #e2c8f5;
+}
+
+.instructorBottomContainer {
+  height: 100%;
+  width: 100%;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructorInnerContainer {
+  height: 80%;
+  width: 90%;
+  display: grid;
+  grid-template-rows: 0.2fr 0.8fr;
+  background-color: red;
+}
+
+.instructorHeader {
+  margin: 10px;
+  grid-row: 1 /2;
+  background-color: blue;
+}
+
+.instructorProfilesContainer {
+  grid-row: 2/ 3;
+  display: flex;
+  flex-wrap: space-evenly;
+  padding: 20px;
+}
+
+.instructorProfileCard {
+  height: 400px;
+  width: 300px;
+  background-color: yellow;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.instructorImage {
+  margin-top: 10px;
+  height: 300px;
+  width: 90%;
+  background-color: pink;
+}

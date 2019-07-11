@@ -1,7 +1,10 @@
+
+import NavBar from "./components/Shared/NavBar";
 import React from 'react';
 import './App.css';
 import Routes from './Routes';
 import axios from 'axios';
+
 
 class App extends React.Component {
   state = { authentication: false, errors: [] };
@@ -36,7 +39,10 @@ class App extends React.Component {
     const { login, logout } = this
     const { authentication } = this.state
     return (
-      <Routes authentication={authentication} login={login} logout={logout}/>
+      <div className="appOuterContainer">
+        <NavBar />
+       <Routes authentication={authentication} login={login} logout={logout}/>
+      </div>
     )
   }
 }
