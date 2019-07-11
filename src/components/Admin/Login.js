@@ -17,8 +17,14 @@ class Login extends React.Component {
   }
 
   render() {
+    const { authentication } = this.props
+    
+    if (authentication) {
+      return <Redirect to="/" />
+    }
+    
     return (
-      <div>
+      <div style={{position: 'absolute', left: '200px'}}>
         <h1>Admin Login</h1>
         <form>
           <label htmlFor="email">Email</label>
