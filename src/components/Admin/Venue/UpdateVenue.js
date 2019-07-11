@@ -1,9 +1,18 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
-const UpdateVenue = () => {
-  return (
-    <div>For for Update Venue</div>
-  )
+class UpdateVenue extends React.Component{
+  render() {
+    const { authentication } = this.props
+
+    if (!authentication) {
+      return <Redirect to="/admin/login" />
+    }
+    
+    return (
+      <div>Form for Update Venue</div>
+    )
+  }
 }
 
 export default UpdateVenue;

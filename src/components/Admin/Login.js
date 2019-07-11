@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class Login extends React.Component {
 
@@ -17,8 +17,14 @@ class Login extends React.Component {
   }
 
   render() {
+    const { authentication } = this.props
+    
+    if (authentication) {
+      return <Redirect to="/" />
+    }
+    
     return (
-      <div>
+      <div style={{position: 'absolute', left: '200px'}}>
         <h1>Admin Login</h1>
         <form>
           <label htmlFor="email">Email</label>
@@ -27,6 +33,7 @@ class Login extends React.Component {
           <input type="password" name="password" id="password" onChange={this.handleInput}/>
           <button type="submit" onClick={this.handleLogin}>Login</button>
         </form>
+        <Link to="/">Home</Link>
       </div>
     )
   }

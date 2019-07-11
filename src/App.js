@@ -1,18 +1,17 @@
-import NavBar from "./components/Shared/NavBar";
 import React from "react";
 import "./App.css";
 import Routes from "./Routes";
 import axios from "axios";
 
 class App extends React.Component {
-  state = { authentication: false, errors: [] };
+  state = { authentication: false, errors: [], curretUser: null };
 
   login = async userCredentials => {
     console.log(userCredentials);
 
     try {
       const response = await axios.post(
-        "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/auth",
+        "http://localhost:5000/auth",
         userCredentials
       );
       console.log(response);
@@ -26,6 +25,7 @@ class App extends React.Component {
         authentication: false,
         errors: error.response.data.errors
       });
+      console.log(error.response.data.errors);
     }
   };
 
@@ -35,14 +35,30 @@ class App extends React.Component {
     this.setState({ authentication: false });
   };
 
+  componentDidMount = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const authenticated = await axios.get("http://localhost:5000/auth", {
+        headers: { "auth-x-token": token }
+      });
+      console.log(authenticated);
+      console.log("authenticated");
+
+      this.setState({
+        authentication: true,
+        curretUser: authenticated.data
+      });
+      console.log(this.state);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   render() {
     const { login, logout } = this;
     const { authentication } = this.state;
     return (
-      <div className="appOuterContainer">
-        <NavBar />
-        <Routes authentication={authentication} login={login} logout={logout} />
-      </div>
+      <Routes authentication={authentication} login={login} logout={logout} />
     );
   }
 }
