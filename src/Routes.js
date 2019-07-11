@@ -34,7 +34,9 @@ class Routes extends React.Component {
       <Switch>
         <div className="appOuterContainer">
           <NavBar authentication={authentication} logout={logout}/>
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/" render={(history) => {
+            return <Home authentication={authentication} history={history}/>
+          }}/>
           <Route exact path="/whats-on/current-productions" component={CurrentProductions} />
           <Route exact path="/whats-on/events" component={Events} />
           <Route exact path="/about/our-story" component={OurStory} />

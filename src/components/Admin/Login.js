@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class Login extends React.Component {
 
@@ -33,6 +33,7 @@ class Login extends React.Component {
           <input type="password" name="password" id="password" onChange={this.handleInput}/>
           <button type="submit" onClick={this.handleLogin}>Login</button>
         </form>
+        <Link to="/">Home</Link>
       </div>
     )
   }
