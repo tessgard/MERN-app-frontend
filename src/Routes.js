@@ -27,6 +27,7 @@ import NewInstructor from './components/Admin/Instructor/NewInstructor';
 
 class Routes extends React.Component {
   render() {
+    const { authentication, login, logout } = this.props
     return(
       <Switch>
         <Route exact path="/" component={Home}/>
@@ -42,16 +43,36 @@ class Routes extends React.Component {
         <Route exact path="/visit/address" component={Address} />
         <Route exact path="/visit/info" component={VisitorInfo} />
         <Route exact path="/visit/contact" component={Contact} />
-        <Route exact path="/admin/login" component={Login} />
-        <Route exact path="/admin/about/update" component={UpdateAbout} />
-        <Route exact path="/admin/class/update" component={UpdateClass} />
-        <Route exact path="/admin/class/new" component={NewClass} />
-        <Route exact path="/admin/event/update" component={UpdateEvent} />
-        <Route exact path="/admin/event/new" component={NewEvent} />
-        <Route exact path="/admin/venue/update" component={UpdateVenue} />
-        <Route exact path="/admin/venue/new" component={NewVenue} />
-        <Route exact path="/admin/instructor/update" component={UpdateInstructor} />
-        <Route exact path="/admin/instructor/new" component={NewInstructor} />
+        <Route exact path="/admin/login" render={(history) => {
+          return <Login authentication={authentication} history={history} login={login} logout={logout}/>
+        }} />
+        <Route exact path="/admin/about/update" render={(history) => {
+          return <UpdateAbout authentication={authentication} history={history} logout={logout}/>
+        }} />
+        <Route exact path="/admin/class/update" render={(history) => {
+          return <UpdateClass authentication={authentication} history={history} logout={logout}/>
+        }} />
+        <Route exact path="/admin/class/new" render={(history) => {
+          return <NewClass authentication={authentication} history={history} logout={logout} />
+        }} />
+        <Route exact path="/admin/event/update" render={(history) => {
+          return <UpdateEvent authentication={authentication} history={history} logout={logout} />
+        }} />
+        <Route exact path="/admin/event/new" render={(history) => {
+          return <NewEvent authentication={authentication} history={history} logout={logout}/>
+        }} />
+        <Route exact path="/admin/venue/update" render={(history) => {
+          return <UpdateVenue authentication={authentication} history={history} logout={logout}/>
+        }} />
+        <Route exact path="/admin/venue/new" render={(history) => {
+          return <NewVenue authentication={authentication} history={history} logout={logout}/>
+        }} />
+        <Route exact path="/admin/instructor/update" render={(history) => {
+          return <UpdateInstructor authentication={authentication} history={history} logout={logout}/>
+        }} />
+        <Route exact path="/admin/instructor/new" render={(history) => {
+          return <NewInstructor authentication={authentication} history={history} logout={logout}/>
+        }} />
       </Switch>
     )
   }
