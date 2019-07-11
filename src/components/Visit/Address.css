@@ -1,0 +1,41 @@
+.addressMainContainer {
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  margin-left: 120px;
+  background-color: #9edc89;
+  padding-bottom: 20px;
+}
+
+.addressBottomContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: red;
+}
+
+.addressInnerContainer {
+  height: auto;
+  width: 90%;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+
+.addressHeader {
+  margin: 10px;
+  grid-row: 1 /2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  font-size: 3vw;
+}
+
+.addressProfilesContainer {
+  grid-row: 2/ 3;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
