@@ -7,6 +7,7 @@ const NavBar = props => {
 
   if (authentication) {
     return (
+
       <div className="navBar">
         <div className="companyLogo" />
         <div className="navBarRightBox">
@@ -73,6 +74,7 @@ const NavBar = props => {
             </svg>
           </div>
         </div>
+
         <button onClick={logout}>Logout</button>
         <Link to="/admin/about/update">Update About</Link>
         <Link to="/admin/class/new">New Class</Link>
@@ -86,6 +88,7 @@ const NavBar = props => {
       </div>
     );
   } else {
+
     return (
       <div className="navBar">
         <a href="http://localhost:3000/" className="companyLogo" />
@@ -152,6 +155,7 @@ const NavBar = props => {
         </div>
       </div>
     );
+
   }
 };
 

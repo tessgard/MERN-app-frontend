@@ -20,22 +20,14 @@ class Instructors extends React.Component {
   render() {
     return (
       <div className="instructorMainContainer">
-        <div className="bcmaDescription">
-          <h5>music,</h5>
-          <h5>dance &</h5>
-          <h5>drama</h5>
-        </div>
+        
         <div className="instructorBottomContainer">
           <div className="instructorInnerContainer">
-            <h1 className="instructorHeader">Our Tutors</h1>
+            <h1 className="instructorHeader">Faculty</h1>
             <div className="instructorProfilesContainer">
               {this.state.data.map((item, index) => (
                 <div className="instructorProfileCard" key={index}>
-                  <img
-                    className="instructorImage"
-                    src={item.image}
-                    alt="Empty Image"
-                  />
+                  
                   <div className="instructorDetails">
                     <h3>Faculty: {item.faculty}</h3>
                     <h2>Name : {item.name}</h2>
