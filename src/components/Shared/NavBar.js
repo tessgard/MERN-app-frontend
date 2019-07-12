@@ -7,14 +7,17 @@ const NavBar = props => {
 
   if (authentication) {
     return (
-
       <div className="navBar">
+        <a
+          href="https://optimistic-dubinsky-7bde69.netlify.com/"
+          className="companyLogo"
+        />
         <div className="companyLogo" />
         <div className="navBarRightBox">
           <div className="navBarLinkBox">
             <a
               className="navBarLinks"
-              href="http://localhost:3000/visit/address"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/"
             >
               Home
             </a>
@@ -22,7 +25,7 @@ const NavBar = props => {
           <div className="navBarLinkBox">
             <a
               className="navBarLinks"
-              href="http://localhost:3000/visit/address"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/about/our-story"
             >
               About Us
             </a>
@@ -30,7 +33,7 @@ const NavBar = props => {
           <div className="navBarLinkBox">
             <a
               className="navBarLinks"
-              href="http://localhost:3000/visit/address"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/classes/dance"
             >
               Classes
             </a>
@@ -38,7 +41,7 @@ const NavBar = props => {
           <div className="navBarLinkBox">
             <a
               className="navBarLinks"
-              href="http://localhost:3000/visit/address"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/about/gallery"
             >
               Gallery
             </a>
@@ -46,7 +49,7 @@ const NavBar = props => {
           <div className="navBarLinkBox">
             <a
               className="navBarLinks"
-              href="http://localhost:3000/visit/address"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/whats-on/events"
             >
               What's On
             </a>
@@ -74,7 +77,6 @@ const NavBar = props => {
             </svg>
           </div>
         </div>
-
         <button onClick={logout}>Logout</button>
         <Link to="/admin/about/update">Update About</Link>
         <Link to="/admin/class/new">New Class</Link>
@@ -88,13 +90,18 @@ const NavBar = props => {
       </div>
     );
   } else {
-
     return (
       <div className="navBar">
-        <a href="http://localhost:3000/" className="companyLogo" />
+        <a
+          href="https://optimistic-dubinsky-7bde69.netlify.com/"
+          className="companyLogo"
+        />
         <div className="navBarRightBox">
           <div className="navBarLinkBox">
-            <a className="navBarLinks" href="http://localhost:3000/">
+            <a
+              className="navBarLinks"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/"
+            >
               Home
             </a>
           </div>
@@ -155,7 +162,6 @@ const NavBar = props => {
         </div>
       </div>
     );
-
   }
 };
 
