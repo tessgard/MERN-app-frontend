@@ -99,7 +99,6 @@ const NavBar = props => {
             <a
               className="navBarLinks"
               href="https://optimistic-dubinsky-7bde69.netlify.com/about/our-story"
-              // href="http://localhost:3000/about/our-story"
             >
               About Us
             </a>
@@ -108,7 +107,6 @@ const NavBar = props => {
             <a
               className="navBarLinks"
               href="https://optimistic-dubinsky-7bde69.netlify.com/classes/dance"
-              // href="http://localhost:3000/classes/dance"
             >
               Classes
             </a>
@@ -117,7 +115,6 @@ const NavBar = props => {
             <a
               className="navBarLinks"
               href="https://optimistic-dubinsky-7bde69.netlify.com/about/gallery"
-              // href="http://localhost:3000/about/gallery"
             >
               Gallery
             </a>
@@ -126,7 +123,6 @@ const NavBar = props => {
             <a
               className="navBarLinks"
               href="https://optimistic-dubinsky-7bde69.netlify.com/whats-on/events"
-              // href="http://localhost:3000/whats-on/events"
             >
               What's On
             </a>
