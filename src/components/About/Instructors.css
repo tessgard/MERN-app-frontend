@@ -1,0 +1,74 @@
+.instructorMainContainer {
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+
+.instructorBottomContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.instructorInnerContainer {
+  height: auto;
+  width: 90%;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+
+.instructorHeader {
+  margin: 10px;
+  grid-row: 1 /2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  font-size: 3vw;
+  font-family: 'Merriweather', serif;
+}
+
+.instructorProfilesContainer {
+  grid-row: 2/ 3;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.instructorProfileCard {
+  height: 100%;
+  width: 100%;
+  margin: 20px;
+  padding: 10px 10px;
+  background-color: white;
+  border-bottom: 1pt solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.instructorImage {
+  margin-top: 10px;
+  height: 300px;
+  min-height: 300px;
+  width: 290px;
+  max-width: 90%;
+  background-color: pink;
+  object-fit: cover;
+}
+
+.instructorDetails {
+  width: 90%;
+  height: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: space-evenly;
+  flex-direction: column;
+  /* overflow: auto; */
+  /* background-color: pink; */
+}
