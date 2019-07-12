@@ -8,7 +8,9 @@ class OurStory extends React.Component {
   };
 
   async componentDidMount() {
-    const response = await axios("http://localhost:5000/about");
+    const response = await axios(
+      "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/about"
+    );
     console.log(response);
     this.setState({
       data: response.data
@@ -19,8 +21,10 @@ class OurStory extends React.Component {
     console.log(this.state.data);
     return (
       <div className="aboutMainContainer">
+
         <div className="aboutMeDescription">
           <h1 className="bcmaPageHeaderH1">About Us</h1>
+
         </div>
         <div className="aboutBottomContainer">
           <div className="aboutBox">
