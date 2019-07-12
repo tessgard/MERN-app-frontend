@@ -41,7 +41,7 @@ const Home = props => {
             <Link to="/admin/login/" className="admin-link">
               <h3>admin</h3>
             </Link>
-            <i class="fab fa-facebook" />
+            <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
           </div>
         </div>
       </div>
@@ -60,7 +60,6 @@ const Home = props => {
           <div className="happeningHeader">
             <h1>What's happening at BCMA?</h1>
           </div>
-
           <div className="happeningEventContainer">
             <div className="eventCardOuter">
               <div className="eventCardImage" />
@@ -76,11 +75,10 @@ const Home = props => {
             </div>
           </div>
         </div>
-
         <div className="footerContainer">
           <div className="footerBox">
             <h3>Logged in as admin</h3>
-            <i class="fab fa-facebook" />
+            <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
           </div>
         </div>
       </div>
