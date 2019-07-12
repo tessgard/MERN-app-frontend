@@ -4,6 +4,7 @@
   width: 100%;
   background-color: #fff;
   padding-bottom: 20px;
+  margin-top: 190px;
 }
 
 .aboutBottomContainer {
@@ -33,11 +34,12 @@
 
 .bcmaPageHeaderH1 {
   font-family: 'Merriweather', serif;
+  font-size: 3vw;
+
 }
 
 .aboutMeDescription {
   background: #fff;
-  margin-top: 190px;
   margin-left: 20%;
   width: 70%;
 }
