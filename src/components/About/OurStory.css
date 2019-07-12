@@ -1,6 +1,6 @@
 .aboutMainContainer {
   height: auto;
-  min-height: 100vh;
+  min-height: calc(100vh - 20px);
   width: 100%;
   background-color: #fff;
   padding-bottom: 20px;
