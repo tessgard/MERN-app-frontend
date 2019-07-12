@@ -88,10 +88,16 @@ const NavBar = props => {
   } else {
     return (
       <div className="navBar">
-        <a href="http://localhost:3000/" className="companyLogo" />
+        <a
+          href="https://optimistic-dubinsky-7bde69.netlify.com/"
+          className="companyLogo"
+        />
         <div className="navBarRightBox">
           <div className="navBarLinkBox">
-            <a className="navBarLinks" href="http://localhost:3000/">
+            <a
+              className="navBarLinks"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/"
+            >
               Home
             </a>
           </div>
