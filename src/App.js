@@ -4,14 +4,14 @@ import Routes from "./Routes";
 import axios from "axios";
 
 class App extends React.Component {
-  state = { authentication: false, errors: [], curretUser: null };
+  state = { authentication: false, errors: [], currentUser: null };
 
   login = async userCredentials => {
     console.log(userCredentials);
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/auth",
+        "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/auth",
         userCredentials
       );
       console.log(response);
@@ -38,15 +38,18 @@ class App extends React.Component {
   componentDidMount = async () => {
     try {
       const token = localStorage.getItem("token");
-      const authenticated = await axios.get("http://localhost:5000/auth", {
-        headers: { "auth-x-token": token }
-      });
+      const authenticated = await axios.get(
+        "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/auth",
+        {
+          headers: { "auth-x-token": token }
+        }
+      );
       console.log(authenticated);
       console.log("authenticated");
 
       this.setState({
         authentication: true,
-        curretUser: authenticated.data
+        currentUser: authenticated.data
       });
       console.log(this.state);
     } catch (error) {
