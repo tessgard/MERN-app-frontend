@@ -1,17 +1,14 @@
 import React from "react";
 import "./Home.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-
-
-const Home = (props) => {
-  const { authentication } = props
+const Home = props => {
+  const { authentication } = props;
 
   if (!authentication) {
     return (
       <div className="homeMainContainer">
         <div className="homeVideoContainer">
-          Home
           <div className="bcmaDescription">
             <h5>music,</h5>
             <h5>dance &</h5>
@@ -22,7 +19,7 @@ const Home = (props) => {
           <div className="happeningHeader">
             <h1>What's happening at BCMA?</h1>
           </div>
-  
+
           <div className="happeningEventContainer">
             <div className="eventCardOuter">
               <div className="eventCardImage" />
@@ -38,10 +35,12 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-  
+
         <div className="footerContainer">
           <div className="footerBox">
-            <Link to="/admin/login/" className="admin-link"><h3>admin</h3></Link>
+            <Link to="/admin/login/" className="admin-link">
+              <h3>admin</h3>
+            </Link>
             <i class="fab fa-facebook" />
           </div>
         </div>
@@ -51,7 +50,6 @@ const Home = (props) => {
     return (
       <div className="homeMainContainer">
         <div className="homeVideoContainer">
-          Home
           <div className="bcmaDescription">
             <h5>music,</h5>
             <h5>dance &</h5>
@@ -62,7 +60,7 @@ const Home = (props) => {
           <div className="happeningHeader">
             <h1>What's happening at BCMA?</h1>
           </div>
-  
+
           <div className="happeningEventContainer">
             <div className="eventCardOuter">
               <div className="eventCardImage" />
@@ -78,7 +76,7 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-  
+
         <div className="footerContainer">
           <div className="footerBox">
             <h3>Logged in as admin</h3>
@@ -88,7 +86,6 @@ const Home = (props) => {
       </div>
     );
   }
-  
 };
 
 export default Home;
