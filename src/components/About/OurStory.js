@@ -8,7 +8,9 @@ class OurStory extends React.Component {
   };
 
   async componentDidMount() {
-    const response = await axios("http://localhost:5000/about");
+    const response = await axios(
+      "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/about"
+    );
     console.log(response);
     this.setState({
       data: response.data
@@ -20,7 +22,6 @@ class OurStory extends React.Component {
     return (
       <div className="aboutMainContainer">
         <div className="bcmaDescription">
-          OurStory
           <h5>music,</h5>
           <h5>dance &</h5>
           <h5>drama</h5>
