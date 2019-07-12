@@ -1,6 +1,6 @@
 .instructorMainContainer {
   height: auto;
-  min-height: 100vh;
+  min-height: calc(100vh - 20px);
   width: 100%;
   margin-left: 120px;
   background-color: #e2c8f5;

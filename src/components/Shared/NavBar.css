@@ -1,27 +1,37 @@
-.sideNavBar {
-  height: 100vh;
-  width: 100px;
+.navBar {
+  height: 130px;
+  width: 100vw;
   background-color: white;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-content: center;
-  padding-left: 10px;
-  padding-right: 10px;
   position: fixed;
 }
 
+.navBarRightBox {
+  display: flex;
+  flex-direction: row;
+}
+
 .companyLogo {
-  width: 100%;
-  height: 80px;
-  padding-top: 10px;
+  width: 170px;
+  height: 100%;
+  background-image: url("./CompanyLogo.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 20px;
 }
 
-.menuLogo {
-  width: 100%;
+.navBarLinks {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5vw;
 }
 
-.donationLogo {
-  width: 100%;
-  padding-bottom: 10px;
+.navBarLinkBox {
+  width: 12vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
