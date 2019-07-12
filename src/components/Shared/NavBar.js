@@ -88,20 +88,18 @@ const NavBar = props => {
   } else {
     return (
       <div className="navBar">
-        <div className="companyLogo" />
+        <a href="http://localhost:3000/" className="companyLogo" />
         <div className="navBarRightBox">
           <div className="navBarLinkBox">
-            <a
-              className="navBarLinks"
-              href="http://localhost:3000/visit/address"
-            >
+            <a className="navBarLinks" href="http://localhost:3000/">
               Home
             </a>
           </div>
           <div className="navBarLinkBox">
             <a
               className="navBarLinks"
-              href="http://localhost:3000/visit/address"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/about/our-story"
+              // href="http://localhost:3000/about/our-story"
             >
               About Us
             </a>
@@ -109,7 +107,8 @@ const NavBar = props => {
           <div className="navBarLinkBox">
             <a
               className="navBarLinks"
-              href="http://localhost:3000/visit/address"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/classes/dance"
+              // href="http://localhost:3000/classes/dance"
             >
               Classes
             </a>
@@ -117,7 +116,8 @@ const NavBar = props => {
           <div className="navBarLinkBox">
             <a
               className="navBarLinks"
-              href="http://localhost:3000/visit/address"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/about/gallery"
+              // href="http://localhost:3000/about/gallery"
             >
               Gallery
             </a>
@@ -125,7 +125,8 @@ const NavBar = props => {
           <div className="navBarLinkBox">
             <a
               className="navBarLinks"
-              href="http://localhost:3000/visit/address"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/whats-on/events"
+              // href="http://localhost:3000/whats-on/events"
             >
               What's On
             </a>
