@@ -21,8 +21,15 @@ class OurStory extends React.Component {
     console.log(this.state.data);
     return (
       <div className="aboutMainContainer">
+<<<<<<< HEAD
         <div className="aboutMeDescription">
           <h1 className="bcmaPageHeaderH1">About Us</h1>
+=======
+
+        <div className="aboutMeDescription">
+          <h1 className="bcmaPageHeaderH1">About Us</h1>
+
+>>>>>>> 6ab6177a719303a283009d1b619714177080ca13
         </div>
         <div className="aboutBottomContainer">
           <div className="aboutBox">
