@@ -44,8 +44,11 @@ class Routes extends React.Component {
             return <OurStory onContentSelect={onContentSelect} history={history} authentication={authentication}/>
           }}/>
           <Route exact path="/about/gallery" component={ImageGallery} />
-          <Route exact path="/about/instructors" component={Instructors} />
-          <Route exact path="/classes" component={Classes} />
+
+          <Route exact path="/about/instructors" render={(history) => {
+            return <Instructors onContentSelect={onContentSelect} history={history} authentication={authentication}/>
+          }}/>
+
           <Route exact path="/classes/dance" component={Dance} />
           <Route exact path="/classes/musical-theatre" component={MusicalTheatre} />
           <Route exact path="/classes/acting" component={Acting} />
@@ -60,7 +63,7 @@ class Routes extends React.Component {
             return <UpdateAbout authentication={authentication} history={history} selectedContent={selectedContent}/>
           }} />
           <Route exact path="/admin/class/update" render={(history) => {
-            return <UpdateClass authentication={authentication} history={history} />
+            return <UpdateClass authentication={authentication} history={history}/>
           }} />
           <Route exact path="/admin/class/new" render={(history) => {
             return <NewClass authentication={authentication} history={history} />
@@ -78,7 +81,7 @@ class Routes extends React.Component {
             return <NewVenue authentication={authentication} history={history}/>
           }} />
           <Route exact path="/admin/instructor/update" render={(history) => {
-            return <UpdateInstructor authentication={authentication} history={history}/>
+            return <UpdateInstructor authentication={authentication} history={history} selectedContent={selectedContent}/>
           }} />
           <Route exact path="/admin/instructor/new" render={(history) => {
             return <NewInstructor authentication={authentication} history={history}/>
