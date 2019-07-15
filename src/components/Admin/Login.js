@@ -24,7 +24,7 @@ class Login extends React.Component {
     }
     
     return (
-      <div style={{position: 'absolute', left: '200px'}}>
+      <div style={{position: 'absolute', left: '200px', top: '200px'}}>
         <h1>Admin Login</h1>
         <form>
           <label htmlFor="email">Email</label>
