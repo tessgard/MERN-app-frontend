@@ -30,7 +30,7 @@ class UpdateInstructor extends React.Component{
       console.log(this.state.description)
       const response = await axios.put(`https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/instructor/${this.state.id}`
                   ,{name: this.state.name,
-                  decription: this.state.description,
+                  description: this.state.description,
                   faculty: this.state.faculty});
 
       console.log(response)
@@ -56,7 +56,7 @@ class UpdateInstructor extends React.Component{
       <form  onSubmit={this.onFormSubmit} style={{display: 'flex', flexDirection: 'column'}}>
         <label htmlFor="name">Name: </label>
         <input type="text" name="name" value={this.state.name} placeholde="name" onChange={this.onInputChange}/>
-        <label htmlFor="description"> Description:</label>
+        <label htmlFor="description"> Expertise:</label>
         <input type="text" name="description" value={this.state.description} onChange={this.onInputChange} />
         <label htmlFor="faculty">Faculty: </label>
         <input type="text" name="faculty" value={this.state.faculty} onChange={this.onInputChange} />
