@@ -20,30 +20,26 @@ class OurStory extends React.Component {
   render() {
     console.log(this.state.data);
     return (
-      <div className="aboutMainContainer">
-
-        <div className="aboutMeDescription">
-          <h1 className="bcmaPageHeaderH1">About Us</h1>
-
-        </div>
-        <div className="aboutBottomContainer">
-          <div className="aboutBox">
-            
-            <br />
-            <br />
-            <br />
-            <br />
-            {this.state.data.map((item, index) => (
-              <div className="aboutBoxDescription" key={index}>
-                <p>{item.description}</p>
-                <br />
-              </div>
-            ))}
-          </div>
+      <div className="main-container">
+        <div className="inner-main-container">
+        <h1 className="bcmaPageHeaderH1">About Us</h1>
+        
+          {this.state.data.map((item, index) => (
+            <div  key={index}>
+              <p>{item.description}</p>
+              <br />
+            </div>
+          ))}
+          
         </div>
       </div>
+      
+            
+  
     );
   }
 }
 
 export default OurStory;
+
+
