@@ -1,6 +1,7 @@
 import React from "react";
 import "./Instructors.css";
 import axios from "axios";
+import "../../components/layout.css"
 
 class Instructors extends React.Component {
   state = {
@@ -16,26 +17,24 @@ class Instructors extends React.Component {
 
   render() {
     return (
-      <div className="instructorMainContainer">
-        <h1 className="instructorHeader">Faculty</h1>
-        
-        <div className="instructorBottomContainer">
-          <div className="instructorInnerContainer">
-            <div className="instructorProfilesContainer">
-              {this.state.data.map((item, index) => (
+      <div className="main-container">
+        <div className="inner-main-container">
+        <h1 className="bcmaPageHeaderH1">Faculty</h1>
 
-                <div className="instructorProfileCard" key={index}>
-                  <div className="instructorDetails">
-                    <h2>Name : {item.name}</h2>
-                    <h4>{item.description}</h4>
-                    <h4>Expertise : {item.expertise}</h4>
-                  </div>
-                </div>
-              ))}
+          {this.state.data.map((item, index) => (
+            <div className="instructor-detail-main" key={index}>
+              <div className="instructor-detail-content">
+                <h2>Name : {item.name}</h2>
+                <h4>Expertise: {item.description}</h4>
+                <h4>Faculty : {item.faculty}</h4>
+              </div>
             </div>
-          </div>
+            
+          ))}
         </div>
       </div>
+
+
     );
   }
 }

@@ -1,0 +1,33 @@
+.class-grid-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.classes-card {
+  width: 250px;
+  height: 200px;
+  border: 1pt solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px 10px;
+}
+
+.class-show-popup-hide {
+  display: none;
+}
+
+.class-show-popup {
+  display: block;
+}
+
+.class-show-content-card {
+  width: 350px;
+  height: 100%;
+  border: 1pt solid red;
+}
