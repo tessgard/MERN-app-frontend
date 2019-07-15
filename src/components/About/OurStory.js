@@ -10,7 +10,7 @@ class OurStory extends React.Component {
 
   async componentDidMount() {
     const response = await axios.get(
-      "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/about"
+      'https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/about'
     );
     console.log(response);
     this.setState({
