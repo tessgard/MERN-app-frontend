@@ -1,7 +1,6 @@
 import React from "react";
 import "./Instructors.css";
 import axios from "axios";
-import "../../components/layout.css"
 
 class Instructors extends React.Component {
   state = {
