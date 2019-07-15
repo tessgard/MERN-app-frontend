@@ -24,58 +24,40 @@ class OurStory extends React.Component {
 
     if (authentication) {
       return (
-        <div className="aboutMainContainer">
-  
-          <div className="aboutMeDescription">
-            <h1 className="bcmaPageHeaderH1">About Us</h1>
-  
-          </div>
-          <div className="aboutBottomContainer">
-            <div className="aboutBox">
-              
-              <br />
-              <br />
-              <br />
-              <br />
+         <div className="main-container">
+        <div className="inner-main-container">
+        <h1 className="bcmaPageHeaderH1">About Us</h1>
+        
               {this.state.data.map((item, index) => (
-                <div className="aboutBoxDescription" key={index} >
+                <div key={index} >
                   <p>{item.description}</p>
                   <p>{item._id}</p>
                   <Link to="/admin/about/update" onClick={() => onContentSelect(item)}>Update</Link>
                   <br />
                 </div>
               ))}
-            </div>
-          </div>
         </div>
-      );
+      </div>
+            
+    );
     } else {
       return (
-        <div className="aboutMainContainer">
-  
-          <div className="aboutMeDescription">
-            <h1 className="bcmaPageHeaderH1">About Us</h1>
-  
-          </div>
-          <div className="aboutBottomContainer">
-            <div className="aboutBox">
-              
+        <div className="main-container">
+        <div className="inner-main-container">
+        <h1 className="bcmaPageHeaderH1">About Us</h1>
+        
+          {this.state.data.map((item, index) => (
+            <div  key={index}>
+              <p>{item.description}</p>
               <br />
-              <br />
-              <br />
-              <br />
-              {this.state.data.map((item, index) => (
-                <div className="aboutBoxDescription" key={index} >
-                  <p>{item.description}</p>
-                  <br />
-                </div>
-              ))}
             </div>
-          </div>
+          ))}
+          
         </div>
+      </div>
       );
-    }
-  }
-}
+  }}}
 
 export default OurStory;
+
+

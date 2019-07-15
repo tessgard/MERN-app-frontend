@@ -1,0 +1,54 @@
+.class-grid-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.classes-card {
+  width: 250px;
+  height: 200px;
+  border: 1pt solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px 10px;
+}
+
+
+.class-show-popup {
+  position: absolute;
+  top: 100px;
+  left: 40%;
+  z-index: 999;
+  background: white;
+
+}
+
+.class-show-content-card {
+  width: 350px;
+  height: 100%;
+  border: 1pt solid black;
+  padding: 20px 20px;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.show {
+  display: block !important;
+}

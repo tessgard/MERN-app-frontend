@@ -1,52 +1,11 @@
-.instructorMainContainer {
-  height: auto;
-  min-height: calc(100vh - 20px);
-  width: 100%;
-  background-color: #fff;
-  padding-bottom: 20px;
-  margin-top: 190px;
-}
 
-.instructorBottomContainer {
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.instructorInnerContainer {
-  height: 80%;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 10px;
-  font-size: 2vw;
-
-}
-
-.instructorHeader {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  font-size: 3vw;
-  font-family: 'Merriweather', serif;
-}
-
-.instructorProfilesContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.instructorProfileCard {
+.instructor-detail-main {
   height: 100%;
-  width: 100%;
+  width: 50%;
   margin: 20px;
   padding: 10px 10px;
   background-color: white;
-  border-bottom: 1pt solid black;
+  border: 1pt solid #e1e1e1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -54,13 +13,13 @@
 }
 
 
-.instructorDetails {
+.instructor-detail-content {
   width: 90%;
   height: auto;
   margin-top: 10px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: flex-start;
   align-items: space-evenly;
   flex-direction: column;
-  
 }

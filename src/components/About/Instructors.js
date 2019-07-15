@@ -18,56 +18,46 @@ class Instructors extends React.Component {
   render() {
     const { onContentSelect, authentication } = this.props
 
-    if (authentication) {
+   if (authentication) {
       return (
-        <div className="instructorMainContainer">
-          <h1 className="instructorHeader">Faculty</h1>
-          
-          <div className="instructorBottomContainer">
-            <div className="instructorInnerContainer">
-              <div className="instructorProfilesContainer">
-                {this.state.data.map((item, index) => (
-  
-                  <div className="instructorProfileCard" key={index}>
-                    <div className="instructorDetails">
-                      <h2>Name : {item.name}</h2>
-                      <h4>{item.description}</h4>
-                      <h4>Faculty : {item.faculty}</h4>
+        <div className="main-container">
+        <div className="inner-main-container">
+        <h1 className="bcmaPageHeaderH1">Faculty</h1>
+
+          {this.state.data.map((item, index) => (
+            <div className="instructor-detail-main" key={index}>
+              <div className="instructor-detail-content">
+                <h2>Name : {item.name}</h2>
+                <h4>Expertise: {item.description}</h4>
+                <h4>Faculty : {item.faculty}</h4>
                       <Link to='/admin/instructor/update' onClick={() => onContentSelect(item)}>Update</Link>
                     </div>
                   </div>
                 ))}
+
               </div>
             </div>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="instructorMainContainer">
-          <h1 className="instructorHeader">Faculty</h1>
-          
-          <div className="instructorBottomContainer">
-            <div className="instructorInnerContainer">
-              <div className="instructorProfilesContainer">
-                {this.state.data.map((item, index) => (
-  
-                  <div className="instructorProfileCard" key={index}>
-                    <div className="instructorDetails">
-                      <h2>Name : {item.name}</h2>
-                      <h4>{item.description}</h4>
-                      <h4>Faculty : {item.faculty}</h4>
+            
+          )}
+      
+
+    else {
+      <div className="main-container">
+        <div className="inner-main-container">
+        <h1 className="bcmaPageHeaderH1">Faculty</h1>
+
+          {this.state.data.map((item, index) => (
+            <div className="instructor-detail-main" key={index}>
+              <div className="instructor-detail-content">
+                <h2>Name : {item.name}</h2>
+                <h4>Expertise: {item.description}</h4>
+                <h4>Faculty : {item.faculty}</h4>
                     </div>
                   </div>
                 ))}
+
               </div>
             </div>
-          </div>
-        </div>
-      );
-    }
-    
-  }
-}
-
+          
+}}}
 export default withRouter(Instructors);

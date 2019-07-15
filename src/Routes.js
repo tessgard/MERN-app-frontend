@@ -7,6 +7,7 @@ import Events from './components/WhatsOn/Events';
 import OurStory from './components/About/OurStory';
 import ImageGallery from './components/About/ImageGallery';
 import Instructors from './components/About/Instructors';
+import Classes from './components/Classes/Classes'
 import Dance from './components/Classes/Dance';
 import MusicalTheatre from './components/Classes/MusicalTheatre';
 import Acting from './components/Classes/Acting';
@@ -43,9 +44,11 @@ class Routes extends React.Component {
             return <OurStory onContentSelect={onContentSelect} history={history} authentication={authentication}/>
           }}/>
           <Route exact path="/about/gallery" component={ImageGallery} />
+
           <Route exact path="/about/instructors" render={(history) => {
             return <Instructors onContentSelect={onContentSelect} history={history} authentication={authentication}/>
           }}/>
+
           <Route exact path="/classes/dance" component={Dance} />
           <Route exact path="/classes/musical-theatre" component={MusicalTheatre} />
           <Route exact path="/classes/acting" component={Acting} />
