@@ -4,7 +4,8 @@ import axios from "axios";
 
 class Classes extends React.Component {
   state = {
-    data: []
+    data: [],
+    popup: false
   };
 
   async componentDidMount() {
@@ -20,12 +21,35 @@ class Classes extends React.Component {
 
    classPopup = (e) => {
       e.preventDefault();
+      const name = e.target.innerText
+      const selectedClass = this.state.data.find((item, index) => {
+        return item.name === name
+      })
       let popup = document.querySelector(".class-show-popup-hide")
-      popup.classList.remove("class-show-popup-hide");
-      popup.classList.add("class-show-popup")  
+      // popup.classList.remove("class-show-popup-hide");
+      // popup.classList.add("class-show-popup")
+      this.setState({
+        popup: true,
+        selectedClass: selectedClass
+      })  
     };  
+
+    removePopup = () => {
+      this.setState({
+        popup: false,
+      })
+    }
   
-   
+    // classPopupById = (e) => {
+    //   e.preventDefault();
+    //   this.state.data.find((item, index) => (
+    //     key=index
+    //     if (item.id === "id from item in link clicked")  {
+    //       item.description
+
+    //     }
+    //   ))
+    // };
 
   
   
@@ -40,23 +64,25 @@ class Classes extends React.Component {
             
               {this.state.data.map((item, index) => (
                 <div className="classes-card">
-                <div  key={index}>
-                  <a href="#" onClick={this.classPopup}><h3>{item.category}</h3></a>
+                <div key={index}>
+                  <a href="#" onClick={this.classPopup}><h3>{item.name}</h3></a>
                 </div>
                 </div>
 
               ))}
           </div>
-
-          <div className="class-show-popup-hide">
-              
+          
+          {
+            this.state.popup &&
+              <div className="class-show-popup">
                 <div className="class-show-content-card">
-                  
+                  <p onClick={this.removePopup}>x</p>
+                  <p>{this.state.selectedClass.name}</p>
+                  <p>{this.state.selectedClass.description}</p>
+
                 </div>
-
-              
-
-          </div>
+              </div>
+          }
           
         </div>
       </div>
