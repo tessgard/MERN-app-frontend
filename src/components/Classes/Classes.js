@@ -26,8 +26,8 @@ class Classes extends React.Component {
         return item.name === name
       })
       let popup = document.querySelector(".class-show-popup-hide")
-      // popup.classList.remove("class-show-popup-hide");
-      // popup.classList.add("class-show-popup")
+      
+
       this.setState({
         popup: true,
         selectedClass: selectedClass
@@ -39,24 +39,14 @@ class Classes extends React.Component {
         popup: false,
       })
     }
-  
-    // classPopupById = (e) => {
-    //   e.preventDefault();
-    //   this.state.data.find((item, index) => (
-    //     key=index
-    //     if (item.id === "id from item in link clicked")  {
-    //       item.description
 
-    //     }
-    //   ))
-    // };
-
-  
-  
   render() {
     console.log(this.state.data);
     return (
       <div className="main-container">
+
+      <div id="overlay" className={this.state.popup && "show" }></div>
+      
         <div className="inner-main-container">
           <h1 className="bcmaPageHeaderH1">Classes</h1>
 
@@ -76,8 +66,10 @@ class Classes extends React.Component {
             this.state.popup &&
               <div className="class-show-popup">
                 <div className="class-show-content-card">
-                  <p onClick={this.removePopup}>x</p>
-                  <p>{this.state.selectedClass.name}</p>
+                  <a href="#"><h2 onClick={this.removePopup}>x</h2></a>
+                  <br></br>
+                  <h2>{this.state.selectedClass.name}</h2>
+                  <br></br>
                   <p>{this.state.selectedClass.description}</p>
 
                 </div>
