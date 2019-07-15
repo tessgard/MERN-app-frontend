@@ -29,7 +29,7 @@ import NavBar from "./components/Shared/NavBar";
 
 class Routes extends React.Component {
   render() {
-    const { authentication, login, logout } = this.props
+    const { authentication, login, logout, selectedContent, onContentSelect } = this.props
     return(
       <Switch>
         <div className="appOuterContainer">
@@ -39,7 +39,9 @@ class Routes extends React.Component {
           }}/>
           <Route exact path="/whats-on/current-productions" component={CurrentProductions} />
           <Route exact path="/whats-on/events" component={Events} />
-          <Route exact path="/about/our-story" component={OurStory} />
+          <Route exact path="/about/our-story" render={(history) => {
+            return <OurStory onContentSelect={onContentSelect} history={history} authentication={authentication}/>
+          }}/>
           <Route exact path="/about/gallery" component={ImageGallery} />
           <Route exact path="/about/instructors" component={Instructors} />
           <Route exact path="/classes/dance" component={Dance} />
@@ -53,7 +55,7 @@ class Routes extends React.Component {
             return <Login authentication={authentication} history={history} login={login} />
           }} />
           <Route exact path="/admin/about/update" render={(history) => {
-            return <UpdateAbout authentication={authentication} history={history} />
+            return <UpdateAbout authentication={authentication} history={history} selectedContent={selectedContent}/>
           }} />
           <Route exact path="/admin/class/update" render={(history) => {
             return <UpdateClass authentication={authentication} history={history} />
