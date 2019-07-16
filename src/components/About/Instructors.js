@@ -22,14 +22,15 @@ class Instructors extends React.Component {
       return (
         <div className="main-container">
           <div className="inner-main-container">
-          `<h1 className="bcmaPageHeaderH1">Faculty</h1>
+            <h1 className="bcmaPageHeaderH1">Faculty</h1>
+            <Link to='/admin/instructor/new'><button>Add New Instructor</button></Link>
             {this.state.data.map((item, index) => (
               <div className="instructor-detail-main" key={index}>
                 <div className="instructor-detail-content">
                   <h2>Name : {item.name}</h2>
                   <h4>Expertise: {item.description}</h4>
                   <h4>Faculty : {item.faculty}</h4>
-                  <Link to='/admin/instructor/update' onClick={() => onContentSelect(item)}>Update</Link>
+                  <Link to='/admin/instructor/update' onClick={() => onContentSelect(item)}><button>Update Details</button></Link>
                 </div>
               </div>
             ))}

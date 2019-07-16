@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, withRouter } from 'react-router-dom';
+import { Redirect, withRouter, Link } from 'react-router-dom';
 import axios from 'axios';
 
 class UpdateAbout extends React.Component {
@@ -53,6 +53,7 @@ class UpdateAbout extends React.Component {
           <label htmlFor="description"> Description:</label>
           <textarea rows="10" cols="50" value={this.state.description} onChange={this.onInputChange} name="description" id="description"/>
           <button onClick={this.onFormSubmit}>Submit</button>
+          <Link to="/about/instructors"><button>Back</button></Link>
         </form>
       </div>
     )

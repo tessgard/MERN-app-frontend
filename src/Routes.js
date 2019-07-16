@@ -84,7 +84,7 @@ class Routes extends React.Component {
             return <UpdateInstructor authentication={authentication} history={history} selectedContent={selectedContent}/>
           }} />
           <Route exact path="/admin/instructor/new" render={(history) => {
-            return <NewInstructor authentication={authentication} history={history}/>
+            return <NewInstructor authentication={authentication} history={history} selectedContent={selectedContent}/>
           }} />
         </div>
       </Switch>

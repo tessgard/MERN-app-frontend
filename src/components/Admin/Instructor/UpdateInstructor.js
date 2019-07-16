@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, withRouter } from 'react-router-dom';
+import { Redirect, withRouter, Link } from 'react-router-dom';
 import axios from 'axios';
 
 class UpdateInstructor extends React.Component{
@@ -61,6 +61,7 @@ class UpdateInstructor extends React.Component{
         <label htmlFor="faculty">Faculty: </label>
         <input type="text" name="faculty" value={this.state.faculty} onChange={this.onInputChange} />
         <button onClick={this.onFormSubmit}>Submit</button>
+        <Link to="/about/instructors"><button>Back</button></Link>
       </form>
     </div>
     )
