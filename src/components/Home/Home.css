@@ -1,93 +1,39 @@
-.homeMainContainer {
-  height: auto;
-  min-height: 100vh;
+#punchLine {
+  font-family: 'Merriweather', serif;
+  font-size: 2.4vw;
+  margin-top: 20px;
+}
+
+
+
+.landing-main-container {
   width: 100%;
-  margin-top: 130px;
-  background-color: #fce183;
-}
-
-.homeVideoContainer {
-  height: 650px;
-  width: 100%;
-  background-image: url("./giraffe.jpg");
-  /* background-size: cover; */
-}
-
-.bcmaDescription {
-  width: 6%;
-  padding: 10px;
-  background-color: red;
-}
-
-/* Show Main Events */
-.happeningContainer {
-  height: auto;
-  width: 100%;
-  background-color: #fce183;
-}
-
-.happeningHeader {
-  padding: 10px;
-  margin: 10px;
-}
-
-.happeningEventContainer {
-  width: 100%;
-  height: auto;
+  margin-top: 150px;
+  height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
-.eventCardOuter {
-  height: 600px;
-  width: 35%;
-  background-color: white;
-  border: 2px solid black;
+.hero-content-home {
+  width: 90%;
+  margin-top: 20px;
+  border: 1 pt solid red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.eventCardImage {
-  height: 400px;
-  width: 100%;
-  background-image: url("./giraffe.jpg");
+.image-gallery-home {
+  width: 60%;
+  border: 1pt solid black;
+  height: 420px;
+  background-image: url("./BCMA-cats.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-
-.eventDetails {
-  margin: 10px;
-}
-
-/* Footer */
 
 .footerContainer {
-  height: 100px;
-  width: 100%;
-  background-color: #fce183;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footerBox {
-  width: 90%;
-  height: 100%;
-  border-top: 2px solid black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footerBox h3 {
-  margin: 20px;
-}
-
-#punchLine {
-  font-family: "Sacramento", cursive;
-  font-size: 3vw;
-}
-
-.admin-link {
-  text-decoration: none;
-  color: black;
+  margin-top: 180px;
+  margin-bottom: 30px; 
 }

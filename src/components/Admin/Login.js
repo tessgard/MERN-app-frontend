@@ -24,16 +24,19 @@ class Login extends React.Component {
     }
     
     return (
-      <div style={{position: 'absolute', left: '200px', top: '200px'}}>
-        <h1>Admin Login</h1>
-        <form>
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" onChange={this.handleInput}/>
-          <label htmlFor="password">Password</label>
-          <input type="password" name="password" id="password" onChange={this.handleInput}/>
-          <button type="submit" onClick={this.handleLogin}>Login</button>
-        </form>
-        <Link to="/">Home</Link>
+      <div className="main-container">
+        <div className="inner-main-container">
+          <div style={{position: 'absolute', left: '200px', top: '200px'}}>
+            <h1>Admin Login</h1>
+            <form>
+              <label htmlFor="email">Email</label>
+              <input type="email" name="email" id="email" onChange={this.handleInput}/>
+              <label htmlFor="password">Password</label>
+              <input type="password" name="password" id="password" onChange={this.handleInput}/>
+              <button type="submit" onClick={this.handleLogin}>Login</button>
+            </form>
+          </div>
+        </div>
       </div>
     )
   }
