@@ -17,7 +17,7 @@ const Home = props => {
         <div className="footerContainer">
           <div className="footerBox">
             <Link to="/admin/login/" className="admin-link">
-              <b>admin login ></b>
+              <p id="admin-link">admin login ></p>
             </Link>
           </div>
         </div>
@@ -32,9 +32,8 @@ const Home = props => {
           <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
         </div>
         <div className="footerContainer">
-        <h1>hello</h1>
           <div className="footerBox">
-            <b>Logged in as admin</b>
+            <p id="admin-link">Logged in as admin</p>
           </div>
         </div>
     </div>

@@ -4,26 +4,54 @@ import axios from "axios";
 
 class ImageGallery extends React.Component {
   state = {
-    data: []
+    images: null
   };
 
   async componentDidMount() {
-    const response = await axios(
-      "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/gallery"
+    const response = await axios.get(
+      "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/images/get-objects"
     );
     console.log(response);
     this.setState({
-      data: response.data
+      images: response.data
     });
+
+    
   }
+
+  
+
   render() {
-    return (
-      <div className="main-container">
-        <div className="inner-main-container">
-        <h1 className="bcmaPageHeaderH1">Image Gallery</h1>
+    const imageState = this.state.images
+    if (!imageState) {
+      return null
+    } else {
+      const imageArr = imageState.imageUrls
+      console.log(imageArr)
+      return (
+        
+        <div className="main-container">
+          <div className="inner-main-container">
+          <h1 className="bcmaPageHeaderH1">Image Gallery</h1>
+            <div className="gallery-outer-container">
+            
+            {imageArr.slice(1).map((url ) => (
+              <div className="image-thumbnail">   
+                <img className="images" src={url}></img>
+              </div>
+          ))}
+
+
+
+      
+
+
+            </div>
+          </div>
         </div>
-      </div>
-    );
+        
+      );
+    }
   }
 }
 
