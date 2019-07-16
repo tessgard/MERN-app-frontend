@@ -48,7 +48,7 @@ class Routes extends React.Component {
           <Route exact path="/about/instructors" render={(history) => {
             return <Instructors onContentSelect={onContentSelect} history={history} authentication={authentication}/>
           }}/>
-
+          <Route exact path="/classes" component={Classes}/>
           <Route exact path="/classes/dance" component={Dance} />
           <Route exact path="/classes/musical-theatre" component={MusicalTheatre} />
           <Route exact path="/classes/acting" component={Acting} />
