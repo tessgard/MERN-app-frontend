@@ -5,14 +5,31 @@ import { Link, withRouter } from 'react-router-dom';
 
 class Instructors extends React.Component {
   state = {
-    data: []
+    data: [],
+    errors: []
   };
+
   async componentDidMount() {
+    this.getInstructors()
+  }
+
+  getInstructors = async () => {
     const response = await axios.get('https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/instructor');
     console.log(response);
     this.setState({
       data: response.data
     });
+  }
+
+  deleteInstructor = async (item) => {
+    console.log(item)
+    try {
+      const response = axios.delete(`https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/instructor/${item._id}`)
+      console.log(response)
+      this.getInstructors()
+    } catch (error) {
+      this.setState({ errors: error.response})
+    }
   }
 
   render() {
@@ -31,6 +48,7 @@ class Instructors extends React.Component {
                   <h4>Expertise: {item.description}</h4>
                   <h4>Faculty : {item.faculty}</h4>
                   <Link to='/admin/instructor/update' onClick={() => onContentSelect(item)}><button>Update Details</button></Link>
+                  <button onClick={() => this.deleteInstructor(item)}>Delete Instructor</button>
                 </div>
               </div>
             ))}
