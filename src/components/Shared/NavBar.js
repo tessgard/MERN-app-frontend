@@ -8,10 +8,6 @@ const NavBar = props => {
   if (authentication) {
     return (
       <div className="navBar">
-        <a
-          href="https://optimistic-dubinsky-7bde69.netlify.com/"
-          className="companyLogo"
-        />
         <div className="companyLogo" />
         <div className="navBarRightBox">
           <div className="navBarLinkBox">

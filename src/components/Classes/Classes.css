@@ -18,14 +18,12 @@
   margin: 10px 10px;
 }
 
-
 .class-show-popup {
-  position: absolute;
-  top: 100px;
-  left: 40%;
+  position: fixed;
+  top: calc(30% - 25px);
+  left: calc(50% - 50px);
   z-index: 999;
   background: white;
-
 }
 
 .class-show-content-card {
@@ -33,20 +31,6 @@
   height: 100%;
   border: 1pt solid black;
   padding: 20px 20px;
-}
-
-#overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
 }
 
 .show {
