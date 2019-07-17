@@ -29,7 +29,7 @@ const NavBar = props => {
           <div className="navBarLinkBox">
             <a
               className="navBarLinks"
-              href="https://optimistic-dubinsky-7bde69.netlify.com/classes/dance"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/classes"
             >
               Classes
             </a>
@@ -104,7 +104,7 @@ const NavBar = props => {
           <div className="navBarLinkBox">
             <a
               className="navBarLinks"
-              href="https://optimistic-dubinsky-7bde69.netlify.com/classes/dance"
+              href="https://optimistic-dubinsky-7bde69.netlify.com/classes"
             >
               Classes
             </a>
