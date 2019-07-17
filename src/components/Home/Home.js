@@ -7,7 +7,6 @@ const Home = props => {
 
   if (!authentication) {
     return (
-
       <div className="landing-main-container">
         <div className="alert-box">
           <div className="free-trial">
@@ -15,8 +14,7 @@ const Home = props => {
           </div>
         </div>
         <div className="hero-content-home">
-          <div className="image-gallery-home">
-          </div>
+          <div className="image-gallery-home" />
           <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
         </div>
         <div className="footerContainer">
@@ -38,16 +36,16 @@ const Home = props => {
             </div>
         </div>
         <div className="hero-content-home">
-          <div className="image-gallery-home">
-          </div>
+          <div className="image-gallery-home" />
           <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
         </div>
         <div className="footerContainer">
+
           <div className="footerBox">
             <p id="admin-link">Logged in as admin</p>
           </div>
         </div>
-    </div>
+      </div>
     );
   }
 };

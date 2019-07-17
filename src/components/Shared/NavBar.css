@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-content: center;
   position: fixed;
+  z-index: 3;
 }
 
 .navBarRightBox {
@@ -44,7 +45,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white; 
+  color: white;
   padding: 5px 5px;
   margin: 10px 10px;
   font-size: 70%;
