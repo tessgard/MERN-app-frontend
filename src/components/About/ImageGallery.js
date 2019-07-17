@@ -14,7 +14,7 @@ class ImageGallery extends React.Component {
     const response = await axios.get(
       "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/images/get-objects"
     );
-    // console.log(response);
+
     this.setState({
       images: response.data
     });
@@ -23,7 +23,7 @@ class ImageGallery extends React.Component {
 
   imagePopup = (e) => {
     e.preventDefault();
-    console.log(e.currentTarget.src)
+    // console.log(e.currentTarget.src)
 
     this.setState({
       popup: true,
