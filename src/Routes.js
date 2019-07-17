@@ -8,10 +8,6 @@ import OurStory from './components/About/OurStory';
 import ImageGallery from './components/About/ImageGallery';
 import Instructors from './components/About/Instructors';
 import Classes from './components/Classes/Classes'
-import Dance from './components/Classes/Dance';
-import MusicalTheatre from './components/Classes/MusicalTheatre';
-import Acting from './components/Classes/Acting';
-import PreSchool from './components/Classes/PreSchool';
 import Address from './components/Visit/Address';
 import VisitorInfo from './components/Visit/VisitorInfo';
 import Contact from './components/Visit/Contact';
@@ -51,10 +47,7 @@ class Routes extends React.Component {
           <Route exact path="/classes" render={(history) => {
             return <Classes onContentSelect={onContentSelect} history={history} authentication={authentication} />
           }}/>
-          <Route exact path="/classes/dance" component={Dance} />
-          <Route exact path="/classes/musical-theatre" component={MusicalTheatre} />
-          <Route exact path="/classes/acting" component={Acting} />
-          <Route exact path="/classes/preschool" component={PreSchool} />
+          
           <Route exact path="/visit/address" component={Address} />
           <Route exact path="/visit/info" component={VisitorInfo} />
           <Route exact path="/visit/contact" component={Contact} />

@@ -45,7 +45,6 @@ class Classes extends React.Component {
       const selectedClass = this.state.data.find((item, index) => {
         return item.name === name
       })
-      let popup = document.querySelector(".class-show-popup-hide")
       
 
       this.setState({

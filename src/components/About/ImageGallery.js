@@ -18,7 +18,6 @@ class ImageGallery extends React.Component {
     this.setState({
       images: response.data
     });
-
   }
 
   imagePopup = (e) => {
@@ -28,8 +27,6 @@ class ImageGallery extends React.Component {
     this.setState({
       popup: true,
       currentImage: e.currentTarget.src
-
-
     })  
   };  
 
