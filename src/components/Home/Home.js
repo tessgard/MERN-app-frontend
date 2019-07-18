@@ -32,7 +32,6 @@ class Home extends React.Component {
 
   if (!authentication) {
     return (
-
       <div className="landing-main-container">
         <div className="alert-box">
           <div className="free-trial">
@@ -105,6 +104,7 @@ class Home extends React.Component {
 {/* ------------------------------- */}
 
           </div>
+
           <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
         </div>
         <div className="footerContainer">
@@ -131,14 +131,16 @@ class Home extends React.Component {
           
 
           </div>
+
           <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
         </div>
         <div className="footerContainer">
+
           <div className="footerBox">
             <p id="admin-link">Logged in as admin</p>
           </div>
         </div>
-    </div>
+      </div>
     );
   }
 }
