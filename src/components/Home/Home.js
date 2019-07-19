@@ -10,7 +10,10 @@ const Home = props => {
       <div className="landing-main-container">
         <div className="alert-box">
           <div className="free-trial">
-            <a  href="#">We offer free trials for your first group class, contact us today to get started!</a>
+            <a href="#">
+              We offer free trials for your first group class, contact us today
+              to get started!
+            </a>
           </div>
         </div>
         <div className="hero-content-home">
@@ -25,22 +28,23 @@ const Home = props => {
           </div>
         </div>
       </div>
-
     );
   } else {
     return (
       <div className="landing-main-container">
         <div className="alert-box">
-            <div className="free-trial">
-              <a  href="#">We offer free trials for your first group class, contact us today to get started!</a>
-            </div>
+          <div className="free-trial">
+            <a href="#">
+              We offer free trials for your first group class, contact us today
+              to get started!
+            </a>
+          </div>
         </div>
         <div className="hero-content-home">
           <div className="image-gallery-home" />
           <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
         </div>
         <div className="footerContainer">
-
           <div className="footerBox">
             <p id="admin-link">Logged in as admin</p>
           </div>
