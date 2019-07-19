@@ -1,27 +1,27 @@
-
-import React from 'react';
-import './App.css';
-import { Route, Switch } from 'react-router-dom';
-import Home from './components/Home/Home';
-import CurrentProductions from './components/WhatsOn/CurrentProductions';
-import Events from './components/WhatsOn/Events';
-import OurStory from './components/About/OurStory';
-import ImageGallery from './components/About/ImageGallery';
-import Instructors from './components/About/Instructors';
-import Classes from './components/Classes/Classes'
-import Address from './components/Visit/Address';
-import VisitorInfo from './components/Visit/VisitorInfo';
-import Contact from './components/Visit/Contact';
-import Login from './components/Admin/Login';
-import UpdateAbout from './components/Admin/About/UpdateAbout';
-import UpdateClass from './components/Admin/Class/UpdateClass';
-import NewClass from './components/Admin/Class/NewClass';
-import UpdateEvent from './components/Admin/Event/UpdateEvent';
-import NewEvent from './components/Admin/Event/NewEvent';
-import UpdateVenue from './components/Admin/Venue/UpdateVenue';
-import NewVenue from './components/Admin/Venue/NewVenue';
-import UpdateInstructor from './components/Admin/Instructor/UpdateInstructor';
-import NewInstructor from './components/Admin/Instructor/NewInstructor';
+import React from "react";
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
+import Home from "./components/Home/Home";
+import CurrentProductions from "./components/WhatsOn/CurrentProductions";
+import Events from "./components/WhatsOn/Events";
+import OurStory from "./components/About/OurStory";
+import ImageGallery from "./components/About/ImageGallery";
+import Instructors from "./components/About/Instructors";
+import Classes from "./components/Classes/Classes";
+import Address from "./components/Visit/Address";
+import VisitorInfo from "./components/Visit/VisitorInfo";
+import Contact from "./components/Visit/Contact";
+import Login from "./components/Admin/Login";
+import UpdateAbout from "./components/Admin/About/UpdateAbout";
+import ViewContact from "./components/Admin/Visit/ViewContact";
+import UpdateClass from "./components/Admin/Class/UpdateClass";
+import NewClass from "./components/Admin/Class/NewClass";
+import UpdateEvent from "./components/Admin/Event/UpdateEvent";
+import NewEvent from "./components/Admin/Event/NewEvent";
+import UpdateVenue from "./components/Admin/Venue/UpdateVenue";
+import NewVenue from "./components/Admin/Venue/NewVenue";
+import UpdateInstructor from "./components/Admin/Instructor/UpdateInstructor";
+import NewInstructor from "./components/Admin/Instructor/NewInstructor";
 
 import NavBar from "./components/Shared/NavBar";
 
@@ -66,13 +66,32 @@ class Routes extends React.Component {
           />
           <Route exact path="/about/gallery" component={ImageGallery} />
 
-          <Route exact path="/about/instructors" render={(history) => {
-            return <Instructors onContentSelect={onContentSelect} history={history} authentication={authentication}/>
-          }}/>
-          <Route exact path="/classes" render={(history) => {
-            return <Classes onContentSelect={onContentSelect} history={history} authentication={authentication} />
-          }}/>
-          
+          <Route
+            exact
+            path="/about/instructors"
+            render={history => {
+              return (
+                <Instructors
+                  onContentSelect={onContentSelect}
+                  history={history}
+                  authentication={authentication}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/classes"
+            render={history => {
+              return (
+                <Classes
+                  onContentSelect={onContentSelect}
+                  history={history}
+                  authentication={authentication}
+                />
+              );
+            }}
+          />
 
           <Route exact path="/visit/address" component={Address} />
           <Route exact path="/visit/info" component={VisitorInfo} />
@@ -90,7 +109,6 @@ class Routes extends React.Component {
               );
             }}
           />
-
           <Route
             exact
             path="/admin/login"
@@ -117,6 +135,20 @@ class Routes extends React.Component {
               );
             }}
           />
+          <Route
+            exact
+            path="/admin/visit/contact"
+            render={history => {
+              return (
+                <ViewContact
+                  authentication={authentication}
+                  history={history}
+                  selectedContent={selectedContent}
+                />
+              );
+            }}
+          />
+
           <Route
             exact
             path="/admin/class/update"
