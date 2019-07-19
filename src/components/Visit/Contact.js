@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect, Link, withRouter } from "react-router-dom";
 import axios from "axios";
+import Maps from "./MapContainer";
 import "./Contact.css";
 
 class Contact extends React.Component {
@@ -56,13 +57,11 @@ class Contact extends React.Component {
               </div>
             </form>
           </div>
-
           <div className="alternative-contact-container">
             <div className="contact-grid-container">
               <p>You can reach us at (03) 5331 3086</p>
             </div>
           </div>
-
           <div className="alternative-contact-container">
             <div className="contact-grid-container">
               <h2>Visit Us Directly</h2>
@@ -71,6 +70,14 @@ class Contact extends React.Component {
           <div className="alternative-contact-container">
             <div className="contact-grid-container">
               <p>Unit A/112 Victoria St, Ballarat East VIC 3350</p>
+            </div>
+            <Link to="/admin/visit/contact">Test</Link>
+          </div>
+          <div className="alternative-contact-container">
+            <div className="contact-grid-container">
+              <>
+                <Maps />
+              </>
             </div>
           </div>
         </div>
