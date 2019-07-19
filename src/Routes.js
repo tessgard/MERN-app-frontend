@@ -1,30 +1,28 @@
-import React from "react";
-import "./App.css";
-import { Route, Switch } from "react-router-dom";
-import Home from "./components/Home/Home";
-import CurrentProductions from "./components/WhatsOn/CurrentProductions";
-import Events from "./components/WhatsOn/Events";
-import OurStory from "./components/About/OurStory";
-import ImageGallery from "./components/About/ImageGallery";
-import Instructors from "./components/About/Instructors";
-import Classes from "./components/Classes/Classes";
-import Dance from "./components/Classes/Dance"; //no
-import MusicalTheatre from "./components/Classes/MusicalTheatre"; //no
-import Acting from "./components/Classes/Acting"; //no
-import PreSchool from "./components/Classes/PreSchool"; //no
-import Address from "./components/Visit/Address"; //put together with contact
-import VisitorInfo from "./components/Visit/VisitorInfo";
-import Contact from "./components/Visit/Contact"; //do this jy
-import Login from "./components/Admin/Login";
-import UpdateAbout from "./components/Admin/About/UpdateAbout";
-import UpdateClass from "./components/Admin/Class/UpdateClass";
-import NewClass from "./components/Admin/Class/NewClass";
-import UpdateEvent from "./components/Admin/Event/UpdateEvent";
-import NewEvent from "./components/Admin/Event/NewEvent";
-import UpdateVenue from "./components/Admin/Venue/UpdateVenue";
-import NewVenue from "./components/Admin/Venue/NewVenue";
-import UpdateInstructor from "./components/Admin/Instructor/UpdateInstructor";
-import NewInstructor from "./components/Admin/Instructor/NewInstructor";
+
+import React from 'react';
+import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Home from './components/Home/Home';
+import CurrentProductions from './components/WhatsOn/CurrentProductions';
+import Events from './components/WhatsOn/Events';
+import OurStory from './components/About/OurStory';
+import ImageGallery from './components/About/ImageGallery';
+import Instructors from './components/About/Instructors';
+import Classes from './components/Classes/Classes'
+import Address from './components/Visit/Address';
+import VisitorInfo from './components/Visit/VisitorInfo';
+import Contact from './components/Visit/Contact';
+import Login from './components/Admin/Login';
+import UpdateAbout from './components/Admin/About/UpdateAbout';
+import UpdateClass from './components/Admin/Class/UpdateClass';
+import NewClass from './components/Admin/Class/NewClass';
+import UpdateEvent from './components/Admin/Event/UpdateEvent';
+import NewEvent from './components/Admin/Event/NewEvent';
+import UpdateVenue from './components/Admin/Venue/UpdateVenue';
+import NewVenue from './components/Admin/Venue/NewVenue';
+import UpdateInstructor from './components/Admin/Instructor/UpdateInstructor';
+import NewInstructor from './components/Admin/Instructor/NewInstructor';
+
 import NavBar from "./components/Shared/NavBar";
 
 class Routes extends React.Component {
@@ -68,40 +66,14 @@ class Routes extends React.Component {
           />
           <Route exact path="/about/gallery" component={ImageGallery} />
 
-          <Route
-            exact
-            path="/about/instructors"
-            render={history => {
-              return (
-                <Instructors
-                  onContentSelect={onContentSelect}
-                  history={history}
-                  authentication={authentication}
-                />
-              );
-            }}
-          />
-          <Route
-            exact
-            path="/classes"
-            render={history => {
-              return (
-                <Classes
-                  onContentSelect={onContentSelect}
-                  history={history}
-                  authentication={authentication}
-                />
-              );
-            }}
-          />
-          <Route exact path="/classes/dance" component={Dance} />
-          <Route
-            exact
-            path="/classes/musical-theatre"
-            component={MusicalTheatre}
-          />
-          <Route exact path="/classes/acting" component={Acting} />
-          <Route exact path="/classes/preschool" component={PreSchool} />
+          <Route exact path="/about/instructors" render={(history) => {
+            return <Instructors onContentSelect={onContentSelect} history={history} authentication={authentication}/>
+          }}/>
+          <Route exact path="/classes" render={(history) => {
+            return <Classes onContentSelect={onContentSelect} history={history} authentication={authentication} />
+          }}/>
+          
+
           <Route exact path="/visit/address" component={Address} />
           <Route exact path="/visit/info" component={VisitorInfo} />
           {/* <Route exact path="/visit/contact" component={Contact} /> */}

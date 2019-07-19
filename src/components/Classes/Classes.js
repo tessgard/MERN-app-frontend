@@ -43,15 +43,14 @@ class Classes extends React.Component {
     }
   };
 
-  classPopup = () => {
-    // e.preventDefault();
-    // const name = e.target.innerText;
-    // const name = item.name;
-    const name = this.state.selectedClass.name;
-    const selectedClass = this.state.data.find((item, index) => {
-      return item.name === name;
-    });
-    let popup = document.querySelector(".class-show-popup-hide");
+   classPopup = (e) => {
+      e.preventDefault();
+      const name = e.target.innerText
+      const selectedClass = this.state.data.find((item, index) => {
+        return item.name === name
+      })
+      
+
 
     this.setState({
       popup: true,
