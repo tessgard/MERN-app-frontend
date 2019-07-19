@@ -7,7 +7,6 @@ class ImageGallery extends React.Component {
     images: null,
     popup: false,
     currentImage: null
-
   };
 
   async componentDidMount() {
@@ -35,15 +34,17 @@ class ImageGallery extends React.Component {
 
   }
 
-  imagePopup = (e) => {
+  imagePopup = e => {
     e.preventDefault();
     // console.log(e.currentTarget.src)
 
     this.setState({
       popup: true,
       currentImage: e.currentTarget.src
-    })  
-  };  
+
+    });
+  };
+
 
   removePopup = () => {
     this.setState({
@@ -53,10 +54,11 @@ class ImageGallery extends React.Component {
 
   
 
+
   render() {
-    const imageState = this.state.images
+    const imageState = this.state.images;
     if (!imageState) {
-      return null
+      return null;
     } else {
       const imageArr = imageState.imageUrls
 
@@ -71,34 +73,37 @@ class ImageGallery extends React.Component {
       // ---------------------------------------------
 
 
+
       return (
-        
         <div className="main-container">
-              <div id="overlay" className={this.state.popup && "show" }></div>
+          <div id="overlay" className={this.state.popup && "show"} />
 
           <div className="inner-main-container">
-          <h1 className="bcmaPageHeaderH1">Image Gallery</h1>
+            <h1 className="bcmaPageHeaderH1">Image Gallery</h1>
             <div className="gallery-outer-container">
             {imageArr.slice(1).map((url) => (
                  <img onClick={this.imagePopup}className="images rounded" src={url} ></img>
           ))}
+
             </div>
 
-          {
-            this.state.popup &&
+            {this.state.popup && (
               <div className="image-show-popup">
                 <div className="image-show-image-card">
-                  
-                  <img className="image-popup-large" src={this.state.currentImage}></img>
-                  <br></br>
-                  <a id="closing-link-image" href="#"><h2 onClick={this.removePopup}>x</h2></a>
+                  <img
+                    className="image-popup-large"
+                    src={this.state.currentImage}
+                    alt="Empty"
+                  />
+                  <br />
+                  <a id="closing-link-image" href="#">
+                    <h2 onClick={this.removePopup}>x</h2>
+                  </a>
                 </div>
               </div>
-          }
-
+            )}
           </div>
         </div>
-        
       );
     }
   }
