@@ -22,6 +22,7 @@ import UpdateVenue from './components/Admin/Venue/UpdateVenue';
 import NewVenue from './components/Admin/Venue/NewVenue';
 import UpdateInstructor from './components/Admin/Instructor/UpdateInstructor';
 import NewInstructor from './components/Admin/Instructor/NewInstructor';
+import NewAbout from './components/Admin/About/NewAbout';
 
 import NavBar from "./components/Shared/NavBar";
 
@@ -110,6 +111,19 @@ class Routes extends React.Component {
             render={history => {
               return (
                 <UpdateAbout
+                  authentication={authentication}
+                  history={history}
+                  selectedContent={selectedContent}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/admin/about/new"
+            render={history => {
+              return (
+                <NewAbout
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
