@@ -11,12 +11,27 @@ class ImageGallery extends React.Component {
 
   async componentDidMount() {
     const response = await axios.get(
-      "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/images/get-objects"
+      "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/image/get-objects"
     );
+
+    const lazyImages = [...document.querySelectorAll(".images")]
+      const inAdvance = 300
+
+      function lazyLoad() {
+        lazyImages.forEach(image => {
+          if (image.offsetTop < window.innerHeight + window.pageYOffset + inAdvance) {
+            image.src = image.dataset.src
+          }
+        })
+      }
+
+      lazyLoad()
 
     this.setState({
       images: response.data
     });
+
+
   }
 
   imagePopup = e => {
@@ -33,16 +48,32 @@ class ImageGallery extends React.Component {
 
   removePopup = () => {
     this.setState({
-      popup: false
-    });
+      popup: false,
+    })
   };
+
+  
+
 
   render() {
     const imageState = this.state.images;
     if (!imageState) {
       return null;
     } else {
-      const imageArr = imageState.imageUrls;
+      const imageArr = imageState.imageUrls
+
+      // lazy loading to load up only images in viewport to optimise load time
+      // ---------------------------------------------
+
+      
+
+      // window.addEventListener('scroll', lazyLoad());      
+      // window.addEventListener('resize', lazyLoad());
+
+      // ---------------------------------------------
+
+
+
       return (
         <div className="main-container">
           <div id="overlay" className={this.state.popup && "show"} />
@@ -50,14 +81,10 @@ class ImageGallery extends React.Component {
           <div className="inner-main-container">
             <h1 className="bcmaPageHeaderH1">Image Gallery</h1>
             <div className="gallery-outer-container">
-              {imageArr.slice(1).map(url => (
-                <img
-                  onClick={this.imagePopup}
-                  className="images"
-                  src={url}
-                  alt="Empty"
-                />
-              ))}
+            {imageArr.slice(1).map((url) => (
+                 <img onClick={this.imagePopup}className="images rounded" src={url} ></img>
+          ))}
+
             </div>
 
             {this.state.popup && (
