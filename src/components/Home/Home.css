@@ -1,7 +1,7 @@
 #punchLine {
   font-family: 'Merriweather', serif;
   font-size: 2.4vw;
-  margin-top: 350px;
+  margin-top: 50px;
 }
 
 #admin-link {
@@ -62,7 +62,7 @@
 ul.slides {
   display: block;
   position: relative;
-  height: 600px;
+  height: 650px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -91,16 +91,16 @@ ul.slides input {
   display: block;
   position: absolute;
   width: 100%;
-  height: 450px;
+  height: 640px;
   top: 0;
   opacity: 0;
   transition: all .7s ease-in-out;
+  
 }   
 
 .slide-image img {
   width: auto;
-  min-width: 100%;
-  height: 450px;
+  height: 100%;
 }
 
 .carousel-controls {
@@ -108,7 +108,7 @@ ul.slides input {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 9999;
   font-size: 100px;
   line-height: 600px;
   color: #fff;
@@ -132,7 +132,7 @@ ul.slides input {
 }
 
 .carousel-controls .prev-slide {
-  width: 59%;
+  width: 49%;
   text-align: left;
   left: 0;
 }
@@ -142,9 +142,6 @@ ul.slides input {
   text-align: right;
   right: 0;
 }
-
-
-
 
 input:checked + .slide-container .slide-image {
   opacity: 1;

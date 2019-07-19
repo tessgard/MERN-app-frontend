@@ -1,0 +1,25 @@
+// Override default variables before the import
+$body-bg: #000;
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+body {
+  background: white;
+}
+
+.main-container {
+  background: white;
+}
+
+.bcmaPageHeaderH1 {
+  font-family: 'Merriweather', serif;
+  font-size: 3vw;
+  margin-bottom: 50px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+

@@ -47,38 +47,38 @@ class Home extends React.Component {
           {/* ----------------------------------- */}
 
             <div>
-    <div class="carousel">
-        <ul class="slides">
-            <input type="radio" name="radio-buttons" id="img-1" checked />
-            <li class="slide-container">
-                <div class="slide-image">
+    <div className="carousel">
+        <ul className="slides">
+            <input type="radio" nameName="radio-buttons" id="img-1" checked />
+            <li className="slide-container">
+                <div className="slide-image">
 
                   <img src={this.state.data.length === 3 && this.state.data[0].image}></img>
 
 
                 </div>
-                <div class="carousel-controls">
-                    <label for="img-3" class="prev-slide">
+                <div className="carousel-controls">
+                    <label for="img-3" className="prev-slide">
                         <span>&lsaquo;</span>
                     </label>
-                    <label for="img-2" class="next-slide">
+                    <label for="img-2" className="next-slide">
                       <span>&rsaquo;</span>
                     </label>
                 </div>
             </li>
-            <input type="radio" name="radio-buttons" id="img-2" />
-            <li class="slide-container">
-                <div class="slide-image">
+            <input type="radio" nameName="radio-buttons" id="img-2" />
+            <li className="slide-container">
+                <div className="slide-image">
                     
                 <img src={this.state.data.length === 3 && this.state.data[1].image}></img>
 
 
                 </div>
-                <div class="carousel-controls">
+                <div className="carousel-controls">
                     <label for="img-1" class="prev-slide">
                         <span>&lsaquo;</span>
                     </label>
-                    <label for="img-3" class="next-slide">
+                    <label for="img-3" className="next-slide">
                         <span>&rsaquo;</span>
                     </label>
                 </div>
