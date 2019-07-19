@@ -15,9 +15,24 @@ class ImageGallery extends React.Component {
       "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/image/get-objects"
     );
 
+    const lazyImages = [...document.querySelectorAll(".images")]
+      const inAdvance = 300
+
+      function lazyLoad() {
+        lazyImages.forEach(image => {
+          if (image.offsetTop < window.innerHeight + window.pageYOffset + inAdvance) {
+            image.src = image.dataset.src
+          }
+        })
+      }
+
+      lazyLoad()
+
     this.setState({
       images: response.data
     });
+
+
   }
 
   imagePopup = (e) => {
@@ -48,21 +63,10 @@ class ImageGallery extends React.Component {
       // lazy loading to load up only images in viewport to optimise load time
       // ---------------------------------------------
 
-      const lazyImages = [...document.querySelectorAll(".images")]
-      const inAdvance = 300
+      
 
-      function lazyLoad() {
-        lazyImages.forEach(image => {
-          if (image.offsetTop < window.innerHeight + window.pageYOffset + inAdvance) {
-            image.src = image.dataset.src
-          }
-        })
-      }
-
-      lazyLoad()
-
-      window.addEventListener('scroll', lazyLoad());      
-      window.addEventListener('resize', lazyLoad());
+      // window.addEventListener('scroll', lazyLoad());      
+      // window.addEventListener('resize', lazyLoad());
 
       // ---------------------------------------------
 
@@ -76,7 +80,7 @@ class ImageGallery extends React.Component {
           <h1 className="bcmaPageHeaderH1">Image Gallery</h1>
             <div className="gallery-outer-container">
             {imageArr.slice(1).map((url) => (
-                 <img onClick={this.imagePopup}className="images" src={url}></img>
+                 <img onClick={this.imagePopup}className="images rounded" src={url} ></img>
           ))}
             </div>
 
