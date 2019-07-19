@@ -164,7 +164,7 @@ class Classes extends React.Component {
               <div className="class-show-popup">
                 <div className="class-show-content-card">
                   <a href="#">
-                    <h2 onClick={this.removePopup}>x</h2>
+                    <h2 onClick={this.removePopup}>X</h2>
                   </a>
                   <br />
                   <div className="class-popup-header">
