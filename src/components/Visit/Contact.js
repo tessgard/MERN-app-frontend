@@ -32,80 +32,51 @@ class Contact extends React.Component {
       });
       console.log(error.response);
     }
-    this.props.history.push("/visit/contact");
   };
 
   render() {
     return (
-      <div
-        className="main-container"
-        id="maincontainerish"
-        style={{ position: "absolute", left: "200px", top: "200px" }}
-      >
-        <h1 className="bcmaPageHeaderH1" id="headerish">
-          Update Class
-        </h1>
-        <div className="contact-grid-container">
-          <form
-            onSubmit={this.onFormSubmit}
-            style={{ display: "flex", flexDirection: "column" }}
-          >
-            <label htmlFor="email">Email: </label>
-            <input
-              type="text"
-              name="email"
-              value={this.state.email}
-              placeholder="Enter Email"
-              onChange={this.onInputChange}
-            />
+      <div className="main-container">
+        <div className="inner-main-container">
+          <h1 className="bcmaPageHeaderH1">Contact Us</h1>
+          <div className="contact-grid-container">
+            <form onSubmit={this.onFormSubmit}>
+              <label htmlFor="email">
+                Provide us with your email! We'll get in contact.
+              </label>
+              <input
+                type="text"
+                name="email"
+                value={this.state.email}
+                placeholder="Enter Email"
+                onChange={this.onInputChange}
+              />
+              <div className="classes-buttons">
+                <button onClick={this.onFormSubmit}>Submit</button>
+              </div>
+            </form>
+          </div>
 
-            <button onClick={this.onFormSubmit}>Submit</button>
-            <Link to="/classes">
-              <button>Back</button>
-            </Link>
-          </form>
+          <div className="alternative-contact-container">
+            <div className="contact-grid-container">
+              <p>You can reach us at (03) 5331 3086</p>
+            </div>
+          </div>
+
+          <div className="alternative-contact-container">
+            <div className="contact-grid-container">
+              <h2>Visit Us Directly</h2>
+            </div>
+          </div>
+          <div className="alternative-contact-container">
+            <div className="contact-grid-container">
+              <p>Unit A/112 Victoria St, Ballarat East VIC 3350</p>
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default withRouter(Contact);
-
-// class NewClass extends React.Component {
-//   state = {
-//     name: '',
-//     description: '',
-//     category: '',
-//     image: '',
-//     errors: []
-//   }
-
-//   render() {
-//     const { authentication } = this.props
-
-//     if (!authentication) {
-//       return <Redirect to="/admin/login" />
-//     }
-
-//     return (
-//       <div style={{position: 'absolute', left: '200px', top: '200px'}}>
-//       <h1>Update Class</h1>
-//       <form  onSubmit={this.onFormSubmit} style={{display: 'flex', flexDirection: 'column'}}>
-//         <label htmlFor="name">Name: </label>
-//         <input type="text" name="name" value={this.state.name} placeholde="name" onChange={this.onInputChange}/>
-//         <label htmlFor="description"> Description:</label>
-//         <textarea rows="10" cols="50" name="description" value={this.state.description} onChange={this.onInputChange} />
-//         <label htmlFor="faculty">Category: </label>
-//         <input type="text" name="category" value={this.state.category} onChange={this.onInputChange} />
-//         <label htmlFor="faculty">Image: </label>
-//         <input type="text" name="image" value={this.state.image} onChange={this.onInputChange} />
-//         <button onClick={this.onFormSubmit}>Submit</button>
-//         <Link to="/classes"><button>Back</button></Link>
-//       </form>
-//     </div>
-//     )
-//   }
-// }
-
-// export default withRouter(NewClass);
+export default Contact;
