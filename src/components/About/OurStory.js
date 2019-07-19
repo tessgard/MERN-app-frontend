@@ -55,7 +55,9 @@ class OurStory extends React.Component {
         <div className="main-container">
           <div className="inner-main-container">
             <h1 className="bcmaPageHeaderH1">About Us</h1>
-
+            <Link to="/admin/about/new">
+              <button id="new-about-button" className="class-button">Add New About</button>
+            </Link>
             {this.state.data.map((item, index) => (
               <div className="about-description-container" key={index}>
                 <div className="about-description">
