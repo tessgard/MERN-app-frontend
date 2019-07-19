@@ -98,7 +98,7 @@ class Classes extends React.Component {
                       to="/admin/class/update"
                       onClick={() => onContentSelect(item)}
                     >
-                      <button className="class-button">Update Details</button>
+                      <button className="about-button-delete">Update Details</button>
                     </Link>
                     <button
                       className="class-button"
