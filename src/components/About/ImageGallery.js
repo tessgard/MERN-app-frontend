@@ -12,7 +12,7 @@ class ImageGallery extends React.Component {
 
   async componentDidMount() {
     const response = await axios.get(
-      "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/images/get-objects"
+      "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/image/get-objects"
     );
 
     this.setState({
@@ -34,7 +34,8 @@ class ImageGallery extends React.Component {
     this.setState({
       popup: false,
     })
-  }
+  };
+
   
 
   render() {
@@ -43,6 +44,29 @@ class ImageGallery extends React.Component {
       return null
     } else {
       const imageArr = imageState.imageUrls
+
+      // lazy loading to load up only images in viewport to optimise load time
+      // ---------------------------------------------
+
+      const lazyImages = [...document.querySelectorAll(".images")]
+      const inAdvance = 300
+
+      function lazyLoad() {
+        lazyImages.forEach(image => {
+          if (image.offsetTop < window.innerHeight + window.pageYOffset + inAdvance) {
+            image.src = image.dataset.src
+          }
+        })
+      }
+
+      lazyLoad()
+
+      window.addEventListener('scroll', lazyLoad());      
+      window.addEventListener('resize', lazyLoad());
+
+      // ---------------------------------------------
+
+
       return (
         
         <div className="main-container">
