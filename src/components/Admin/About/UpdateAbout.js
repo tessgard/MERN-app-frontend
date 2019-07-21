@@ -47,14 +47,20 @@ class UpdateAbout extends React.Component {
     console.log(this.state)
 
     return (
-      <div style={{position: 'absolute', left: '200px', top: '200px'}}>
-        <h1>Update About</h1>
-        <form  onSubmit={this.onFormSubmit} style={{display: 'flex', flexDirection: 'column'}}>
-          <label htmlFor="description"> Description:</label>
-          <textarea rows="10" cols="50" value={this.state.description} onChange={this.onInputChange} name="description" id="description"/>
-          <button onClick={this.onFormSubmit}>Submit</button>
-          <Link to="/about/our-story"><button>Back</button></Link>
-        </form>
+      <div className="main-container" id="new-class-main-container">
+        <div className="new-class-header">
+          <h1>Update About</h1>
+        </div>
+        <div className="new-class-form-container">
+          <form  onSubmit={this.onFormSubmit} className="new-class-form">
+            <label htmlFor="description"> Description:</label>
+            <textarea rows="10" cols="50" value={this.state.description} onChange={this.onInputChange} name="description" id="description"/>
+            <div className="classes-buttons">
+              <button onClick={this.onFormSubmit}>Submit</button>
+              <Link to="/about/our-story"><button>Back</button></Link>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }

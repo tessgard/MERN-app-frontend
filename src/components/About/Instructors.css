@@ -23,3 +23,8 @@
   align-items: space-evenly;
   flex-direction: column;
 }
+
+#instructor-delete {
+  background-color: red;
+  color: white;
+}
