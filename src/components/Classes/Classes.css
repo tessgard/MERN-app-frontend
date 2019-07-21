@@ -144,3 +144,8 @@
   margin-top: 70px;
   position: absolute;
 }
+
+#delete-class {
+  background-color: red;
+  color: white;
+}

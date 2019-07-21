@@ -7,16 +7,7 @@ class OurStory extends React.Component {
   state = {
     data: []
   };
-
-  // async componentDidMount() {
-  //   const response = await axios.get(
-  //     "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/about"
-  //   );
-  //   console.log(response);
-  //   this.setState({
-  //     data: response.data
-  //   });
-  // }
+  
   async componentDidMount () {
     this.getAbouts()
   }
