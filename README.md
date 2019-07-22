@@ -28,10 +28,46 @@ https://github.com/tessgard | https://github.com/jieyiphua | https://github.com/
 
 Our client was the Ballarat Centre of Music and the Arts. In our conversations wth them we were asked to build a website that could be updated and changed on a contant basis. We wanted to create a Content Management System that was easy to use and wouldn't require the upskill of using something like Wordpress or Kentico. Using the full MERN Stack (MongoDB, ExpressJS, ReactJS, NodeJS) we set upon creating an application that was fully customizable through the main CRUD features(Create, Read, Update, Delete).
 
-### Contents
+## Contents
 
 - [MERN Project Links](#mern-project-links)
+- [About Project](#about-project)
+  - [Background](#background)
+  - [Functionality and Features](#functionality-and-features)
 
+## About Project
+
+### Background
+
+We were tasked with finding a real world client for our final assingment as Coder Academy students. The application that we were asked to build had to use the MERN stack as the basis for its foundation. The BCMA website that we ultimately built was shaped around the requirements of our client, Paula Heenan, Director at BCMA.
+
+We initially has issues finding a client. In fact, we were at the initial stages with another client at the beginning of the first week, until we realised that the scope of that project didn't quite fit the assignment requirements. Luckily, one of our classmates had multiple client options presented to us. The choice came down to two considerations: build a website application for a Jim's Mowing franchise owner or build a website application for the Ballarat Centre of Music and the Arts. After a short deliberation, we decided to proceed with the latter.
+
+Our reasoning was very simple. The BCMA facebook page demonstrated a vibrant ecosystem full of life and colour and we were able to draw inspiration from the artistic creativity of the productions and performances described in the feed. It was clear that the main source of business for BCMA was through their facebook feed. What was also clear was that BCMA lacked a portal/outlet whereby they could display their content in a more organised and streamlined way. We were excited by the possibilities presented to us by BCMA's dilemma.
+
+We had an initial conversation with Paula whereby the skeleton of the application was outlined. As BCMA's content is ever changing and fluid, Paula was very clear that she didn't want something to supersede the Facebook page but compliment it. Points of focus for the app were to display a what's on page, a faculty page, a gallery page and an about page.
+
+We determined pretty quickly that we wanted to create a fully functional CRUD application to make all the content on the website customisable and updateable. We decided that this would be our MVP and set about designing our app.
+
+### Functionality and Features
+
+The BCMA website is a portal whereby future or current BCMA clients and customers can access all the inforamtion reagrding BCMA's productions, classes, faculty and images. The website works in tandem with the BCMA facebook page in providing well rounded brad awareness and the dissemination of BCMA's creative content.
+
+  - BCMA's clients and customers have access to the website where they can pore through all of BCMA's available content           including classes, faculty and future productions.
+  - BCMA admin users can login via a route to have full admin access to the website. Being an admin gives the user                 access to create, read, update and delete all available content on the website including images on the home page carousel     and images associated with upcoming events.
+  - The images on the website are stored on AWS
+  - The website uses Json Web tokens for login/logout which are stored on local storage.
+
+
+Photo of admin login route.
+
+Photo of carousel
+
+## The Brief
+
+### The Client
+
+#### Ballarat Centre of Music and the Arts
 
 ### Short Answer Questions
 
