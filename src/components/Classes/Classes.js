@@ -2,6 +2,8 @@ import React from "react";
 import "./Classes.css";
 import axios from "axios";
 import { Link, withRouter } from "react-router-dom";
+import {Button} from 'react-bootstrap';
+
 
 class Classes extends React.Component {
   state = {
@@ -74,7 +76,7 @@ class Classes extends React.Component {
           <div className="inner-main-container">
             <h1 className="bcmaPageHeaderH1">Classes</h1>
             <Link to="/admin/class/new">
-              <button className="class-button">Add New Class</button>
+              <Button variant="outline-dark">Add New Class</Button>
             </Link>
             <div className="class-grid-container">
               {this.state.data.map((item, index) => (
@@ -98,11 +100,11 @@ class Classes extends React.Component {
                       to="/admin/class/update"
                       onClick={() => onContentSelect(item)}
                     >
-                      <button className="class-button">Update Details</button>
+                      <button className=" class-update-button">Update Details</button>
                     </Link>
                     <button
-                      id="delete-class"
-                      className="class-button"
+                      className="class-delete-button"
+
                       onClick={() => this.deleteClass(item)}
                     >
                       Delete Class
@@ -119,9 +121,9 @@ class Classes extends React.Component {
                     <h2 onClick={this.removePopup}>X</h2>
                   </a>
                   <br />
-                  {/* <div className="class-popup-header">
+                  <div className="class-popup-header">
                     <h2>{this.state.selectedClass.name}</h2>
-                  </div> */}
+                  </div>
                   <br />
                   <p>{this.state.selectedClass.description}</p>
                 </div>
