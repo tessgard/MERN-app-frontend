@@ -28,7 +28,7 @@ class UpdateEvent extends React.Component{
 
     try {
       console.log(this.state.id)
-      const response = await axios.put(`https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/event/${this.state.selectedContent.id}`
+      const response = await axios.put(`https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/event/${this.state.id}`
                   ,{name: this.state.name,
                   description: this.state.description,
                   image: this.state.image});

@@ -9,7 +9,7 @@ class Events extends React.Component {
     data: []
   };
 
-  async componentDidMount() {
+   async getEvents() {
     const response = await axios.get(
       "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/event"
     );
@@ -17,6 +17,10 @@ class Events extends React.Component {
     this.setState({
       data: response.data
     });
+  }
+
+  async componentDidMount() {
+    this.getEvents()
   }
 
   deleteEvent = async (item) => {
@@ -48,6 +52,7 @@ class Events extends React.Component {
 
                   <h2>{item.name}</h2>
                   <p>{item.description}</p>
+                  <img src={item.image}></img>
                 </div>
 
                 <Link 
@@ -58,14 +63,13 @@ class Events extends React.Component {
                 >
                   Update
                 </Link>
-                <Link
+                <button
                   id="event-delete"
                   className="delete-button"
-
                   onClick={() => this.deleteEvent(item)}
                 >
                   Delete
-                </Link>
+                </button>
               </div>
             ))}
           </div>
@@ -82,6 +86,8 @@ class Events extends React.Component {
                 <div className="about-description">
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
+                <img src={item.image}></img>
+
 
                 </div>
                 
