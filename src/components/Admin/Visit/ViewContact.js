@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect, Link, withRouter } from "react-router-dom";
 import axios from "axios";
-// import "./NewClass.css";
+import "./ViewContact.css";
 
 class ViewContact extends React.Component {
   state = {
@@ -31,13 +31,18 @@ class ViewContact extends React.Component {
     } else {
       return (
         <div className="main-container" id="new-class-main-container">
-          {this.state.data.map((item, index) => {
-            return (
-              <div key={index}>
-                <p>{item.email}</p>
-              </div>
-            );
-          })}
+          <div className="new-class-header">
+            <h1>To Contact List</h1>
+          </div>
+          <div className="contact-list-container">
+            {this.state.data.map((item, index) => {
+              return (
+                <div className="contact-item-container" key={index}>
+                  <p className="contact-show">{item.email}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       );
     }
