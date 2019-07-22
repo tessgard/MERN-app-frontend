@@ -25,6 +25,7 @@ import NewVenue from './components/Admin/Venue/NewVenue';
 import UpdateInstructor from './components/Admin/Instructor/UpdateInstructor';
 import NewInstructor from './components/Admin/Instructor/NewInstructor';
 import NewAbout from './components/Admin/About/NewAbout';
+import UpdateHomePhotos from './components/Admin/Home/UpdateHomePhotos';
 
 
 import NavBar from "./components/Shared/NavBar";
@@ -46,7 +47,13 @@ class Routes extends React.Component {
             exact
             path="/"
             render={history => {
-              return <Home authentication={authentication} history={history} />;
+              return (
+                <Home 
+                  authentication={authentication} 
+                  history={history} 
+                  onContentSelect={onContentSelect}
+                />
+              );
             }}
           />
           <Route
@@ -54,7 +61,18 @@ class Routes extends React.Component {
             path="/whats-on/current-productions"
             component={CurrentProductions}
           />
-          <Route exact path="/whats-on/events" component={Events} />
+          
+
+          <Route exact path="/whats-on/events" render={(history) => {
+            return <Events 
+            onContentSelect={onContentSelect} 
+            history={history} 
+            authentication={authentication} 
+            />
+          }}/>
+
+
+
           <Route
             exact
             path="/about/our-story"
@@ -155,7 +173,7 @@ class Routes extends React.Component {
             }}
           />
 
- <Route
+          <Route
             exact
             path="/admin/visit/contact"
             render={history => {
@@ -202,6 +220,8 @@ class Routes extends React.Component {
                 <UpdateEvent
                   authentication={authentication}
                   history={history}
+                  selectedContent={selectedContent}
+
                 />
               );
             }}
@@ -255,6 +275,18 @@ class Routes extends React.Component {
             render={history => {
               return (
                 <NewInstructor
+                  authentication={authentication}
+                  history={history}
+                  selectedContent={selectedContent}
+                />
+              );
+            }}
+          />
+          <Route
+            exact path="/admin/home/update-photos"
+            render={history => {
+              return (
+                <UpdateHomePhotos 
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}

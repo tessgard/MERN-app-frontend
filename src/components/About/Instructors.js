@@ -1,7 +1,9 @@
 import React from "react";
 import "./Instructors.css";
 import axios from "axios";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter } from 'react-router-dom';
+import {Button} from 'react-bootstrap';
+
 
 class Instructors extends React.Component {
   state = {
@@ -45,14 +47,11 @@ class Instructors extends React.Component {
       return (
         <div className="main-container">
           <div className="inner-main-container">
+
             <div className="new-class-header" id="about-header">
               <h1>Faculty</h1>
             </div>
-            <Link to="/admin/instructor/new">
-              <button id="new-about-button" className="class-button">
-                Add New Instructor
-              </button>
-            </Link>
+             <Link to='/admin/instructor/new'><Button variant="outline-dark">Add New</Button></Link>
 
             <div className="instructors-container">
               {this.state.data.map((item, index) => (
@@ -66,17 +65,18 @@ class Instructors extends React.Component {
                         to="/admin/instructor/update"
                         onClick={() => onContentSelect(item)}
                       >
-                        <button className="class-button">Update Details</button>
+                        <button className="instructors-update-button">Update Details</button>
                       </Link>
                       <button
                         id="instructor-delete"
-                        className="class-button"
+                        className="instructors-delete-button"
                         onClick={() => this.deleteInstructor(item)}
                       >
                         Delete Instructor
                       </button>
                     </div>
                   </div>
+
                 </div>
               ))}
             </div>

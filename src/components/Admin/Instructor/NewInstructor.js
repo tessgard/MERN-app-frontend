@@ -45,19 +45,42 @@ class NewInstructor extends React.Component{
     return (
       <div className="main-container" id="new-class-main-container">
         <div className="new-class-header">
-          <h1>New Instructor</h1>
+          <h1>Add new faculty member</h1>
         </div>
+
         <div className="new-class-form-container">
           <form onSubmit={this.onFormSubmit} className="new-class-form">
-            <label htmlFor="name">Name: </label>
-            <input type="text" name="name" value={this.state.name} placeholde="name" onChange={this.onInputChange}/>
+            <label id="first-label" htmlFor="name">
+              Name:
+            </label>
+            <input
+              type="text"
+              name="name"
+              value={this.state.name}
+              placeholder="Suzanna Smith"
+              onChange={this.onInputChange}
+            />
             <label htmlFor="description"> Expertise:</label>
-            <input type="text" name="description" value={this.state.description} onChange={this.onInputChange} />
+            <input
+              type="text"
+              name="description"
+              placeholder="Ballet"
+              value={this.state.description}
+              onChange={this.onInputChange}
+            />
             <label htmlFor="faculty">Faculty: </label>
-            <input type="text" name="faculty" value={this.state.faculty} onChange={this.onInputChange} />
+            <input
+              type="text"
+              name="faculty"
+              placeholder="Dance"
+              value={this.state.faculty}
+              onChange={this.onInputChange}
+            />
             <div className="classes-buttons">
               <button onClick={this.onFormSubmit}>Submit</button>
-              <Link to="/about/instructors"><button>Back</button></Link>
+              <Link to="/classes">
+                <button>Back</button>
+              </Link>
             </div>
           </form>
         </div>

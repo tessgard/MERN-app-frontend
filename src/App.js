@@ -65,6 +65,7 @@ class App extends React.Component {
   render() {
     const { login, logout, onContentSelect } = this;
     const { authentication, selectedContent } = this.state;
+    console.log(this.state)
     return (
       <Routes authentication={authentication} login={login} logout={logout} selectedContent={selectedContent} onContentSelect={onContentSelect}/>
     );

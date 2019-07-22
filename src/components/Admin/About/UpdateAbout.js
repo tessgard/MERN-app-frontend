@@ -25,6 +25,7 @@ class UpdateAbout extends React.Component {
 
     try {
       console.log(this.state.description)
+      console.log(this.props)
       const response = await axios.put(`https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/about/${this.state.id}`, {description: this.state.description})
 
       console.log(response)
