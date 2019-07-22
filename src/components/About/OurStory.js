@@ -2,6 +2,8 @@ import React from "react";
 import "./OurStory.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import {Button} from 'react-bootstrap';
+
 
 class OurStory extends React.Component {
   state = {
@@ -48,9 +50,9 @@ class OurStory extends React.Component {
               <h1>About Us</h1>
             </div>
             <Link to="/admin/about/new">
-              <button id="new-about-button" className="class-button">
-                Add New About
-              </button>
+              <Button id="new-about-button" variant="outline-dark">
+                Add New Paragraph
+              </Button>
             </Link>
             {this.state.data.map((item, index) => (
               <div className="about-description-container" key={index}>
@@ -62,14 +64,13 @@ class OurStory extends React.Component {
                     to="/admin/about/update"
                     onClick={() => onContentSelect(item)}
                   >
-                    <button className="class-button">Update Aboout</button>
+                    <button className="plain-button">Update</button>
                   </Link>
                   <button
-                    id="delete-button"
-                    className="class-button"
+                    className="delete-button"
                     onClick={() => this.deleteAbout(item)}
                   >
-                    Delete About
+                    Delete
                   </button>
                 </div>
               </div>
