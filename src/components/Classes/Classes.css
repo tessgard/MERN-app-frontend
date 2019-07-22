@@ -10,7 +10,6 @@
 .classes-card {
   width: 250px;
   height: 200px;
-  border: 1pt solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,17 +129,25 @@
 .show {
   display: block !important;
 }
+.buttons-container {
+  margin-top: 70px;
+  position: absolute;
+}
 
-.class-button {
+.class-delete-button {
+  text-decoration: none;
+  background: none;
+  border: 1px solid red;
+  padding: 10px;
+  margin: 2px;
+  background-color: white;
+  color: red;
+}
+.class-update-button {
   text-decoration: none;
   background: none;
   border: 1px solid black;
   padding: 10px;
   margin: 2px;
-  background-color: #acd6f3;
-}
-
-.buttons-container {
-  margin-top: 70px;
-  position: absolute;
+  background-color: white;
 }

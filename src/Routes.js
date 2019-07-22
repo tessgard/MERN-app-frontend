@@ -50,7 +50,18 @@ class Routes extends React.Component {
             path="/whats-on/current-productions"
             component={CurrentProductions}
           />
-          <Route exact path="/whats-on/events" component={Events} />
+          
+
+          <Route exact path="/whats-on/events" render={(history) => {
+            return <Events 
+            onContentSelect={onContentSelect} 
+            history={history} 
+            authentication={authentication} 
+            />
+          }}/>
+
+
+
           <Route
             exact
             path="/about/our-story"
@@ -151,6 +162,8 @@ class Routes extends React.Component {
                 <UpdateEvent
                   authentication={authentication}
                   history={history}
+                  selectedContent={selectedContent}
+
                 />
               );
             }}

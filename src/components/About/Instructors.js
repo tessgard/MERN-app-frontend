@@ -2,6 +2,8 @@ import React from "react";
 import "./Instructors.css";
 import axios from "axios";
 import { Link, withRouter } from 'react-router-dom';
+import {Button} from 'react-bootstrap';
+
 
 class Instructors extends React.Component {
   state = {
@@ -40,15 +42,15 @@ class Instructors extends React.Component {
         <div className="main-container">
           <div className="inner-main-container">
             <h1 className="bcmaPageHeaderH1">Faculty</h1>
-            <Link to='/admin/instructor/new'><button>Add New Instructor</button></Link>
+            <Link to='/admin/instructor/new'><Button variant="outline-dark">Add New Instructor</Button></Link>
             {this.state.data.map((item, index) => (
               <div className="instructor-detail-main" key={index}>
                 <div className="instructor-detail-content">
                   <h2>Name : {item.name}</h2>
                   <h4>Expertise: {item.description}</h4>
                   <h4>Faculty : {item.faculty}</h4>
-                  <Link to='/admin/instructor/update' onClick={() => onContentSelect(item)}><button>Update Details</button></Link>
-                  <button onClick={() => this.deleteInstructor(item)}>Delete Instructor</button>
+                  <Link to='/admin/instructor/update' onClick={() => onContentSelect(item)}><button className="instructos-update-button">Update Details</button></Link>
+                  <button className="instructors-delete-button" onClick={() => this.deleteInstructor(item)}>Delete Instructor</button>
                 </div>
               </div>
             ))}

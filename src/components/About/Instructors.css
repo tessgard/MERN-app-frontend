@@ -23,3 +23,29 @@
   align-items: space-evenly;
   flex-direction: column;
 }
+
+
+.instructors-delete-button {
+  text-decoration: none;
+  background: none;
+  border: 1px solid red;
+  padding: 10px;
+  margin: 2px;
+  background-color: white;
+  color: red;
+  display: block;
+  width: 150px;
+
+}
+
+.instructos-update-button {
+  text-decoration: none;
+  background: none;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 2px;
+  background-color: white;
+  display: block;
+  width: 150px;
+
+}
