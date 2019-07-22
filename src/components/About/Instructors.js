@@ -42,7 +42,7 @@ class Instructors extends React.Component {
         <div className="main-container">
           <div className="inner-main-container">
             <h1 className="bcmaPageHeaderH1">Faculty</h1>
-            <Link to='/admin/instructor/new'><Button variant="outline-dark">Add New Instructor</Button></Link>
+            <Link to='/admin/instructor/new'><Button variant="outline-dark">Add New</Button></Link>
             {this.state.data.map((item, index) => (
               <div className="instructor-detail-main" key={index}>
                 <div className="instructor-detail-content">
