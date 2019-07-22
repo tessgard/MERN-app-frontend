@@ -1,6 +1,37 @@
-## MERN Project
+# BCMA
+## Ballarat Centre of Music and the Arts 
 
-This is our final assignment as Coder Academy Students. The title will change according to the project we end up doing.
+This is our final assignment as Coder Academy Students. We have built a MERN stack application for the Ballarat Centre of Music and the Arts. Our aim was to create a full CRUD application that would act as a CMS for our client.
+
+
+Image about BCMA...Maybe logo
+
+## Contributors
+Tess | Jiey | Ivan
+--- | --- | ---
+https://github.com/tessgard | https://github.com/jieyiphua | https://github.com/donatoivan
+
+
+## MERN Project Links
+
+### Deployment
+
+- Client: https://bcma.netlify.com/
+- Server: https://deployment-mern-backend-tessivanjayz.gardtess.now.sh
+
+### Github Repos
+
+- Client: https://github.com/tessgard/MERN-app-frontend
+- Server: https://github.com/donatoivan/mern-backend
+
+## Summary
+
+Our client was the Ballarat Centre of Music and the Arts. In our conversations wth them we were asked to build a website that could be updated and changed on a contant basis. We wanted to create a Content Management System that was easy to use and wouldn't require the upskill of using something like Wordpress or Kentico. Using the full MERN Stack (MongoDB, ExpressJS, ReactJS, NodeJS) we set upon creating an application that was fully customizable through the main CRUD features(Create, Read, Update, Delete).
+
+### Contents
+
+- [MERN Project Links](#mern-project-links)
+
 
 ### Short Answer Questions
 
