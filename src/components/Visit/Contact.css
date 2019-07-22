@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
-  /* flex-direction: column; */
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .contact-grid-container form {
@@ -34,14 +35,19 @@
   padding: 10px;
 }
 
-.alternative-contact-container {
+/* .alternative-contact-container {
+  
   margin-top: 50px;
   font-size: 1.3vw;
-}
+} */
 
 #admin-contact-button {
   padding: 10px;
   border: 1px solid black;
   text-decoration: none;
   color: black;
+}
+
+#contact-container {
+  margin-top: 40px;
 }

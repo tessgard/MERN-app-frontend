@@ -41,8 +41,9 @@ class Contact extends React.Component {
       return (
         <div className="main-container">
           <div className="inner-main-container">
-            <h1 className="bcmaPageHeaderH1">Contact Us</h1>
-
+            <div className="new-class-header" id="about-header">
+              <h1>Contact Us</h1>
+            </div>
             <Link id="admin-contact-button" to="/admin/visit/contact">
               View Contacts
             </Link>
@@ -92,7 +93,9 @@ class Contact extends React.Component {
       return (
         <div className="main-container">
           <div className="inner-main-container">
-            <h1 className="bcmaPageHeaderH1">Contact Us</h1>
+            <div className="new-class-header" id="about-header">
+              <h1>Contact Us</h1>
+            </div>
             <div className="contact-grid-container">
               <form onSubmit={this.onFormSubmit}>
                 <label htmlFor="email">
@@ -110,27 +113,20 @@ class Contact extends React.Component {
                 </div>
               </form>
             </div>
-            <div className="alternative-contact-container">
-              <div className="contact-grid-container">
-                <p>You can reach us at (03) 5331 3086</p>
-              </div>
+
+            <div className="contact-grid-container" id="contact-container">
+              <h5>You can reach us at (03) 5331 3086</h5>
             </div>
-            <div className="alternative-contact-container">
-              <div className="contact-grid-container">
-                <h2>Visit Us Directly</h2>
-              </div>
+            <div className="contact-grid-container">
+              <h2>Visit Us Directly</h2>
             </div>
-            <div className="alternative-contact-container">
-              <div className="contact-grid-container">
-                <p>Unit A/112 Victoria St, Ballarat East VIC 3350</p>
-              </div>
+            <div className="contact-grid-container">
+              <h5>Unit A/112 Victoria St, Ballarat East VIC 3350</h5>
             </div>
-            <div className="alternative-contact-container">
-              <div className="contact-grid-container">
-                <>
-                  <Maps />
-                </>
-              </div>
+            <div className="contact-grid-container">
+              <>
+                <Maps />
+              </>
             </div>
           </div>
         </div>

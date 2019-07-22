@@ -45,14 +45,12 @@ class Classes extends React.Component {
     }
   };
 
-   classPopup = (e) => {
-      e.preventDefault();
-      const name = e.target.innerText
-      const selectedClass = this.state.data.find((item, index) => {
-        return item.name === name
-      })
-      
-
+  classPopup = e => {
+    e.preventDefault();
+    const name = e.target.innerText;
+    const selectedClass = this.state.data.find((item, index) => {
+      return item.name === name;
+    });
 
     this.setState({
       popup: true,
@@ -74,7 +72,9 @@ class Classes extends React.Component {
         <div className="main-container">
           <div id="overlay" className={this.state.popup && "show"} />
           <div className="inner-main-container">
-            <h1 className="bcmaPageHeaderH1">Classes</h1>
+            <div className="new-class-header" id="about-header">
+              <h1>Classes</h1>
+            </div>
             <Link to="/admin/class/new">
               <Button variant="outline-dark">Add New Class</Button>
             </Link>
@@ -113,22 +113,6 @@ class Classes extends React.Component {
                 </div>
               ))}
             </div>
-
-            {this.state.popup && (
-              <div className="class-show-popup">
-                <div className="class-show-content-card">
-                  <a href="#">
-                    <h2 onClick={this.removePopup}>X</h2>
-                  </a>
-                  <br />
-                  <div className="class-popup-header">
-                    <h2>{this.state.selectedClass.name}</h2>
-                  </div>
-                  <br />
-                  <p>{this.state.selectedClass.description}</p>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       );
@@ -138,8 +122,9 @@ class Classes extends React.Component {
           <div id="overlay" className={this.state.popup && "show"} />
 
           <div className="inner-main-container">
-            <h1 className="bcmaPageHeaderH1">Classes</h1>
-
+            <div className="new-class-header" id="about-header">
+              <h1>Classes</h1>
+            </div>
             <div className="class-grid-container">
               {this.state.data.map((item, index) => (
                 <div
