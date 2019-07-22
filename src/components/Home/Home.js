@@ -28,60 +28,47 @@ class Home extends React.Component {
     const { authentication } = this.props
     console.log(this.state.data[0]);
 
-// const Home = props => {
-// const { authentication } = props;
-
-
-
   if (!authentication) {
     return (
       <div className="landing-main-container">
         <div className="alert-box">
           <div className="free-trial">
-            <a href="#">
+            <Link to="/visit/contact">
               We offer free trials for your first group class, contact us today
               to get started!
-            </a>
+            </Link>
           </div>
         </div>
         <div className="hero-content-home">
-          <div >
-
-          <Carousel>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={this.state.data.length === 3 && this.state.data[0].image}
-      alt="First slide"></img>
+          <div>
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={this.state.data.length === 3 && this.state.data[0].image}
+                  alt="First slide"></img>
     
-    <Carousel.Caption>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={this.state.data.length === 3 && this.state.data[1].image}
-      alt="Third slide"></img>
-    
-
-    <Carousel.Caption>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={this.state.data.length === 3 && this.state.data[2].image}
-      alt="Third slide"></img>
-    
-
-    <Carousel.Caption>
-      
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
-
+                <Carousel.Caption>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={this.state.data.length === 3 && this.state.data[1].image}
+                  alt="Third slide"></img>
+                <Carousel.Caption>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={this.state.data.length === 3 && this.state.data[2].image}
+                  alt="Third slide"></img>
+                <Carousel.Caption>                 
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
           </div>
-
           <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
         </div>
         <div className="footerContainer">
@@ -98,19 +85,42 @@ class Home extends React.Component {
       <div className="landing-main-container">
         <div className="alert-box">
           <div className="free-trial">
-            <a href="#">
+            <Link to="/visit/contact">
               We offer free trials for your first group class, contact us today
               to get started!
-            </a>
+            </Link>
           </div>
         </div>
         <div className="hero-content-home">
-          <div className="image-gallery-home">
+          <div>
+            <Carousel>
+              <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={this.state.data.length === 3 && this.state.data[0].image}
+                alt="First slide"></img>
 
-          
-
+                <Carousel.Caption>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={this.state.data.length === 3 && this.state.data[1].image}
+                alt="Third slide"></img>
+                <Carousel.Caption>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={this.state.data.length === 3 && this.state.data[2].image}
+                alt="Third slide"></img>
+                <Carousel.Caption>
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
           </div>
-
           <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
         </div>
         <div className="footerContainer">

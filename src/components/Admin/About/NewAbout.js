@@ -57,4 +57,4 @@ class NewAbout extends React.Component {
   }
 }
 
-export default NewAbout;
+export default withRouter(NewAbout);
