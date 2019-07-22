@@ -45,9 +45,9 @@ class Classes extends React.Component {
     }
   };
 
-   classPopup = (e) => {
-      e.preventDefault();
-      const name = e.target.innerText
+   classPopup = () => {
+      // e.preventDefault();
+      const name = this.state.selectedClass.name
       const selectedClass = this.state.data.find((item, index) => {
         return item.name === name
       })
