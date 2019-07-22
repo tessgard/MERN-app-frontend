@@ -25,6 +25,7 @@ import NewVenue from './components/Admin/Venue/NewVenue';
 import UpdateInstructor from './components/Admin/Instructor/UpdateInstructor';
 import NewInstructor from './components/Admin/Instructor/NewInstructor';
 import NewAbout from './components/Admin/About/NewAbout';
+import UpdateHomePhotos from './components/Admin/Home/UpdateHomePhotos';
 
 
 import NavBar from "./components/Shared/NavBar";
@@ -46,7 +47,13 @@ class Routes extends React.Component {
             exact
             path="/"
             render={history => {
-              return <Home authentication={authentication} history={history} />;
+              return (
+                <Home 
+                  authentication={authentication} 
+                  history={history} 
+                  onContentSelect={onContentSelect}
+                />
+              );
             }}
           />
           <Route
@@ -155,7 +162,7 @@ class Routes extends React.Component {
             }}
           />
 
- <Route
+          <Route
             exact
             path="/admin/visit/contact"
             render={history => {
@@ -255,6 +262,18 @@ class Routes extends React.Component {
             render={history => {
               return (
                 <NewInstructor
+                  authentication={authentication}
+                  history={history}
+                  selectedContent={selectedContent}
+                />
+              );
+            }}
+          />
+          <Route
+            exact path="/admin/home/update-photos"
+            render={history => {
+              return (
+                <UpdateHomePhotos 
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
