@@ -48,6 +48,7 @@ class Instructors extends React.Component {
         <div className="main-container">
           <div className="inner-main-container">
 
+
             <div className="new-class-header" id="about-header">
               <h1>Faculty</h1>
             </div>

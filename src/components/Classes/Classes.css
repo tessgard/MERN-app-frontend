@@ -1,3 +1,10 @@
+a {
+  text-decoration: none;
+}
+
+a {color: #f00;}
+a:hover {color: #0f0;}
+
 .class-grid-container {
   width: 90%;
   height: 100%;
