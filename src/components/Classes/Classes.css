@@ -1,5 +1,5 @@
 .class-grid-container {
-  width: 100%;
+  width: 90%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -50,6 +50,7 @@
   color: white;
   font-size: 16px;
   padding: 16px 20px;
+  text-decoration: none;
 }
 
 .classes-details a {
@@ -79,7 +80,6 @@
 }
 
 .class-show-content-card {
-
   width: 700px;
   min-height: 400px;
 

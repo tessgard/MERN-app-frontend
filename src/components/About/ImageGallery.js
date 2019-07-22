@@ -14,24 +14,25 @@ class ImageGallery extends React.Component {
       "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/image/get-objects"
     );
 
-    const lazyImages = [...document.querySelectorAll(".images")]
-      const inAdvance = 300
+    const lazyImages = [...document.querySelectorAll(".images")];
+    const inAdvance = 300;
 
-      function lazyLoad() {
-        lazyImages.forEach(image => {
-          if (image.offsetTop < window.innerHeight + window.pageYOffset + inAdvance) {
-            image.src = image.dataset.src
-          }
-        })
-      }
+    function lazyLoad() {
+      lazyImages.forEach(image => {
+        if (
+          image.offsetTop <
+          window.innerHeight + window.pageYOffset + inAdvance
+        ) {
+          image.src = image.dataset.src;
+        }
+      });
+    }
 
-      lazyLoad()
+    lazyLoad();
 
     this.setState({
       images: response.data
     });
-
-
   }
 
   imagePopup = e => {
@@ -41,50 +42,46 @@ class ImageGallery extends React.Component {
     this.setState({
       popup: true,
       currentImage: e.currentTarget.src
-
     });
   };
 
-
   removePopup = () => {
     this.setState({
-      popup: false,
-    })
+      popup: false
+    });
   };
-
-  
-
 
   render() {
     const imageState = this.state.images;
     if (!imageState) {
       return null;
     } else {
-      const imageArr = imageState.imageUrls
+      const imageArr = imageState.imageUrls;
 
       // lazy loading to load up only images in viewport to optimise load time
       // ---------------------------------------------
 
-      
-
-      // window.addEventListener('scroll', lazyLoad());      
+      // window.addEventListener('scroll', lazyLoad());
       // window.addEventListener('resize', lazyLoad());
 
       // ---------------------------------------------
-
-
 
       return (
         <div className="main-container">
           <div id="overlay" className={this.state.popup && "show"} />
 
           <div className="inner-main-container">
-            <h1 className="bcmaPageHeaderH1">Image Gallery</h1>
+            <div className="new-class-header" id="about-header">
+              <h1>Image Gallery</h1>
+            </div>
             <div className="gallery-outer-container">
-            {imageArr.slice(1).map((url) => (
-                 <img onClick={this.imagePopup}className="images rounded" src={url} ></img>
-          ))}
-
+              {imageArr.slice(1).map(url => (
+                <img
+                  onClick={this.imagePopup}
+                  className="images rounded"
+                  src={url}
+                />
+              ))}
             </div>
 
             {this.state.popup && (

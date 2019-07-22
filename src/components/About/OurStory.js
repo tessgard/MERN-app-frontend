@@ -7,9 +7,9 @@ class OurStory extends React.Component {
   state = {
     data: []
   };
-  
-  async componentDidMount () {
-    this.getAbouts()
+
+  async componentDidMount() {
+    this.getAbouts();
   }
 
   getAbouts = async () => {
@@ -20,8 +20,8 @@ class OurStory extends React.Component {
     this.setState({
       data: response.data
     });
-  }
- 
+  };
+
   deleteAbout = async item => {
     try {
       const response = await axios.delete(
@@ -36,7 +36,6 @@ class OurStory extends React.Component {
     }
   };
 
-
   render() {
     const { onContentSelect, authentication } = this.props;
     console.log(this.props);
@@ -45,27 +44,32 @@ class OurStory extends React.Component {
       return (
         <div className="main-container">
           <div className="inner-main-container">
-            <h1 className="bcmaPageHeaderH1">About Us</h1>
+            <div className="new-class-header" id="about-header">
+              <h1>About Us</h1>
+            </div>
             <Link to="/admin/about/new">
-              <button id="new-about-button" className="class-button">Add New About</button>
+              <button id="new-about-button" className="class-button">
+                Add New About
+              </button>
             </Link>
             {this.state.data.map((item, index) => (
               <div className="about-description-container" key={index}>
                 <div className="about-description">
                   <p>{item.description}</p>
                 </div>
-                <div>
+                <div className="about-button-container">
                   <Link
-                    id="about-update"
                     to="/admin/about/update"
                     onClick={() => onContentSelect(item)}
                   >
-                    <button className="class-button">Update Aboout</button> 
+                    <button className="class-button">Update Aboout</button>
                   </Link>
-                  <button id="delete-button" className="class-button"
-                        onClick={() => this.deleteAbout(item)}
-                      >
-                        Delete About
+                  <button
+                    id="delete-button"
+                    className="class-button"
+                    onClick={() => this.deleteAbout(item)}
+                  >
+                    Delete About
                   </button>
                 </div>
               </div>
@@ -77,10 +81,15 @@ class OurStory extends React.Component {
       return (
         <div className="main-container">
           <div className="inner-main-container">
-            <h1 className="bcmaPageHeaderH1">About Us</h1>
-
+            <div className="new-class-header" id="about-header">
+              <h1>About Us</h1>
+            </div>
             {this.state.data.map((item, index) => (
-              <div className="about-description-container"key={index}>
+              <div
+                className="about-description-container"
+                id="about-description-container"
+                key={index}
+              >
                 <div className="about-description">
                   <p>{item.description}</p>
                 </div>
