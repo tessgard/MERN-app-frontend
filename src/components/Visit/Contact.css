@@ -38,3 +38,10 @@
   margin-top: 50px;
   font-size: 1.3vw;
 }
+
+#admin-contact-button {
+  padding: 10px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+}

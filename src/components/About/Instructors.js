@@ -26,7 +26,7 @@ class Instructors extends React.Component {
   deleteInstructor = async (item) => {
     console.log(item)
     try {
-      const response = axios.delete(`https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/instructor/${item._id}`)
+      const response = await axios.delete(`https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/instructor/${item._id}`)
       console.log(response)
       this.getInstructors()
     } catch (error) {
@@ -36,13 +36,14 @@ class Instructors extends React.Component {
 
   render() {
     const { onContentSelect, authentication } = this.props
-
+    console.log('render')
     if (authentication) {
       return (
         <div className="main-container">
           <div className="inner-main-container">
             <h1 className="bcmaPageHeaderH1">Faculty</h1>
             <Link to='/admin/instructor/new'><Button variant="outline-dark">Add New Instructor</Button></Link>
+
             {this.state.data.map((item, index) => (
               <div className="instructor-detail-main" key={index}>
                 <div className="instructor-detail-content">
@@ -51,6 +52,7 @@ class Instructors extends React.Component {
                   <h4>Faculty : {item.faculty}</h4>
                   <Link to='/admin/instructor/update' onClick={() => onContentSelect(item)}><button className="instructos-update-button">Update Details</button></Link>
                   <button className="instructors-delete-button" onClick={() => this.deleteInstructor(item)}>Delete Instructor</button>
+
                 </div>
               </div>
             ))}
