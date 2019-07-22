@@ -151,3 +151,8 @@
   margin: 2px;
   background-color: white;
 }
+
+#delete-class {
+  background-color: red;
+  color: white;
+}

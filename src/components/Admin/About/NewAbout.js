@@ -1,39 +1,30 @@
 import React from 'react';
-import { Redirect, withRouter, Link } from 'react-router-dom';
+import { Redirect, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
-class UpdateAbout extends React.Component {
+class NewAbout extends React.Component {
   state = {
-    data: null,
-    selectedContent: null,
-    description: this.props.selectedContent.description || '',
-    id: this.props.selectedContent._id,
+    description: "",
     errors: []
   }
 
-  componentDidMount() {
-    console.log('About component did mount')
-  }
-
-  onInputChange = (event) => {
-    this.setState({ description: event.target.value })
-    console.log(this.state)
-  }
+  onInputChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+    console.log(this.state);
+  };
 
   onFormSubmit = async (event) => {
     event.preventDefault();
-
+    console.log(this.state);
     try {
-      console.log(this.state.description)
-      console.log(this.props)
-      const response = await axios.put(`https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/about/${this.state.id}`, {description: this.state.description})
-
+      const newAbout  = { description: this.state.description };
+      const response = await axios.post('https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/about/new', newAbout);
       console.log(response)
-      console.log(response.config)
     } catch (error) {
       this.setState({
         errors: error.response
-      })
+      });
+      console.log(error.response);
     }
     this.props.history.push('/about/our-story')
   }
@@ -42,15 +33,13 @@ class UpdateAbout extends React.Component {
     const { authentication } = this.props
 
     if (!authentication) {
-      return <Redirect to="/admin/login" />
+      return <Redirect to="/admin/login" />;
     }
-    console.log('about render')
-    console.log(this.state)
 
     return (
       <div className="main-container" id="new-class-main-container">
         <div className="new-class-header">
-          <h1>Update About</h1>
+          <h1>New About</h1>
         </div>
         <div className="new-class-form-container">
           <form  onSubmit={this.onFormSubmit} className="new-class-form">
@@ -64,7 +53,8 @@ class UpdateAbout extends React.Component {
         </div>
       </div>
     )
+
   }
 }
 
-export default withRouter(UpdateAbout);
+export default withRouter(NewAbout);

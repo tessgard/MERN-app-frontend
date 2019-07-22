@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
@@ -14,6 +15,7 @@ import VisitorInfo from './components/Visit/VisitorInfo';
 import Contact from './components/Visit/Contact';
 import Login from './components/Admin/Login';
 import UpdateAbout from './components/Admin/About/UpdateAbout';
+import ViewContact from "./components/Admin/Visit/ViewContact";
 import UpdateClass from './components/Admin/Class/UpdateClass';
 import NewClass from './components/Admin/Class/NewClass';
 import UpdateEvent from './components/Admin/Event/UpdateEvent';
@@ -22,6 +24,9 @@ import UpdateVenue from './components/Admin/Venue/UpdateVenue';
 import NewVenue from './components/Admin/Venue/NewVenue';
 import UpdateInstructor from './components/Admin/Instructor/UpdateInstructor';
 import NewInstructor from './components/Admin/Instructor/NewInstructor';
+import NewAbout from './components/Admin/About/NewAbout';
+import UpdateHomePhotos from './components/Admin/Home/UpdateHomePhotos';
+
 
 import NavBar from "./components/Shared/NavBar";
 
@@ -42,7 +47,13 @@ class Routes extends React.Component {
             exact
             path="/"
             render={history => {
-              return <Home authentication={authentication} history={history} />;
+              return (
+                <Home 
+                  authentication={authentication} 
+                  history={history} 
+                  onContentSelect={onContentSelect}
+                />
+              );
             }}
           />
           <Route
@@ -77,13 +88,32 @@ class Routes extends React.Component {
           />
           <Route exact path="/about/gallery" component={ImageGallery} />
 
-          <Route exact path="/about/instructors" render={(history) => {
-            return <Instructors onContentSelect={onContentSelect} history={history} authentication={authentication}/>
-          }}/>
-          <Route exact path="/classes" render={(history) => {
-            return <Classes onContentSelect={onContentSelect} history={history} authentication={authentication} />
-          }}/>
-          
+          <Route
+            exact
+            path="/about/instructors"
+            render={history => {
+              return (
+                <Instructors
+                  onContentSelect={onContentSelect}
+                  history={history}
+                  authentication={authentication}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/classes"
+            render={history => {
+              return (
+                <Classes
+                  onContentSelect={onContentSelect}
+                  history={history}
+                  authentication={authentication}
+                />
+              );
+            }}
+          />
 
           <Route exact path="/visit/address" component={Address} />
           <Route exact path="/visit/info" component={VisitorInfo} />
@@ -101,7 +131,6 @@ class Routes extends React.Component {
               );
             }}
           />
-
           <Route
             exact
             path="/admin/login"
@@ -121,6 +150,35 @@ class Routes extends React.Component {
             render={history => {
               return (
                 <UpdateAbout
+                  authentication={authentication}
+                  history={history}
+                  selectedContent={selectedContent}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+
+            path="/admin/about/new"
+            render={history => {
+              return (
+                <NewAbout
+
+                  authentication={authentication}
+                  history={history}
+                  selectedContent={selectedContent}
+                />
+              );
+            }}
+          />
+
+          <Route
+            exact
+            path="/admin/visit/contact"
+            render={history => {
+              return (
+                <ViewContact
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
@@ -217,6 +275,18 @@ class Routes extends React.Component {
             render={history => {
               return (
                 <NewInstructor
+                  authentication={authentication}
+                  history={history}
+                  selectedContent={selectedContent}
+                />
+              );
+            }}
+          />
+          <Route
+            exact path="/admin/home/update-photos"
+            render={history => {
+              return (
+                <UpdateHomePhotos 
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}

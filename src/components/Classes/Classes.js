@@ -104,6 +104,7 @@ class Classes extends React.Component {
                     </Link>
                     <button
                       className="class-delete-button"
+
                       onClick={() => this.deleteClass(item)}
                     >
                       Delete Class
