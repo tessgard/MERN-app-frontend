@@ -28,13 +28,12 @@ class ImageGallery extends React.Component {
         })
       }
 
-      lazyLoad()
+
+    lazyLoad();
 
     this.setState({
       images: response.data
     });
-
-
   }
 
   imagePopup = (e) => {
@@ -47,13 +46,12 @@ class ImageGallery extends React.Component {
     })  
   };  
 
+
   removePopup = () => {
     this.setState({
-      popup: false,
-    })
+      popup: false
+    });
   };
-
-  
 
   render() {
     const imageState = this.state.images
@@ -62,17 +60,25 @@ class ImageGallery extends React.Component {
     } else {
       const imageArr = imageState.imageUrls      
 
+
       return (
         
         <div className="main-container">
               <div id="overlay" className={this.state.popup && "show" }></div>
 
           <div className="inner-main-container">
-          <h1 className="bcmaPageHeaderH1">Image Gallery</h1>
+
+            <div className="new-class-header" id="about-header">
+              <h1>Image Gallery</h1>
+            </div>
             <div className="gallery-outer-container">
-            {imageArr.slice(1).map((url) => (
-                 <img onClick={this.imagePopup}className="images rounded-cirlce" src={url} ></img>
-          ))}
+              {imageArr.slice(1).map(url => (
+                <img
+                  onClick={this.imagePopup}
+                  className="images rounded"
+                  src={url}
+                />
+              ))}
             </div>
 
           {

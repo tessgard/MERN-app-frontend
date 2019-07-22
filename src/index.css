@@ -18,7 +18,7 @@ code {
   height: 100%;
   margin-bottom: 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
   font-size: 14px;
 }
@@ -26,7 +26,10 @@ code {
 .inner-main-container {
   width: 80%;
   height: 100%;
-  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .bcmaPageHeaderH1 {
@@ -50,7 +53,7 @@ a {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 4;
   cursor: pointer;
 }
 
@@ -78,5 +81,3 @@ a {
   justify-content: center;
   align-items: center;
 }
-
-

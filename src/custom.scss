@@ -1,4 +1,4 @@
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap.scss";
 
 body {
   background: white;
@@ -6,11 +6,11 @@ body {
 
 .main-container {
   background: white;
-  
 }
 
 .bcmaPageHeaderH1 {
-  font-family: 'Merriweather', serif;
+  // font-family: 'Merriweather', serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 3vw;
   margin-bottom: 50px;
 }
