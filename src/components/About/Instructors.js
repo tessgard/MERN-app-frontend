@@ -18,7 +18,6 @@ class Instructors extends React.Component {
     const response = await axios.get(
       "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/instructor"
     );
-    console.log(response);
     this.setState({
       data: response.data
     });
@@ -26,14 +25,12 @@ class Instructors extends React.Component {
   };
 
   deleteInstructor = async item => {
-    console.log(item);
     try {
       const response = await axios.delete(
         `https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/instructor/${
           item._id
         }`
       );
-      console.log(response);
       this.getInstructors();
     } catch (error) {
       this.setState({ errors: error.response });
@@ -42,7 +39,6 @@ class Instructors extends React.Component {
 
   render() {
     const { onContentSelect, authentication } = this.props;
-    console.log("render");
     if (authentication) {
       return (
         <div className="main-container">
