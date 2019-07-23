@@ -3,8 +3,7 @@
 
 This is our final assignment as Coder Academy Students. We have built a MERN stack application for the Ballarat Centre of Music and the Arts. Our aim was to create a full CRUD application that would act as a CMS for our client.
 
-
-Image about BCMA...Maybe logo
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/ballarat-centre-of-music-and-the-arts-ballarat-dance-schools-e30a-938x704.jpg)
 
 ## Contributors
 Tess | Jiey | Ivan
@@ -58,10 +57,21 @@ The BCMA website is a portal whereby future or current BCMA clients and customer
   - The images on the website are stored on AWS
   - The website uses Json Web tokens for login/logout which are stored on local storage.
 
+### Home Page
 
-Photo of admin login route.
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/home-carousel.png)
 
-Photo of carousel
+### Admin login route
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/admin-login.png)
+
+### Home Page with admin logged in
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/logout-on-navbar.png)
+
+
+
+
 
 ## The Brief
 
