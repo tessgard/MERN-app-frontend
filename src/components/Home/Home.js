@@ -154,10 +154,28 @@ class Home extends React.Component {
             </div>
             <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
           </div>
-          <div className="footerContainer">
-            <div className="footerBox">
-              <p id="admin-link">Logged in as admin</p>
-            </div>
+          <div>
+            <Link 
+              to="/admin/home/update-photos"
+              onClick={() => onContentSelect(this.state.data[0])}>
+              <button className="plain-button">
+                Update Image 1
+              </button>
+            </Link>
+            <Link 
+              to="/admin/home/update-photos"
+              onClick={() => onContentSelect(this.state.data[1])}>
+              <button className="plain-button">
+                Update Image 2
+              </button>
+            </Link>
+            <Link 
+              to="/admin/home/update-photos"
+              onClick={() => onContentSelect(this.state.data[2])}>
+              <button className="plain-button">
+                Update Image 3
+              </button>
+            </Link>
           </div>
         </div>
       );
