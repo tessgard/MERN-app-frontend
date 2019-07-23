@@ -12,6 +12,10 @@ class NewClass extends React.Component {
     errors: []
   };
 
+  componentDidMount() {
+    this.props.handleLoading();
+  }
+
   onInputChange = event => {
     this.setState({ [event.target.name]: event.target.value });
     console.log(this.state);

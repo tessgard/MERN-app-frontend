@@ -9,6 +9,9 @@ class Contact extends React.Component {
     email: "",
     errors: []
   };
+  componentDidMount() {
+    this.props.handleLoading();
+  }
 
   onInputChange = event => {
     this.setState({ [event.target.name]: event.target.value });

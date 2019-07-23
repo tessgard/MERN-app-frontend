@@ -5,6 +5,10 @@ import "./Login.css";
 class Login extends React.Component {
   state = {};
 
+  componentDidMount() {
+    this.props.handleLoading();
+  }
+
   handleInput = e => {
     this.setState({
       [e.target.name]: e.target.value

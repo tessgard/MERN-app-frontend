@@ -18,6 +18,7 @@ class ViewContact extends React.Component {
       this.setState({
         data: response.data
       });
+      this.props.handleLoading();
     } catch (error) {
       this.setState({ error: error.message });
     }

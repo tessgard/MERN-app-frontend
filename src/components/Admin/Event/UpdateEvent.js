@@ -1,56 +1,61 @@
-import React from 'react';
-import { Redirect, withRouter, Link } from 'react-router-dom';
-import axios from 'axios';
+import React from "react";
+import { Redirect, withRouter, Link } from "react-router-dom";
+import axios from "axios";
 
-class UpdateEvent extends React.Component{
-  
+class UpdateEvent extends React.Component {
   state = {
     data: null,
     selectedContent: null,
-    name: this.props.selectedContent.name || '',
-    description: this.props.selectedContent.description || '',
-    image: this.props.selectedContent.image || '',
+    name: this.props.selectedContent.name || "",
+    description: this.props.selectedContent.description || "",
+    image: this.props.selectedContent.image || "",
     id: this.props.selectedContent._id,
     errors: []
-  }
+  };
 
   componentDidMount() {
-    console.log('event update component did mount')
+    console.log("event update component did mount");
+    this.props.handleLoading();
   }
 
-  onInputChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value })
-    console.log(this.state)
-  }
+  onInputChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+    console.log(this.state);
+  };
 
-  onFormSubmit = async (event) => {
+  onFormSubmit = async event => {
     event.preventDefault();
 
     try {
-      console.log(this.state.id)
-      const response = await axios.put(`https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/event/${this.state.id}`
-                  ,{name: this.state.name,
-                  description: this.state.description,
-                  image: this.state.image});
+      console.log(this.state.id);
+      const response = await axios.put(
+        `https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/event/${
+          this.state.id
+        }`,
+        {
+          name: this.state.name,
+          description: this.state.description,
+          image: this.state.image
+        }
+      );
 
-      console.log(response)
-      console.log(response.config)
+      console.log(response);
+      console.log(response.config);
     } catch (error) {
       this.setState({
         errors: error.response
-      })
+      });
     }
-    this.props.history.push('/whats-on/events')
-  }
-
+    this.props.history.push("/whats-on/events");
+  };
 
   render() {
-    const { authentication } = this.props
+    const { authentication } = this.props;
 
     if (!authentication) {
-      return <Redirect to="/admin/login" />
+      return <Redirect to="/admin/login" />;
     }
-    
+
     return (
       <div className="main-container" id="new-class-main-container">
         <div className="new-class-header">
@@ -95,7 +100,7 @@ class UpdateEvent extends React.Component{
           </form>
         </div>
       </div>
-    )
+    );
   }
 }
 

@@ -15,6 +15,7 @@ class UpdateInstructor extends React.Component {
 
   componentDidMount() {
     console.log("instructor update component did mount");
+    this.props.handleLoading();
   }
 
   onInputChange = event => {
