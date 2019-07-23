@@ -39,6 +39,7 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
   - [The Solution](#the-solution)
 - [Application Design](#application-design)
   - [Design Process](#design-process)
+    - [Version 1.0 Wireframe](#version-1.o-wireframe)
   - [User Stories](#user-stories)
 
 ## About The Project
@@ -160,20 +161,32 @@ Once logged in as admin, would look like this:
 
 The design process took three distinct steps that allowed us to arrive at our final application. Our initial conversation with the client was non-specific and loose. Knowing that we were going to have only three weeks to submit our assignment, we began to formalise a design blueprint for the application. We wanted to infuse a sense of youth and fun into the design, coupled with a sophistication and lightness that would speak to the demographic that is represented and targeted at BCMA. We scoured through the grups Facebook page, picking colour schemes that we thought were appropriate according to the BCMA branding that already existed. We had many aspirations for the application that we wanted to implement, but we came to the agreement that our MVP would be a full CRUD application.
 
+#### Version 1.0 Wireframe
+
 The first iteration of the design was very colourful and fun, vibrant and effervescent. Each individual content category had it's own bubbly pastel colour scheme. The navbar was on the left hand side to simulate a dashboard feel in order to facilitate seamless browser experience. Essentially, we wanted to convey that same fruitful fun that is conveyed and expressed every time the children atr BCMA enter stage right and perform their productions.
 
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/first-draft-design.png)
 
+Whilst our client was supportive of our design choices, she made it very clear that she wanted the content to do the talking. She felt that the application was a little busy not a true reflection of her business. She believed the colour scheme was too distracting and asked for a redraft
 
+#### Version 2.0 Wireframe
 
+The second iteration had a much more muted colour palette that sought to still capture a youthful but professional look that the client was looking for. We changed the navbar to be more of a standard navbar but kept the layout pretty much the same a as the previous iteration.
 
+In choosing our colour palette, we used the BCMA logo that was provided to us by Paula:
 
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/bcma-logo.jpg)
 
+We used the purple from the logo as the basis for our colour scheme in version 2.0. We still wanted to maintain that sense of fun from the previous version and bring a modern touch to the design. We thought this might strike a nice balance for our client and awaited her response.
 
-Whilst our client was supportive of our design choices, she made it very clear that she wanted the content to do the talking. She felt that the application was a little busy not a true reflection
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/second-draft-design.png)
+
+Our client again was very clear that she thought our design was still too busy. In retrospect and on further thought, it seems that we weren't capturing the true essence of BCMA and it's client base. We think we may have formulated our version of what BCMA was and hadn't cracked what was charming about BCMA and it's people. In working through the feedback we received from Paula, we came to the decision to simplify eveything as much as possible in order to meet pur client's requests. We stripped back most of the components and came to a much cleaner and simpler desgin aesthetic.
+
+#### Version 3.0 Wireframe
 
 ### User Stories
 
-### Wireframes
 
 
 
