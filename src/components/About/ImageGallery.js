@@ -31,6 +31,7 @@ class ImageGallery extends React.Component {
     }
 
     lazyLoad();
+
     this.setState({
       images: response.data
     });
@@ -39,8 +40,6 @@ class ImageGallery extends React.Component {
 
   imagePopup = e => {
     e.preventDefault();
-    // console.log(e.currentTarget.src)
-
     this.setState({
       popup: true,
       currentImage: e.currentTarget.src

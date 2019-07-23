@@ -17,7 +17,6 @@ class Faqs extends React.Component {
     const response = await axios.get(
       "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/faq"
     );
-    console.log(response);
     this.setState({
       data: response.data
     });
@@ -30,7 +29,6 @@ class Faqs extends React.Component {
           item._id
         }`
       );
-      console.log(response);
       this.getFaqs();
     } catch (error) {
       this.setState({ errors: error.response });
@@ -39,8 +37,6 @@ class Faqs extends React.Component {
 
   render() {
     const { onContentSelect, authentication } = this.props;
-    console.log(this.props);
-
     if (authentication) {
       return (
         <div className="main-container">
@@ -53,7 +49,6 @@ class Faqs extends React.Component {
                 Add New FAQ
               </Button>
             </Link>
-
             {this.state.data.map((item, index) => (
               <div className="about-description-container" key={index}>
                 <div className="about-description">
@@ -86,7 +81,6 @@ class Faqs extends React.Component {
                 </div>
               </div>
             ))}
-                  
                 </div>
               </div>
             ))}
@@ -111,11 +105,9 @@ class Faqs extends React.Component {
                   <p>{item.question}</p>
                   <p>answer:</p>
                   <p>{item.answer}</p>
-
                 </div>
               </div>
-            ))}
-            
+            ))} 
           </div>
         </div>
       );
