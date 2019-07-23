@@ -49,7 +49,6 @@ class Home extends React.Component {
                     }
                     alt="First slide"
                   />
-
                   <Carousel.Caption />
                 </Carousel.Item>
                 <Carousel.Item>
@@ -107,7 +106,6 @@ class Home extends React.Component {
                     }
                     alt="First slide"
                   />
-
                   <Carousel.Caption />
                 </Carousel.Item>
                 <Carousel.Item>
@@ -131,26 +129,6 @@ class Home extends React.Component {
                   <Carousel.Caption />
                 </Carousel.Item>
               </Carousel>
-            </div>
-            <div>
-              <Link
-                to="/admin/home/update-photos"
-                onClick={() => onContentSelect(this.state.data[0])}
-              >
-                <button className="class-button">Update Image 1</button>
-              </Link>
-              <Link
-                to="/admin/home/update-photos"
-                onClick={() => onContentSelect(this.state.data[1])}
-              >
-                <button className="class-button">Update Image 2</button>
-              </Link>
-              <Link
-                to="/admin/home/update-photos"
-                onClick={() => onContentSelect(this.state.data[2])}
-              >
-                <button className="class-button">Update Image 3</button>
-              </Link>
             </div>
             <h3 id="punch-line">Professional Exciting Positive Friendly Fun</h3>
           </div>
