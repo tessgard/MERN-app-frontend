@@ -8,8 +8,6 @@ import OurStory from "./components/About/OurStory";
 import ImageGallery from "./components/About/ImageGallery";
 import Instructors from "./components/About/Instructors";
 import Classes from "./components/Classes/Classes";
-import Address from "./components/Visit/Address";
-import VisitorInfo from "./components/Visit/VisitorInfo";
 import Contact from "./components/Visit/Contact";
 import Login from "./components/Admin/Login";
 import UpdateAbout from "./components/Admin/About/UpdateAbout";
@@ -28,7 +26,6 @@ import Faqs from "./components/Faqs";
 import NewFaq from "./components/Admin/Faq/NewFaq";
 import UpdateFaq from "./components/Admin/Faq/UpdateFaq";
 import Loader from "./components/Shared/Loader";
-
 import NavBar from "./components/Shared/NavBar";
 
 class Routes extends React.Component {
@@ -74,7 +71,6 @@ class Routes extends React.Component {
             path="/whats-on/current-productions"
             component={CurrentProductions}
           />
-
           <Route
             exact
             path="/whats-on/events"
@@ -89,7 +85,6 @@ class Routes extends React.Component {
               );
             }}
           />
-
           <Route
             exact
             path="/about/our-story"
@@ -118,7 +113,6 @@ class Routes extends React.Component {
               );
             }}
           />
-
           <Route
             exact
             path="/faqs"
@@ -132,7 +126,6 @@ class Routes extends React.Component {
               );
             }}
           />
-
           <Route
             exact
             path="/about/instructors"
@@ -161,10 +154,6 @@ class Routes extends React.Component {
               );
             }}
           />
-
-          {/* <Route exact path="/visit/address" component={Address} />
-          <Route exact path="/visit/info" component={VisitorInfo} />
-          <Route exact path="/visit/contact" component={Contact} /> */}
           <Route
             exact
             path="/visit/contact"
@@ -247,7 +236,6 @@ class Routes extends React.Component {
               );
             }}
           />
-
           <Route
             exact
             path="/admin/visit/contact"
