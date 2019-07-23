@@ -7,6 +7,7 @@
   align-content: center;
   position: fixed;
   z-index: 3;
+  /* box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2); */
 }
 
 .nav-bar-right-box {
@@ -22,21 +23,21 @@
   background-repeat: no-repeat;
   margin-left: 20px;
 }
-
+/* 
 .nav-bar-links {
   text-decoration: none;
   color: black;
   font-size: 1.5vw;
-}
+} */
 
-.nav-bar-link-box {
+/* .nav-bar-link-box {
   width: 12vw;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
+} */
+/* 
 .log-out-button {
   width: 50px;
   height: 50px;
@@ -51,4 +52,4 @@
   font-size: 70%;
   font-weight: 800;
   cursor: pointer;
-}
+} */
