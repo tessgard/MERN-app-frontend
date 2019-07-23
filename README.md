@@ -33,6 +33,10 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
 - [About Project](#about-project)
   - [Background](#background)
   - [Functionality and Features](#functionality-and-features)
+- [The Brief](#the-brief)
+  - [The Client](#the-client)
+  - [The Problem](#the-problem)
+  - [The Solution](#the-solution)
 
 ## About Project
 
@@ -69,15 +73,50 @@ The BCMA website is a portal whereby future or current BCMA clients and customer
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/logout-on-navbar.png)
 
-
-
-
-
 ## The Brief
 
 ### The Client
 
 #### Ballarat Centre of Music and the Arts
+
+
+> Enter the exciting world of preforming arts!
+> Become a ‘triple threat’ and dance, sing and act your way into an unbelievable world of expression,
+> fun and friendships or simply come in and enjoy your own private sessions to just learn to sing songs that YOU want to sing.
+>
+> Discover your potential and build confidence through becoming great at something you love to do.
+>
+> At the BCMA you can try a variety of classes before committing to any. 
+> The range is extraordinary; the teachers amazing, the results come from what you put in. 
+> Our philosophy is to ‘Maximise YOUR potential’, whatever that may be
+>
+> The BCMA studios include 2 large Dance/Drama studios, 6 Music Studios and a Costume department.
+>
+> We have an exciting dance, drama and music centre, which in addition to offering up-to-date facilities 
+> also makes families very welcome in our lounge area. 
+> Comfortable couches, large screen for DVD viewing, tea and coffee facilities 
+> and the convenience of being close to supermarkets, banks, kinders and schools
+>
+> On the main artery into Ballarat from Melbourne (Victoria Street), we are easy to find, easy to park at and easy to relax in.
+
+BCMA is a Arts academy catering for all sorts of classes for the vibrant arts community in Ballarat. A quick look at their Facebook page reveals the important role this organisation plays in the wider Ballarat community.
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/bcma-facebook.png)
+
+### The Problem
+
+There were two main considerations that we had to work through during our application build. These two considerations were the main driving force behind most of our design decisions and helped direct us on the way to generating our final outcome.
+
+Whilst BCMA had a very successful method of communicating with their current clients and members, they were very aware that apart from their Facebook profile, they had no substantial digital footprint. In order to communicate with the general public about the content they produce and provide, it was clear to BCMA that they had to branch out and build a website. With 31 professional instructors and a multitude of classes and productions on offer across multiple venues, BCMA were after a way to centralize all this information for current and prospective clients. 
+
+The second consideration that we had to assess was that BCMA's portfolio of content was ever changing and non-static. Many of the details for venues and dates for BCMA's offerings are not known until the very last minute and so it was important to them to have an application that was updateable at the click of a button.
+
+### The Solution
+
+We wanted to create a very simple to use Content Management System for BCMA in order to facilitate a seamless user experience during the creating and updating of content on their website. We set out to make the webiste completely updateable and deletable barring a few exceptiops. These exceptions were purporseful design decisions that were made in order to maintain a comprehensive structure for the website.
+
+The main categories presented to us from 
+
 
 ### Short Answer Questions
 
