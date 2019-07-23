@@ -74,9 +74,9 @@ class Home extends React.Component {
                 </Carousel.Item>
               </Carousel>
             </div>
-            <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
+            <h3 id="punch-line">Professional Exciting Positive Friendly Fun</h3>
           </div>
-          <div className="footerContainer">
+          <div className="footer-container">
             <div className="footerBox">
               <Link to="/admin/login/" className="admin-link">
                 <p id="admin-link">admin login ></p>
@@ -152,29 +152,26 @@ class Home extends React.Component {
                 <button className="class-button">Update Image 3</button>
               </Link>
             </div>
-            <h3 id="punchLine">Professional Exciting Positive Friendly Fun</h3>
+            <h3 id="punch-line">Professional Exciting Positive Friendly Fun</h3>
           </div>
           <div>
-            <Link 
+            <Link
               to="/admin/home/update-photos"
-              onClick={() => onContentSelect(this.state.data[0])}>
-              <button className="plain-button">
-                Update Image 1
-              </button>
+              onClick={() => onContentSelect(this.state.data[0])}
+            >
+              <button className="plain-button">Update Image 1</button>
             </Link>
-            <Link 
+            <Link
               to="/admin/home/update-photos"
-              onClick={() => onContentSelect(this.state.data[1])}>
-              <button className="plain-button">
-                Update Image 2
-              </button>
+              onClick={() => onContentSelect(this.state.data[1])}
+            >
+              <button className="plain-button">Update Image 2</button>
             </Link>
-            <Link 
+            <Link
               to="/admin/home/update-photos"
-              onClick={() => onContentSelect(this.state.data[2])}>
-              <button className="plain-button">
-                Update Image 3
-              </button>
+              onClick={() => onContentSelect(this.state.data[2])}
+            >
+              <button className="plain-button">Update Image 3</button>
             </Link>
           </div>
         </div>

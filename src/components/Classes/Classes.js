@@ -52,7 +52,6 @@ class Classes extends React.Component {
       return item.name === name;
     });
 
-
     this.setState({
       popup: true,
       selectedClass: selectedClass

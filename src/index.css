@@ -32,12 +32,6 @@ code {
   flex-direction: column;
 }
 
-.bcmaPageHeaderH1 {
-  font-family: "Merriweather", serif;
-  font-size: 3vw;
-  margin-bottom: 50px;
-}
-
 a {
   color: black;
   text-decoration: none;

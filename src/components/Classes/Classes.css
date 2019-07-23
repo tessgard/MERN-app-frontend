@@ -2,8 +2,12 @@ a {
   text-decoration: none;
 }
 
-a {color: #f00;}
-a:hover {color: #0f0;}
+a {
+  color: #f00;
+}
+a:hover {
+  color: #0f0;
+}
 
 .class-grid-container {
   width: 90%;
@@ -22,7 +26,6 @@ a:hover {color: #0f0;}
   align-items: center;
   text-align: center;
   margin: 10px 10px;
-  /* background: rgba(0, 0, 0, 0.6); */
 }
 
 .classes-name-container h3 {

@@ -2,14 +2,14 @@
 /*font-family: 'Montserrat', sans-serif;*/
 @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 /* font-family: 'Sacramento', cursive; */
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
 
 * {
   margin: 0px;
   font-family: "Montserrat", sans-serif;
 }
 
-.appOuterContainer {
+.app-outer-container {
   width: 100%;
   height: 100%;
   display: flex;
