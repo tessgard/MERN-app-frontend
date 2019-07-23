@@ -1,5 +1,5 @@
-#punchLine {
-  font-family: 'Merriweather', serif;
+#punch-line {
+  font-family: "Merriweather", serif;
   font-size: 2.4vw;
   margin-top: 50px;
 }
@@ -29,12 +29,11 @@
 .image-gallery-home {
   width: 80%;
   max-height: 150px;
-  
 }
 
-.footerContainer {
+.footer-container {
   margin-top: 180px;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 .alert-box {
@@ -50,13 +49,6 @@
   width: 50%;
   margin-right: 20px;
   text-align: center;
-}
-
-
-/* carousel */
-
-.carousel {
- 
 }
 
 ul.slides {
@@ -79,12 +71,11 @@ ul.slides {
 }
 
 ul.slides input {
-  display: none; 
+  display: none;
 }
 
-
-.slide-container { 
-  display: block; 
+.slide-container {
+  display: block;
 }
 
 .slide-image {
@@ -94,9 +85,8 @@ ul.slides input {
   height: 640px;
   top: 0;
   opacity: 0;
-  transition: all .7s ease-in-out;
-  
-}   
+  transition: all 0.7s ease-in-out;
+}
 
 .slide-image img {
   width: auto;
@@ -119,11 +109,11 @@ ul.slides input {
   position: absolute;
   padding: 0 20px;
   opacity: 0;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
   cursor: pointer;
 }
 
-.slide-image:hover + .carousel-controls label{
+.slide-image:hover + .carousel-controls label {
   opacity: 0.5;
 }
 
@@ -150,7 +140,7 @@ input:checked + .slide-container .slide-image {
 }
 
 input:checked + .slide-container .carousel-controls label {
-   display: block; 
+  display: block;
 }
 
 input#img-1:checked ~ .carousel-dots label#img-dot-1,
@@ -159,8 +149,9 @@ input#img-3:checked ~ .carousel-dots label#img-dot-3,
 input#img-4:checked ~ .carousel-dots label#img-dot-4,
 input#img-5:checked ~ .carousel-dots label#img-dot-5,
 input#img-6:checked ~ .carousel-dots label#img-dot-6 {
-opacity: 1;
+  opacity: 1;
 }
 
-
-input:checked + .slide-container .nav label { display: block; }
+input:checked + .slide-container .nav label {
+  display: block;
+}

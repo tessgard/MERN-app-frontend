@@ -1,6 +1,144 @@
-## MERN Project
+# BCMA
+## Ballarat Centre of Music and the Arts 
 
-This is our final assignment as Coder Academy Students. The title will change according to the project we end up doing.
+This is our final assignment as Coder Academy Students. We have built a MERN stack application for the Ballarat Centre of Music and the Arts. Our aim was to create a full CRUD application that would act as a CMS for our client.
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/ballarat-centre-of-music-and-the-arts-ballarat-dance-schools-e30a-938x704.jpg)
+
+## Contributors
+Tess | Jiey | Ivan
+--- | --- | ---
+https://github.com/tessgard | https://github.com/jieyiphua | https://github.com/donatoivan
+
+
+## MERN Project Links
+
+### Deployment
+
+- Client: https://bcma.netlify.com/
+- Server: https://deployment-mern-backend-tessivanjayz.gardtess.now.sh
+
+### Github Repos
+
+- Client: https://github.com/tessgard/MERN-app-frontend
+- Server: https://github.com/donatoivan/mern-backend
+
+## Summary
+
+Our client was the Ballarat Centre of Music and the Arts. In our conversations wth them we were asked to build a website that could be updated and changed on a contant basis. We wanted to create a Content Management System that was easy to use and wouldn't require the upskill of using something like Wordpress or Kentico. Using the full MERN Stack (MongoDB, ExpressJS, ReactJS, NodeJS) we set upon creating an application that was fully customizable through the main CRUD features(Create, Read, Update, Delete).
+
+## Contents
+
+- [MERN Project Links](#mern-project-links)
+- [About Project](#about-project)
+  - [Background](#background)
+  - [Functionality and Features](#functionality-and-features)
+- [The Brief](#the-brief)
+  - [The Client](#the-client)
+  - [The Problem](#the-problem)
+  - [The Solution](#the-solution)
+
+## About Project
+
+### Background
+
+We were tasked with finding a real world client for our final assingment as Coder Academy students. The application that we were asked to build had to use the MERN stack as the basis for its foundation. The BCMA website that we ultimately built was shaped around the requirements of our client, Paula Heenan, Director at BCMA.
+
+We initially has issues finding a client. In fact, we were at the initial stages with another client at the beginning of the first week, until we realised that the scope of that project didn't quite fit the assignment requirements. Luckily, one of our classmates had multiple client options presented to us. The choice came down to two considerations: build a website application for a Jim's Mowing franchise owner or build a website application for the Ballarat Centre of Music and the Arts. After a short deliberation, we decided to proceed with the latter.
+
+Our reasoning was very simple. The BCMA facebook page demonstrated a vibrant ecosystem full of life and colour and we were able to draw inspiration from the artistic creativity of the productions and performances described in the feed. It was clear that the main source of business for BCMA was through their facebook feed. What was also clear was that BCMA lacked a portal/outlet whereby they could display their content in a more organised and streamlined way. We were excited by the possibilities presented to us by BCMA's dilemma.
+
+We had an initial conversation with Paula whereby the skeleton of the application was outlined. As BCMA's content is ever changing and fluid, Paula was very clear that she didn't want something to supersede the Facebook page but compliment it. Points of focus for the app were to display a what's on page, a faculty page, a gallery page and an about page.
+
+We determined pretty quickly that we wanted to create a fully functional CRUD application to make all the content on the website customisable and updateable. We decided that this would be our MVP and set about designing our app.
+
+### Functionality and Features
+
+The BCMA website is a portal whereby future or current BCMA clients and customers can access all the inforamtion reagrding BCMA's productions, classes, faculty and images. The website works in tandem with the BCMA facebook page in providing well rounded brad awareness and the dissemination of BCMA's creative content.
+
+  - BCMA's clients and customers have access to the website where they can pore through all of BCMA's available content           including classes, faculty and future productions.
+  - BCMA admin users can login via a route to have full admin access to the website. Being an admin gives the user                 access to create, read, update and delete all available content on the website including images on the home page carousel     and images associated with upcoming events.
+  - The images on the website are stored on AWS
+  - The website uses Json Web tokens for login/logout which are stored on local storage.
+
+### Home Page
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/home-carousel.png)
+
+### Admin login route
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/admin-login.png)
+
+### Home Page with admin logged in
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/logout-on-navbar.png)
+
+## The Brief
+
+### The Client
+
+#### Ballarat Centre of Music and the Arts
+
+
+> Enter the exciting world of preforming arts!
+> Become a ‘triple threat’ and dance, sing and act your way into an unbelievable world of expression,
+> fun and friendships or simply come in and enjoy your own private sessions to just learn to sing songs that YOU want to sing.
+>
+> Discover your potential and build confidence through becoming great at something you love to do.
+>
+> At the BCMA you can try a variety of classes before committing to any. 
+> The range is extraordinary; the teachers amazing, the results come from what you put in. 
+> Our philosophy is to ‘Maximise YOUR potential’, whatever that may be
+>
+> The BCMA studios include 2 large Dance/Drama studios, 6 Music Studios and a Costume department.
+>
+> We have an exciting dance, drama and music centre, which in addition to offering up-to-date facilities 
+> also makes families very welcome in our lounge area. 
+> Comfortable couches, large screen for DVD viewing, tea and coffee facilities 
+> and the convenience of being close to supermarkets, banks, kinders and schools
+>
+> On the main artery into Ballarat from Melbourne (Victoria Street), we are easy to find, easy to park at and easy to relax in.
+
+BCMA is a Arts academy catering for all sorts of classes for the vibrant arts community in Ballarat. A quick look at their Facebook page reveals the important role this organisation plays in the wider Ballarat community.
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/bcma-facebook.png)
+
+### The Problem
+
+There were two main considerations that we had to work through during our application build. These two considerations were the main driving force behind most of our design decisions and helped direct us on the way to generating our final outcome.
+
+Whilst BCMA had a very successful method of communicating with their current clients and members, they were very aware that apart from their Facebook profile, they had no substantial digital footprint. In order to communicate with the general public about the content they produce and provide, it was clear to BCMA that they had to branch out and build a website. With 31 professional instructors and a multitude of classes and productions on offer across multiple venues, BCMA were after a way to centralize all this information for current and prospective clients. 
+
+The second consideration that we had to assess was that BCMA's portfolio of content was ever changing and non-static. Many of the details for venues and dates for BCMA's offerings are not known until the very last minute and so it was important to them to have an application that was updateable at the click of a button.
+
+### The Solution
+
+We wanted to create a very simple to use Content Management System for BCMA in order to facilitate a seamless user experience during the creating and updating of content on their website. We set out to make the webiste completely updateable and deletable barring a few exceptiops. These exceptions were purporseful design decisions that were made in order to maintain a comprehensive structure for the website.
+
+We were provided with a basic outline of categories to focus on through a word document provided by the client. A small section of these documents are deatialed as follows:
+
+#### About us
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/about-us-paula.png)
+
+#### Classes
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/classes-paula.png)
+
+#### Faculty
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/faculty-paula.png)
+
+#### Gallery
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/gallery-paula.png)
+
+#### FAQ
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/faq-paula.png)
+
+#### Whats On
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/whats-on-paula.png)
+
+
+
+
+
 
 ### Short Answer Questions
 

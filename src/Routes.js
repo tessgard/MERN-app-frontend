@@ -1,20 +1,18 @@
-
-
-import React from 'react';
-import './App.css';
-import { Route, Switch } from 'react-router-dom';
-import Home from './components/Home/Home';
-import CurrentProductions from './components/WhatsOn/CurrentProductions';
-import Events from './components/WhatsOn/Events';
-import OurStory from './components/About/OurStory';
-import ImageGallery from './components/About/ImageGallery';
-import Instructors from './components/About/Instructors';
-import Classes from './components/Classes/Classes'
-import Address from './components/Visit/Address';
-import VisitorInfo from './components/Visit/VisitorInfo';
-import Contact from './components/Visit/Contact';
-import Login from './components/Admin/Login';
-import UpdateAbout from './components/Admin/About/UpdateAbout';
+import React from "react";
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
+import Home from "./components/Home/Home";
+import CurrentProductions from "./components/WhatsOn/CurrentProductions";
+import Events from "./components/WhatsOn/Events";
+import OurStory from "./components/About/OurStory";
+import ImageGallery from "./components/About/ImageGallery";
+import Instructors from "./components/About/Instructors";
+import Classes from "./components/Classes/Classes";
+import Address from "./components/Visit/Address";
+import VisitorInfo from "./components/Visit/VisitorInfo";
+import Contact from "./components/Visit/Contact";
+import Login from "./components/Admin/Login";
+import UpdateAbout from "./components/Admin/About/UpdateAbout";
 import ViewContact from "./components/Admin/Visit/ViewContact";
 import UpdateClass from './components/Admin/Class/UpdateClass';
 import NewClass from './components/Admin/Class/NewClass';
@@ -29,12 +27,22 @@ import UpdateHomePhotos from './components/Admin/Home/UpdateHomePhotos';
 import Faqs from './components/Faqs';
 import NewFaq from './components/Admin/Faq/NewFaq';
 import UpdateFaq from './components/Admin/Faq/UpdateFaq';
+import Loader from "./components/Shared/Loader";
+
 
 
 
 import NavBar from "./components/Shared/NavBar";
 
 class Routes extends React.Component {
+  state = {
+    isLoading: true
+  };
+
+  handleLoading = () => {
+    this.setState({ isLoading: false });
+  };
+
   render() {
     const {
       authentication,
@@ -43,18 +51,22 @@ class Routes extends React.Component {
       selectedContent,
       onContentSelect
     } = this.props;
+
     return (
       <Switch>
-        <div className="appOuterContainer">
+        <div className="app-outer-container">
           <NavBar authentication={authentication} logout={logout} />
+          {this.state.isLoading && <Loader />}
+
           <Route
             exact
             path="/"
             render={history => {
               return (
-                <Home 
-                  authentication={authentication} 
-                  history={history} 
+                <Home
+                  handleLoading={this.handleLoading}
+                  authentication={authentication}
+                  history={history}
                   onContentSelect={onContentSelect}
                 />
               );
@@ -65,17 +77,21 @@ class Routes extends React.Component {
             path="/whats-on/current-productions"
             component={CurrentProductions}
           />
-          
 
-          <Route exact path="/whats-on/events" render={(history) => {
-            return <Events 
-            onContentSelect={onContentSelect} 
-            history={history} 
-            authentication={authentication} 
-            />
-          }}/>
-
-
+          <Route
+            exact
+            path="/whats-on/events"
+            render={history => {
+              return (
+                <Events
+                  onContentSelect={onContentSelect}
+                  history={history}
+                  authentication={authentication}
+                  handleLoading={this.handleLoading}
+                />
+              );
+            }}
+          />
 
           <Route
             exact
@@ -86,6 +102,21 @@ class Routes extends React.Component {
                   onContentSelect={onContentSelect}
                   history={history}
                   authentication={authentication}
+                  handleLoading={this.handleLoading}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/about/gallery"
+            render={history => {
+              return (
+                <ImageGallery
+                  onContentSelect={onContentSelect}
+                  history={history}
+                  authentication={authentication}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -104,8 +135,8 @@ class Routes extends React.Component {
               );
             }}
           />
-
           <Route exact path="/about/gallery" component={ImageGallery} />
+
 
           <Route
             exact
@@ -116,6 +147,7 @@ class Routes extends React.Component {
                   onContentSelect={onContentSelect}
                   history={history}
                   authentication={authentication}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -126,6 +158,7 @@ class Routes extends React.Component {
             render={history => {
               return (
                 <Classes
+                  handleLoading={this.handleLoading}
                   onContentSelect={onContentSelect}
                   history={history}
                   authentication={authentication}
@@ -134,9 +167,9 @@ class Routes extends React.Component {
             }}
           />
 
-          <Route exact path="/visit/address" component={Address} />
+          {/* <Route exact path="/visit/address" component={Address} />
           <Route exact path="/visit/info" component={VisitorInfo} />
-          {/* <Route exact path="/visit/contact" component={Contact} /> */}
+          <Route exact path="/visit/contact" component={Contact} /> */}
           <Route
             exact
             path="/visit/contact"
@@ -146,6 +179,7 @@ class Routes extends React.Component {
                   authentication={authentication}
                   history={history}
                   login={login}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -159,6 +193,7 @@ class Routes extends React.Component {
                   authentication={authentication}
                   history={history}
                   login={login}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -172,6 +207,7 @@ class Routes extends React.Component {
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -189,18 +225,16 @@ class Routes extends React.Component {
               );
             }}
           />
-          <Route
-        
+          <Route  
             exact
-
             path="/admin/about/new"
             render={history => {
               return (
                 <NewAbout
-
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -231,6 +265,7 @@ class Routes extends React.Component {
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -244,6 +279,7 @@ class Routes extends React.Component {
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -257,6 +293,7 @@ class Routes extends React.Component {
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -270,7 +307,7 @@ class Routes extends React.Component {
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
-
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -280,7 +317,11 @@ class Routes extends React.Component {
             path="/admin/event/new"
             render={history => {
               return (
-                <NewEvent authentication={authentication} history={history} />
+                <NewEvent
+                  authentication={authentication}
+                  history={history}
+                  handleLoading={this.handleLoading}
+                />
               );
             }}
           />
@@ -292,6 +333,7 @@ class Routes extends React.Component {
                 <UpdateVenue
                   authentication={authentication}
                   history={history}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -301,7 +343,11 @@ class Routes extends React.Component {
             path="/admin/venue/new"
             render={history => {
               return (
-                <NewVenue authentication={authentication} history={history} />
+                <NewVenue
+                  authentication={authentication}
+                  history={history}
+                  handleLoading={this.handleLoading}
+                />
               );
             }}
           />
@@ -314,6 +360,7 @@ class Routes extends React.Component {
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -327,18 +374,21 @@ class Routes extends React.Component {
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
           />
           <Route
-            exact path="/admin/home/update-photos"
+            exact
+            path="/admin/home/update-photos"
             render={history => {
               return (
-                <UpdateHomePhotos 
+                <UpdateHomePhotos
                   authentication={authentication}
                   history={history}
                   selectedContent={selectedContent}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}

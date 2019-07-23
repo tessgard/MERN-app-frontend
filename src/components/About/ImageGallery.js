@@ -7,7 +7,6 @@ class ImageGallery extends React.Component {
     images: null,
     popup: false,
     currentImage: null
-
   };
 
   async componentDidMount() {
@@ -15,37 +14,39 @@ class ImageGallery extends React.Component {
       "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/image/get-objects"
     );
 
-     // lazy loading to load up only images in viewport to optimise load time
+    // lazy loading to load up only images in viewport to optimise load time
 
-    const lazyImages = [...document.querySelectorAll(".images")]
-      const inAdvance = 300
+    const lazyImages = [...document.querySelectorAll(".images")];
+    const inAdvance = 300;
 
-      function lazyLoad() {
-        lazyImages.forEach(image => {
-          if (image.offsetTop < window.innerHeight + window.pageYOffset + inAdvance) {
-            image.src = image.dataset.src
-          }
-        })
-      }
-
+    function lazyLoad() {
+      lazyImages.forEach(image => {
+        if (
+          image.offsetTop <
+          window.innerHeight + window.pageYOffset + inAdvance
+        ) {
+          image.src = image.dataset.src;
+        }
+      });
+    }
 
     lazyLoad();
 
     this.setState({
       images: response.data
     });
+    this.props.handleLoading();
   }
 
-  imagePopup = (e) => {
+  imagePopup = e => {
     e.preventDefault();
     // console.log(e.currentTarget.src)
 
     this.setState({
       popup: true,
       currentImage: e.currentTarget.src
-    })  
-  };  
-
+    });
+  };
 
   removePopup = () => {
     this.setState({
@@ -54,20 +55,16 @@ class ImageGallery extends React.Component {
   };
 
   render() {
-    const imageState = this.state.images
+    const imageState = this.state.images;
     if (!imageState) {
-      return null
+      return null;
     } else {
-      const imageArr = imageState.imageUrls      
-
+      const imageArr = imageState.imageUrls;
 
       return (
-        
         <div className="main-container">
-              <div id="overlay" className={this.state.popup && "show" }></div>
-
+          <div id="overlay" className={this.state.popup && "show"} />
           <div className="inner-main-container">
-
             <div className="new-class-header" id="about-header">
               <h1>Image Gallery</h1>
             </div>
@@ -77,25 +74,27 @@ class ImageGallery extends React.Component {
                   onClick={this.imagePopup}
                   className="images rounded"
                   src={url}
+                  alt="Gallery"
                 />
               ))}
             </div>
-
-          {
-            this.state.popup &&
+            {this.state.popup && (
               <div className="image-show-popup">
                 <div className="image-show-image-card">
-                  
-                  <img className="image-popup-large" src={this.state.currentImage}></img>
-                  <br></br>
-                  <a id="closing-link-image" href="#"><h2 onClick={this.removePopup}>x</h2></a>
+                  <img
+                    className="image-popup-large"
+                    src={this.state.currentImage}
+                    alt="Gallery"
+                  />
+                  <br />
+                  <a id="closing-link-image" href="#">
+                    <h2 onClick={this.removePopup}>x</h2>
+                  </a>
                 </div>
               </div>
-          }
-
+            )}
           </div>
         </div>
-        
       );
     }
   }

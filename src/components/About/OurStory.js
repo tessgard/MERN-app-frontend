@@ -22,6 +22,7 @@ class OurStory extends React.Component {
     this.setState({
       data: response.data
     });
+    this.props.handleLoading();
   };
 
   deleteAbout = async item => {

@@ -17,6 +17,7 @@ const NavBar = props => {
 
   if (authentication) {
     return (
+
       <div className="navBar">
       <Link
           to="/"
@@ -58,6 +59,7 @@ const NavBar = props => {
 
   
         
+
       </div>
     );
   } else {
@@ -94,8 +96,7 @@ const NavBar = props => {
           </Navbar.Collapse>
         </Navbar>
 
-          
-
+    
         </div>
       </div>
     );
