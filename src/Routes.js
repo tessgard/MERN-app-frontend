@@ -14,17 +14,24 @@ import Contact from "./components/Visit/Contact";
 import Login from "./components/Admin/Login";
 import UpdateAbout from "./components/Admin/About/UpdateAbout";
 import ViewContact from "./components/Admin/Visit/ViewContact";
-import UpdateClass from "./components/Admin/Class/UpdateClass";
-import NewClass from "./components/Admin/Class/NewClass";
-import UpdateEvent from "./components/Admin/Event/UpdateEvent";
-import NewEvent from "./components/Admin/Event/NewEvent";
-import UpdateVenue from "./components/Admin/Venue/UpdateVenue";
-import NewVenue from "./components/Admin/Venue/NewVenue";
-import UpdateInstructor from "./components/Admin/Instructor/UpdateInstructor";
-import NewInstructor from "./components/Admin/Instructor/NewInstructor";
-import NewAbout from "./components/Admin/About/NewAbout";
-import UpdateHomePhotos from "./components/Admin/Home/UpdateHomePhotos";
+import UpdateClass from './components/Admin/Class/UpdateClass';
+import NewClass from './components/Admin/Class/NewClass';
+import UpdateEvent from './components/Admin/Event/UpdateEvent';
+import NewEvent from './components/Admin/Event/NewEvent';
+import UpdateVenue from './components/Admin/Venue/UpdateVenue';
+import NewVenue from './components/Admin/Venue/NewVenue';
+import UpdateInstructor from './components/Admin/Instructor/UpdateInstructor';
+import NewInstructor from './components/Admin/Instructor/NewInstructor';
+import NewAbout from './components/Admin/About/NewAbout';
+import UpdateHomePhotos from './components/Admin/Home/UpdateHomePhotos';
+import Faqs from './components/Faqs';
+import NewFaq from './components/Admin/Faq/NewFaq';
+import UpdateFaq from './components/Admin/Faq/UpdateFaq';
 import Loader from "./components/Shared/Loader";
+
+
+
+
 import NavBar from "./components/Shared/NavBar";
 
 class Routes extends React.Component {
@@ -117,6 +124,22 @@ class Routes extends React.Component {
 
           <Route
             exact
+            path="/faqs"
+            render={history => {
+              return (
+                <Faqs
+                  onContentSelect={onContentSelect}
+                  history={history}
+                  authentication={authentication}
+                />
+              );
+            }}
+          />
+          <Route exact path="/about/gallery" component={ImageGallery} />
+
+
+          <Route
+            exact
             path="/about/instructors"
             render={history => {
               return (
@@ -191,6 +214,19 @@ class Routes extends React.Component {
           />
           <Route
             exact
+            path="/admin/faq/update"
+            render={history => {
+              return (
+                <UpdateFaq
+                  authentication={authentication}
+                  history={history}
+                  selectedContent={selectedContent}
+                />
+              );
+            }}
+          />
+          <Route  
+            exact
             path="/admin/about/new"
             render={history => {
               return (
@@ -203,6 +239,22 @@ class Routes extends React.Component {
               );
             }}
           />
+          <Route
+        
+        exact
+
+        path="/admin/faq/new"
+        render={history => {
+          return (
+            <NewFaq
+
+              authentication={authentication}
+              history={history}
+              selectedContent={selectedContent}
+            />
+          );
+        }}
+      />
 
           <Route
             exact
