@@ -91,7 +91,7 @@ class UpdateInstructor extends React.Component {
             />
             <div className="classes-buttons">
               <button onClick={this.onFormSubmit}>Submit</button>
-              <Link to="/classes">
+              <Link to="/about/instructors">
                 <button>Back</button>
               </Link>
             </div>

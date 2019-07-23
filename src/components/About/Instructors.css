@@ -1,4 +1,3 @@
-
 .instructors-container {
   display: flex;
   flex-wrap: wrap;
@@ -8,15 +7,9 @@
   width: 100%;
 }
 
-
-
-
-
 .instructor-detail-content h2 {
   border-bottom: 1px solid black;
 }
-
-
 
 .instructor-detail-main {
   height: 300px;
@@ -43,7 +36,6 @@
   flex-direction: column;
 }
 
-
 .instructors-delete-button {
   text-decoration: none;
   background: none;
@@ -54,7 +46,6 @@
   color: red;
   display: block;
   width: 150px;
-
 }
 
 .instructors-update-button {
@@ -67,4 +58,3 @@
   display: block;
   width: 150px;
 }
-

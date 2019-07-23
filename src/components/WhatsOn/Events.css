@@ -1,3 +1,16 @@
 #event-update {
   margin-right: 10px;
 }
+
+#event-details-container h2 {
+  border-bottom: 1px solid black;
+  margin-bottom: 30px;
+}
+
+#event-details-container p {
+  margin-bottom: 30px;
+}
+
+#event-details-container img {
+  left: 50%;
+}

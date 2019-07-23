@@ -47,14 +47,16 @@ class Events extends React.Component {
       return (
         <div className="main-container">
           <div className="inner-main-container">
-            <h1 className="bcmaPageHeaderH1">What's on</h1>
+            <div className="new-class-header" id="about-header">
+              <h1>What's On</h1>
+            </div>
             <Link to="/admin/event/new">
               <Button variant="outline-dark">Add New Event</Button>
             </Link>
 
             {this.state.data.map((item, index) => (
               <div className="about-description-container" key={index}>
-                <div className="about-description">
+                <div className="about-description" id="event-details-container">
                   <h2>{item.name}</h2>
                   <p>{item.description}</p>
                   <img src={item.image} />
@@ -84,11 +86,12 @@ class Events extends React.Component {
       return (
         <div className="main-container">
           <div className="inner-main-container">
-            <h1 className="bcmaPageHeaderH1">What's on</h1>
-
+            <div className="new-class-header" id="about-header">
+              <h1>What's On</h1>
+            </div>
             {this.state.data.map((item, index) => (
-              <div key={index}>
-                <div className="about-description">
+              <div className="about-description-container" key={index}>
+                <div className="about-description" id="event-details-container">
                   <h2>{item.name}</h2>
                   <p>{item.description}</p>
                   <img src={item.image} />

@@ -87,7 +87,7 @@ class NewEvent extends React.Component {
             />
             <div className="classes-buttons">
               <button onClick={this.onFormSubmit}>Submit</button>
-              <Link to="/classes">
+              <Link to="/whats-on/events">
                 <button>Back</button>
               </Link>
             </div>

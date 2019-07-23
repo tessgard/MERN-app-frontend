@@ -53,7 +53,6 @@ class Instructors extends React.Component {
             <Link to="/admin/instructor/new">
               <Button variant="outline-dark">Add New</Button>
             </Link>
-
             <div className="instructors-container">
               {this.state.data.map((item, index) => (
                 <div className="instructor-detail-main" key={index}>

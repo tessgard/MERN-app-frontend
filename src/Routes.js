@@ -47,7 +47,7 @@ class Routes extends React.Component {
 
     return (
       <Switch>
-        <div className="appOuterContainer">
+        <div className="app-outer-container">
           <NavBar authentication={authentication} logout={logout} />
           {this.state.isLoading && <Loader />}
 
