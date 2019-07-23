@@ -11,44 +11,44 @@ const NavBar = props => {
         <div className="companyLogo" />
         <div className="navBarRightBox">
           <div className="navBarLinkBox">
-            <a
+            <Link
               className="navBarLinks"
-              href="https://bcma.netlify.com/"
+              to="/"
             >
               Home
-            </a>
+            </Link>
           </div>
           <div className="navBarLinkBox">
-            <a
+            <Link
               className="navBarLinks"
-              href="https://bcma.netlify.com/about/our-story"
+              to="/about/our-story"
             >
               About Us
-            </a>
+            </Link>
           </div>
           <div className="navBarLinkBox">
-            <a
+            <Link
               className="navBarLinks"
-              href="https://bcma.netlify.com/classes"
+              to="/classes"
             >
               Classes
-            </a>
+            </Link>
           </div>
           <div className="navBarLinkBox">
-            <a
+            <Link
               className="navBarLinks"
-              href="https://bcma.netlify.com/about/gallery"
+              href="/about/gallery"
             >
               Gallery
-            </a>
+            </Link>
           </div>
           <div className="navBarLinkBox">
-            <a
+            <Link
               className="navBarLinks"
-              href="https://bcma.netlify.com/whats-on/events"
+              href="/whats-on/events"
             >
               What's On
-            </a>
+            </Link>
           </div>
           <div className="navBarLinkBox">
           <a href="https://www.facebook.com/ballaratcentreofmusicandthearts/" target="none" ><svg
@@ -81,50 +81,50 @@ const NavBar = props => {
   } else {
     return (
       <div className="navBar">
-        <a
-          href="https://bcma.netlify.com/"
+        <Link
+          to="/"
           className="companyLogo"
         />
         <div className="navBarRightBox">
           <div className="navBarLinkBox">
-            <a
+            <Link
               className="navBarLinks"
-              href="https://bcma.netlify.com/"
+              to="/"
             >
               Home
-            </a>
+            </Link>
           </div>
           <div className="navBarLinkBox">
-            <a
+            <Link
               className="navBarLinks"
-              href="https://bcma.netlify.com/about/our-story"
+              to="/about/our-story"
             >
               About Us
-            </a>
+            </Link>
           </div>
           <div className="navBarLinkBox">
-            <a
+            <Link
               className="navBarLinks"
-              href="https://bcma.netlify.com/classes"
+              to="/classes"
             >
               Classes
-            </a>
+            </Link>
           </div>
           <div className="navBarLinkBox">
-            <a
+            <Link
               className="navBarLinks"
-              href="https://bcma.netlify.com/about/gallery"
+              to="/about/gallery"
             >
               Gallery
-            </a>
+            </Link>
           </div>
           <div className="navBarLinkBox">
-            <a
+            <Link
               className="navBarLinks"
-              href="https://bcma.netlify.com/whats-on/events"
+              to="/whats-on/events"
             >
               What's On
-            </a>
+            </Link>
           </div>
           <div className="navBarLinkBox">
             <a href="https://www.facebook.com/ballaratcentreofmusicandthearts/" target="none" ><svg
