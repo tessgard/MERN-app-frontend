@@ -31,7 +31,6 @@ class ImageGallery extends React.Component {
     }
 
     lazyLoad();
-
     this.setState({
       images: response.data
     });
