@@ -2,9 +2,15 @@ import React from "react";
 import "./App.css";
 import Routes from "./Routes";
 import axios from "axios";
+import { BrowserRouter } from "react-router-dom";
 
 class App extends React.Component {
-  state = { authentication: false, errors: [], currentUser: null, selectedContent: null };
+  state = {
+    authentication: false,
+    errors: [],
+    currentUser: null,
+    selectedContent: null
+  };
 
   login = async userCredentials => {
     console.log(userCredentials);
@@ -57,17 +63,23 @@ class App extends React.Component {
     }
   };
 
-  onContentSelect = (content) => {
-    this.setState({ selectedContent: content })
-    console.log(this.state)
-  }
+  onContentSelect = content => {
+    this.setState({ selectedContent: content });
+    console.log(this.state);
+  };
 
   render() {
     const { login, logout, onContentSelect } = this;
     const { authentication, selectedContent } = this.state;
-    console.log(this.state)
+    console.log(this.state);
     return (
-      <Routes authentication={authentication} login={login} logout={logout} selectedContent={selectedContent} onContentSelect={onContentSelect}/>
+      <Routes
+        authentication={authentication}
+        login={login}
+        logout={logout}
+        selectedContent={selectedContent}
+        onContentSelect={onContentSelect}
+      />
     );
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home/Home";
 import CurrentProductions from "./components/WhatsOn/CurrentProductions";
 import Events from "./components/WhatsOn/Events";
@@ -28,7 +28,7 @@ import Faqs from "./components/Faqs";
 import NewFaq from "./components/Admin/Faq/NewFaq";
 import UpdateFaq from "./components/Admin/Faq/UpdateFaq";
 import Loader from "./components/Shared/Loader";
-
+import NotFound from "./components/Shared/NotFound";
 import NavBar from "./components/Shared/NavBar";
 
 class Routes extends React.Component {
@@ -50,11 +50,11 @@ class Routes extends React.Component {
     } = this.props;
 
     return (
-      <Switch>
-        <div className="app-outer-container">
-          <NavBar authentication={authentication} logout={logout} />
-          {this.state.isLoading && <Loader />}
+      <div className="app-outer-container">
+        <NavBar authentication={authentication} logout={logout} />
+        {this.state.isLoading && <Loader />}
 
+        <Switch>
           <Route
             exact
             path="/"
@@ -162,9 +162,9 @@ class Routes extends React.Component {
             }}
           />
 
-          {/* <Route exact path="/visit/address" component={Address} />
+          <Route exact path="/visit/address" component={Address} />
           <Route exact path="/visit/info" component={VisitorInfo} />
-          <Route exact path="/visit/contact" component={Contact} /> */}
+          <Route exact path="/visit/contact" component={Contact} />
           <Route
             exact
             path="/visit/contact"
@@ -247,7 +247,6 @@ class Routes extends React.Component {
               );
             }}
           />
-
           <Route
             exact
             path="/admin/visit/contact"
@@ -385,8 +384,20 @@ class Routes extends React.Component {
               );
             }}
           />
-        </div>
-      </Switch>
+
+          <Route
+            render={history => {
+              return (
+                <NotFound
+                  history={history}
+                  handleLoading={this.handleLoading}
+                />
+              );
+            }}
+            // component={NotFound}
+          />
+        </Switch>
+      </div>
     );
   }
 }

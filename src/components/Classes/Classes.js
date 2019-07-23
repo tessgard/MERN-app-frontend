@@ -13,7 +13,7 @@ class Classes extends React.Component {
   };
 
   async componentDidMount() {
-    this.getClasses();
+    await this.getClasses();
   }
 
   getClasses = async () => {
