@@ -115,7 +115,29 @@ The second consideration that we had to assess was that BCMA's portfolio of cont
 
 We wanted to create a very simple to use Content Management System for BCMA in order to facilitate a seamless user experience during the creating and updating of content on their website. We set out to make the webiste completely updateable and deletable barring a few exceptiops. These exceptions were purporseful design decisions that were made in order to maintain a comprehensive structure for the website.
 
-The main categories presented to us from 
+We were provided with a basic outline of categories to focus on through a word document provided by the client. A small section of these documents are deatialed as follows:
+
+#### About us
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/about-us-paula.png)
+
+#### Classes
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/classes-paula.png)
+
+#### Faculty
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/faculty-paula.png)
+
+#### Gallery
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/gallery-paula.png)
+
+#### FAQ
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/faq-paula.png)
+
+#### Whats On
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/whats-on-paula.png)
+
+
+
+
 
 
 ### Short Answer Questions
