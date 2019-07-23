@@ -39,7 +39,7 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
   - [The Solution](#the-solution)
 - [Application Design](#application-design)
   - [Design Process](#design-process)
-    - [Version 1.0 Wireframe](#version-1.0-wireframe)
+    - [Version 10 Wireframe](#version-1.0-wireframe)
   - [User Stories](#user-stories)
 
 ## About The Project
