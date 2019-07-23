@@ -26,6 +26,10 @@ import UpdateInstructor from './components/Admin/Instructor/UpdateInstructor';
 import NewInstructor from './components/Admin/Instructor/NewInstructor';
 import NewAbout from './components/Admin/About/NewAbout';
 import UpdateHomePhotos from './components/Admin/Home/UpdateHomePhotos';
+import Faqs from './components/Faqs';
+import NewFaq from './components/Admin/Faq/NewFaq';
+import UpdateFaq from './components/Admin/Faq/UpdateFaq';
+
 
 
 import NavBar from "./components/Shared/NavBar";
@@ -86,6 +90,21 @@ class Routes extends React.Component {
               );
             }}
           />
+
+          <Route
+            exact
+            path="/faqs"
+            render={history => {
+              return (
+                <Faqs
+                  onContentSelect={onContentSelect}
+                  history={history}
+                  authentication={authentication}
+                />
+              );
+            }}
+          />
+
           <Route exact path="/about/gallery" component={ImageGallery} />
 
           <Route
@@ -159,6 +178,20 @@ class Routes extends React.Component {
           />
           <Route
             exact
+            path="/admin/faq/update"
+            render={history => {
+              return (
+                <UpdateFaq
+                  authentication={authentication}
+                  history={history}
+                  selectedContent={selectedContent}
+                />
+              );
+            }}
+          />
+          <Route
+        
+            exact
 
             path="/admin/about/new"
             render={history => {
@@ -172,6 +205,22 @@ class Routes extends React.Component {
               );
             }}
           />
+          <Route
+        
+        exact
+
+        path="/admin/faq/new"
+        render={history => {
+          return (
+            <NewFaq
+
+              authentication={authentication}
+              history={history}
+              selectedContent={selectedContent}
+            />
+          );
+        }}
+      />
 
           <Route
             exact
