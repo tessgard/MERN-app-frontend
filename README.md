@@ -1,5 +1,5 @@
 # BCMA
-## Ballarat Centre of Music and the Arts 
+## Ballarat Centre of Music and the Arts Website
 
 This is our final assignment as Coder Academy Students. We have built a MERN stack application for the Ballarat Centre of Music and the Arts. Our aim was to create a full CRUD application that would act as a CMS for our client.
 
@@ -30,15 +30,18 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
 ## Contents
 
 - [MERN Project Links](#mern-project-links)
-- [About Project](#about-project)
+- [About The Project](#about-the-project)
   - [Background](#background)
   - [Functionality and Features](#functionality-and-features)
 - [The Brief](#the-brief)
   - [The Client](#the-client)
   - [The Problem](#the-problem)
   - [The Solution](#the-solution)
+- [Application Design](#application-design)
+  - [Design Process](#design-process)
+  - [User Stories](#user-stories)
 
-## About Project
+## About The Project
 
 ### Background
 
@@ -115,7 +118,7 @@ The second consideration that we had to assess was that BCMA's portfolio of cont
 
 We wanted to create a very simple to use Content Management System for BCMA in order to facilitate a seamless user experience during the creating and updating of content on their website. We set out to make the webiste completely updateable and deletable barring a few exceptiops. These exceptions were purporseful design decisions that were made in order to maintain a comprehensive structure for the website.
 
-We were provided with a basic outline of categories to focus on through a word document provided by the client. A small section of these documents are deatialed as follows:
+We were provided with a basic outline of categories to focus on through a word document provided by the client. A small section of these documents are detailed as follows:
 
 #### About us
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/about-us-paula.png)
@@ -135,8 +138,42 @@ We were provided with a basic outline of categories to focus on through a word d
 #### Whats On
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/whats-on-paula.png)
 
+As you can tell, a lot of the content that BCMA were thinking about adding and implementing was still somewhat up in the air. This only furthered our resolve to provide them with an application that could have content added to it at any point in time. Likewise, if they felt that the content they had up on their website was stale or redundant, it would be easy for them to change it.
+
+The main way to assure ourselves that the content could be solely managed by BCMA administrators was to provide an Admin portal that had access to protected routes. We used Json WEb tokens to verify the admin user's credentials in order to allow them to have access to full CRUD functionality. When the user logs in to the website, a request is sent to our server to authencticate the user. If the user credentials mathc ones in the databse, a JWT is created and sent back to the user and stored on local storage and is only removed untill the user logs out or the token expires. While the user is logged in, the application constantly checks if the JWT is valid.
+
+Below is an image that explains the process quite clearly:
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/jwt%20.png)
+
+This way a website page that looked like this:
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/about-us-normal.png)
+
+Once logged in as admin, would look like this:
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/about-us-admin.png)
+
+## Application Design
+
+### Design Process
+
+The design process took three distinct steps that allowed us to arrive at our final application. Our initial conversation with the client was non-specific and loose. Knowing that we were going to have only three weeks to submit our assignment, we began to formalise a design blueprint for the application. We wanted to infuse a sense of youth and fun into the design, coupled with a sophistication and lightness that would speak to the demographic that is represented and targeted at BCMA. We scoured through the grups Facebook page, picking colour schemes that we thought were appropriate according to the BCMA branding that already existed. We had many aspirations for the application that we wanted to implement, but we came to the agreement that our MVP would be a full CRUD application.
+
+The first iteration of the design was very colourful and fun, vibrant and effervescent. Each individual content category had it's own bubbly pastel colour scheme. The navbar was on the left hand side to simulate a dashboard feel in order to facilitate seamless browser experience. Essentially, we wanted to convey that same fruitful fun that is conveyed and expressed every time the children atr BCMA enter stage right and perform their productions.
 
 
+
+
+
+
+
+
+Whilst our client was supportive of our design choices, she made it very clear that she wanted the content to do the talking. She felt that the application was a little busy not a true reflection
+
+### User Stories
+
+### Wireframes
 
 
 
