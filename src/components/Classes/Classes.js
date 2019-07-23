@@ -2,8 +2,7 @@ import React from "react";
 import "./Classes.css";
 import axios from "axios";
 import { Link, withRouter } from "react-router-dom";
-import {Button} from 'react-bootstrap';
-
+import { Button } from "react-bootstrap";
 
 class Classes extends React.Component {
   state = {
@@ -23,9 +22,11 @@ class Classes extends React.Component {
         "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/class"
       );
       console.log(response);
+
       this.setState({
         data: response.data
       });
+      this.props.handleLoading();
     } catch (error) {
       this.setState({ errors: error.response });
     }
@@ -45,9 +46,8 @@ class Classes extends React.Component {
     }
   };
 
-  classPopup = e => {
-    e.preventDefault();
-    const name = e.target.innerText;
+  classPopup = () => {
+    const name = this.state.selectedClass.name;
     const selectedClass = this.state.data.find((item, index) => {
       return item.name === name;
     });
@@ -67,6 +67,16 @@ class Classes extends React.Component {
   render() {
     const { onContentSelect, authentication } = this.props;
     console.log(this.state.data);
+
+    // if (this.state.isLoading) {
+    //   return (
+    //     <div className="main-container">
+    //       <div className="inner-main-container">
+    //         <h1>Loading</h1>
+    //       </div>
+    //     </div>
+    // );
+    // } else {
     if (authentication) {
       return (
         <div className="main-container">
@@ -100,11 +110,12 @@ class Classes extends React.Component {
                       to="/admin/class/update"
                       onClick={() => onContentSelect(item)}
                     >
-                      <button className=" class-update-button">Update Details</button>
+                      <button className=" class-update-button">
+                        Update Details
+                      </button>
                     </Link>
                     <button
                       className="class-delete-button"
-
                       onClick={() => this.deleteClass(item)}
                     >
                       Delete Class
@@ -168,6 +179,7 @@ class Classes extends React.Component {
         </div>
       );
     }
+    // }
   }
 }
 

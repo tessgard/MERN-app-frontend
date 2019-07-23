@@ -1,49 +1,55 @@
-import React from 'react';
-import { Redirect, withRouter, Link } from 'react-router-dom';
-import axios from 'axios';
+import React from "react";
+import { Redirect, withRouter, Link } from "react-router-dom";
+import axios from "axios";
 import "./NewEvent.css";
 
-
-class NewEvent extends React.Component{
+class NewEvent extends React.Component {
   state = {
-    name: '',
-    description: '',
-    image: '',
+    name: "",
+    description: "",
+    image: "",
     errors: []
+  };
+
+  componentDidMount() {
+    this.props.handleLoading();
   }
 
-  onInputChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value })
-    console.log(this.state)
-  }
+  onInputChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+    console.log(this.state);
+  };
 
-  onFormSubmit = async (event) => {
+  onFormSubmit = async event => {
     event.preventDefault();
-    console.log(this.state)
+    console.log(this.state);
     const newEvent = {
       name: this.state.name,
       description: this.state.description,
       image: this.state.image
-    }
+    };
     try {
-      const response = await axios.post('https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/event/new', newEvent)
-      console.log(response)
+      const response = await axios.post(
+        "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/event/new",
+        newEvent
+      );
+      console.log(response);
     } catch (error) {
       this.setState({
         errors: error.response
-      })
-      console.log(error.response)
+      });
+      console.log(error.response);
     }
-    this.props.history.push('/whats-on/events')
-  }
+    this.props.history.push("/whats-on/events");
+  };
 
   render() {
-    const { authentication } = this.props
+    const { authentication } = this.props;
 
     if (!authentication) {
-      return <Redirect to="/admin/login" />
+      return <Redirect to="/admin/login" />;
     }
-    
+
     return (
       <div className="main-container" id="new-class-main-container">
         <div className="new-class-header">
@@ -88,7 +94,7 @@ class NewEvent extends React.Component{
           </form>
         </div>
       </div>
-    )
+    );
   }
 }
 

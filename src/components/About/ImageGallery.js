@@ -33,6 +33,7 @@ class ImageGallery extends React.Component {
     this.setState({
       images: response.data
     });
+    this.props.handleLoading();
   }
 
   imagePopup = e => {
