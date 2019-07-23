@@ -67,27 +67,19 @@ class Contact extends React.Component {
                 </div>
               </form>
             </div>
-            <div className="alternative-contact-container">
-              <div className="contact-grid-container">
-                <p>You can reach us at (03) 5331 3086</p>
-              </div>
+            <div className="contact-grid-container">
+              <h5>You can reach us at (03) 5331 3086</h5>
             </div>
-            <div className="alternative-contact-container">
-              <div className="contact-grid-container">
-                <h2>Visit Us Directly</h2>
-              </div>
+            <div className="contact-grid-container">
+              <h2>Visit Us Directly</h2>
             </div>
-            <div className="alternative-contact-container">
-              <div className="contact-grid-container">
-                <p>Unit A/112 Victoria St, Ballarat East VIC 3350</p>
-              </div>
+            <div className="contact-grid-container">
+              <h5>Unit A/112 Victoria St, Ballarat East VIC 3350</h5>
             </div>
-            <div className="alternative-contact-container">
-              <div className="contact-grid-container">
-                <>
-                  <Maps />
-                </>
-              </div>
+            <div className="contact-grid-container">
+              <>
+                <Maps />
+              </>
             </div>
           </div>
         </div>
