@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "./components/Home/Home";
 import CurrentProductions from "./components/WhatsOn/CurrentProductions";
 import Events from "./components/WhatsOn/Events";
@@ -394,7 +394,6 @@ class Routes extends React.Component {
                 />
               );
             }}
-            // component={NotFound}
           />
         </Switch>
       </div>

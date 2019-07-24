@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import Routes from "./Routes";
 import axios from "axios";
-import { BrowserRouter } from "react-router-dom";
 
 class App extends React.Component {
   state = {
