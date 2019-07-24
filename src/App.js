@@ -8,7 +8,8 @@ class App extends React.Component {
     authentication: false,
     errors: [],
     currentUser: null,
-    selectedContent: null
+    selectedContent: null,
+    failed: false
   };
 
   login = async userCredentials => {
@@ -19,11 +20,12 @@ class App extends React.Component {
       );
       const token = response.data.token;
       localStorage.setItem("token", token);
-      this.setState({ authentication: true });
+      this.setState({ authentication: true, failed: false });
     } catch (error) {
       this.setState({
         authentication: false,
-        errors: error.response.data.errors
+        errors: error.response.data.errors,
+        failed: true
       });
     }
   };
@@ -56,12 +58,14 @@ class App extends React.Component {
 
   render() {
     const { login, logout, onContentSelect } = this;
-    const { authentication, selectedContent } = this.state;
+    const { authentication, selectedContent, errors, failed } = this.state;
     return (
       <Routes
         authentication={authentication}
         login={login}
         logout={logout}
+        errors={errors}
+        failed={failed}
         selectedContent={selectedContent}
         onContentSelect={onContentSelect}
       />
