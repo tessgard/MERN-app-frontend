@@ -12,30 +12,23 @@ class App extends React.Component {
   };
 
   login = async userCredentials => {
-    console.log(userCredentials);
-
     try {
       const response = await axios.post(
         "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/auth",
         userCredentials
       );
-      console.log(response);
       const token = response.data.token;
-      console.log(token);
       localStorage.setItem("token", token);
       this.setState({ authentication: true });
-      console.log(this.state);
     } catch (error) {
       this.setState({
         authentication: false,
         errors: error.response.data.errors
       });
-      console.log(error.response.data.errors);
     }
   };
 
   logout = () => {
-    console.log("clicked");
     localStorage.removeItem("token");
     this.setState({ authentication: false });
   };
@@ -49,28 +42,21 @@ class App extends React.Component {
           headers: { "auth-x-token": token }
         }
       );
-      console.log(authenticated);
-      console.log("authenticated");
 
       this.setState({
         authentication: true,
         currentUser: authenticated.data
       });
-      console.log(this.state);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   onContentSelect = content => {
     this.setState({ selectedContent: content });
-    console.log(this.state);
   };
 
   render() {
     const { login, logout, onContentSelect } = this;
     const { authentication, selectedContent } = this.state;
-    console.log(this.state);
     return (
       <Routes
         authentication={authentication}

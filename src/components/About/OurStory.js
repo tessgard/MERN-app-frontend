@@ -18,7 +18,6 @@ class OurStory extends React.Component {
     const response = await axios.get(
       "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/about"
     );
-    console.log(response);
     this.setState({
       data: response.data
     });
@@ -32,7 +31,6 @@ class OurStory extends React.Component {
           item._id
         }`
       );
-      console.log(response);
       this.getAbouts();
     } catch (error) {
       this.setState({ errors: error.response });
@@ -41,8 +39,6 @@ class OurStory extends React.Component {
 
   render() {
     const { onContentSelect, authentication } = this.props;
-    console.log(this.props);
-
     if (authentication) {
       return (
         <div className="main-container">
