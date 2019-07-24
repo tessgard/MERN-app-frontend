@@ -137,19 +137,25 @@ class Home extends React.Component {
               to="/admin/home/update-photos"
               onClick={() => onContentSelect(this.state.data[0])}
             >
-              <button className="plain-button">Update Image 1</button>
+              <button className="plain-button" id="not-found-button">
+                Update Image 1
+              </button>
             </Link>
             <Link
               to="/admin/home/update-photos"
               onClick={() => onContentSelect(this.state.data[1])}
             >
-              <button className="plain-button">Update Image 2</button>
+              <button className="plain-button" id="not-found-button">
+                Update Image 2
+              </button>
             </Link>
             <Link
               to="/admin/home/update-photos"
               onClick={() => onContentSelect(this.state.data[2])}
             >
-              <button className="plain-button">Update Image 3</button>
+              <button className="plain-button" id="not-found-button">
+                Update Image 3
+              </button>
             </Link>
           </div>
         </div>
