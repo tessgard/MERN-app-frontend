@@ -1,7 +1,11 @@
 import React from "react";
 import axios from "axios";
+import "./Faqs.css";
 import { Link } from "react-router-dom";
 import {Button} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
 
 
 class Faqs extends React.Component {
@@ -20,6 +24,8 @@ class Faqs extends React.Component {
     this.setState({
       data: response.data
     });
+    this.props.handleLoading();
+
   };
 
   deleteFaq = async item => {
@@ -50,37 +56,35 @@ class Faqs extends React.Component {
               </Button>
             </Link>
             {this.state.data.map((item, index) => (
-              <div className="about-description-container" key={index}>
-                <div className="about-description">
-                </div>
-                <div className="about-button-container">
-                {this.state.data.map((item, index) => (
-              <div
-                className="about-description-container"
-                id="about-description-container"
-                key={index}
-              >
-                <div className="about-description">
-                  <p>question:</p>
-                  <p>{item.question}</p>
-                  <p>answer:</p>
-                  <p>{item.answer}</p>
-                  <Link
-                    to="/admin/faq/update"
-                    onClick={() => onContentSelect(item)}
-                  >
-                    <button className="class-update-button">Update</button>
-                  </Link>
-                  <button
-                    className="class-delete-button"
-                    onClick={() => this.deleteFaq(item)}
-                  >
-                    Delete
-                  </button>
-
-                </div>
-              </div>
-            ))}
+              <div className="faqs-container" key={index}>
+                <div className="">
+                  {this.state.data.map((item, index) => (
+                    <div
+                      className=""
+                      key={index}
+                    >
+                      <div className="faqs-inner-container">
+                        <p>question:</p>
+                        <p>{item.question}</p>
+                        <p>answer:</p>
+                        <p>{item.answer}</p>
+                          <div className="">
+                            <Link
+                              to="/admin/faq/update"
+                              onClick={() => onContentSelect(item)}
+                            >
+                              <div className="plain-button"
+                              >update</div>
+                            </Link>
+                            <div
+                              id="instructor-delete"
+                              className="delete-button"
+                              onClick={() => this.deleteFaq(item)}
+                            >delete</div>
+                          </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
@@ -96,11 +100,11 @@ class Faqs extends React.Component {
             </div>
             {this.state.data.map((item, index) => (
               <div
-                className="about-description-container"
-                id="about-description-container"
+                className="faqs-container"
+                
                 key={index}
               >
-                <div className="about-description">
+                <div className="faqs-inner-container">
                   <p>question:</p>
                   <p>{item.question}</p>
                   <p>answer:</p>

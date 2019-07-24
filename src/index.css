@@ -75,3 +75,26 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.icon-delete-button {
+  text-decoration: none;
+  margin: 5px;
+  font-size: 170%;
+  background: white;
+  color: red;
+  cursor: pointer;
+}
+.icon-update-button {
+  text-decoration: none;
+  font-size: 170%;
+  background: white;
+  margin: 5px;
+}
+
+.link-box-update-delete {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
