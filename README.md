@@ -43,6 +43,7 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
     - [Version 2.0 Wireframe](#version-20-wireframe)
     - [Version 3.0 Wireframe](#version-30-wireframe)
   - [User Stories](#user-stories)
+  - [Workflow Diagram - User Journeys](#workflow-diagram)
 
 ## About The Project
 
@@ -149,7 +150,7 @@ Below is an image that explains the process quite clearly:
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/jwt%20.png)
 
-This way a website page that looked like this:
+Once we were able to differentiate between a normal and an admin user, we would be able to populate the content fields with CRUD functionality. That way, a page that would normally look like this:
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/about-us-normal.png)
 
@@ -200,7 +201,21 @@ Our final version of the design turned out to be much simpler and displayed a mu
 
 ### User Stories
 
+Our User stories were written up using Cardboard, a user-story mapping tool, which provided us with a clear outline of what our MVP would be. We agreed on focusing on two user-story flows: that of the normal user and user as admin.
 
+- As a normal user, we would want them to be able to read all content available on the website including classes, gallery,       about, faculty, whats-on, faqs nad contact
+
+- As an admin user, we would want them to be able to login via a admin page, which would redirect them to the home page. Once   logged in, the admin user would have free rein to create, read, update and delete all contant available on the website. Once   logged out, the website would revert back to the normal webiste with any changes saved on the database and thus the website   updated
+
+#### First Version of User Stories
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user%20story1.png)
+
+#### Second Version of USer Stories
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user%20story%202.png)
+
+Our second version of the user stories was much more pared back in terms of content than the first. This was as per the client's request. She suggested that there was no need for as many different kinds of content to be viewed or altered on the website.
+
+### Workflow Diagram - User Stories
 
 
 ### Short Answer Questions
