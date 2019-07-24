@@ -48,6 +48,7 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
     - [User Journey for Admin User](#user-journey-for-admin-user)
   - [Database Schemas](#database-schemas)
   - [Data Flow Diagram](#data-flow-diagram)
+  - [OO Design Documentation](#oo-design-documentation)
 
 ## About The Project
 
@@ -352,6 +353,10 @@ const InstructorSchema = new mongoose.Schema({
 Below is a graphical representation of the Data Flow of our application
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/My%20First%20Document.png)
+
+## OO Design Documentation
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/OO-diagram-mern.png)
 
 
 
