@@ -143,7 +143,7 @@ We were provided with a basic outline of categories to focus on through a word d
 
 As you can tell, a lot of the content that BCMA were thinking about adding and implementing was still somewhat up in the air. This only furthered our resolve to provide them with an application that could have content added to it at any point in time. Likewise, if they felt that the content they had up on their website was stale or redundant, it would be easy for them to change it.
 
-The main way to assure ourselves that the content could be solely managed by BCMA administrators was to provide an Admin portal that had access to protected routes. We used Json WEb tokens to verify the admin user's credentials in order to allow them to have access to full CRUD functionality. When the user logs in to the website, a request is sent to our server to authencticate the user. If the user credentials mathc ones in the databse, a JWT is created and sent back to the user and stored on local storage and is only removed untill the user logs out or the token expires. While the user is logged in, the application constantly checks if the JWT is valid.
+The main way to assure ourselves that the content could be solely managed by BCMA administrators was to provide an Admin portal that had access to protected routes. We used Json WEb tokens to verify the admin user's credentials in order to allow them to have access to full CRUD functionality. When the user logs in to the website, a request is sent to our server to authencticate the user. If the user credentials mathc ones in the databse, a JWT is created and sent back to the user and stored on local storage and is only removed when the user logs out or the token expires. While the user is logged in, the application constantly checks if the JWT is valid.
 
 Below is an image that explains the process quite clearly:
 
@@ -161,7 +161,8 @@ Once logged in as admin, would look like this:
 
 ### Design Process
 
-The design process took three distinct steps that allowed us to arrive at our final application. Our initial conversation with the client was non-specific and loose. Knowing that we were going to have only three weeks to submit our assignment, we began to formalise a design blueprint for the application. We wanted to infuse a sense of youth and fun into the design, coupled with a sophistication and lightness that would speak to the demographic that is represented and targeted at BCMA. We scoured through the grups Facebook page, picking colour schemes that we thought were appropriate according to the BCMA branding that already existed. We had many aspirations for the application that we wanted to implement, but we came to the agreement that our MVP would be a full CRUD application. 
+The design process took three distinct steps that allowed us to arrive at our final application. Our initial conversation with the client was non-specific and loose. Knowing that we were going to have only three weeks to submit our assignment, we began to formalise a design blueprint for the application. We wanted to infuse a sense of youth and fun into the design, coupled with a sophistication and lightness that would speak to the demographic that is represented and targeted at BCMA. We scoured through the BCMAs Facebook page and Facebook group, picking colour schemes that we thought were appropriate according to the BCMA branding that already existed. We had many aspirations for the application that we wanted to implement, but we came to the agreement that our MVP would be a simple full CRUD application. 
+After our initial Figma planning and design concept 1 and 2, our client got back in touch with some feedback and some more concrete information about what they were after.
 
 We were given some websites by our client as reference points for our design. Below are some of the websites that Paula suggested:
 
@@ -171,7 +172,7 @@ We were given some websites by our client as reference points for our design. Be
 
 #### Version 1.0 Wireframe
 
-The first iteration of the design was very colourful and fun, vibrant and effervescent. Each individual content category had it's own bubbly pastel colour scheme. The navbar was on the left hand side to simulate a dashboard feel in order to facilitate seamless browser experience. Essentially, we wanted to convey that same fruitful fun that is conveyed and expressed every time the children atr BCMA enter stage right and perform their productions.
+The first iteration of the design was very colourful and fun, vibrant and effervescent. Each individual content category had it's own bubbly pastel colour scheme. The navbar was on the left hand side to simulate a dashboard feel in order to facilitate seamless browser experience. Essentially, we wanted to convey that same fruitful fun that is conveyed and expressed every time the children at BCMA enter stage right and perform their productions.
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/first-draft-design.png)
 
