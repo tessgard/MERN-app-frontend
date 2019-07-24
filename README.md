@@ -46,6 +46,7 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
   - [Workflow Diagram - User Journeys](#workflow-diagram---user-stories)
     - [User Journey for Normal User](#user-journey-for-normal-user)
     - [User Journey for Admin User](#user-journey-for-admin-user)
+  - [Database Schemas](#database-schemas)
 
 ## About The Project
 
@@ -228,6 +229,134 @@ We created our user story workflow diagrams in Figma to provide clarity on the o
 #### User Journey for Admin User
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user-workflow-admin.png)
+
+## Database Schemas
+
+In order to facilitate the ability for the Admin user to update and delete all the content available on the website, we proceeded to make schemas for all the content. The use of MongoDb as the database was very helpful as there was no need to establish any relationships between documents or schemas. 
+
+We had two types of Schemas. The first was the User schema. This was used to reperesent Admin. We decided to not call it Admin because we only had one type of user schema and there was no need to differentiate it from any other schemas.
+
+```javascript
+
+const UserSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  }
+});
+
+
+```
+
+The other schemas represented all the updateable content on the website. These ranged from the faqs, contact and about, even up to images in the gallery
+
+```javascript
+
+const AboutSchema = new mongoose.Schema({
+  description: {
+    type: String,
+    required: true
+  }
+});
+
+const CarouselImageSchema = new mongoose.Schema({
+  image: {
+    type: String,
+    required: true
+  }
+});
+
+const ClassSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  category: {
+    type: String,
+    required: true
+  },
+  image: {
+    type: String,
+    required: true
+  }
+});
+
+const ContactSchema = new mongoose.Schema({
+  email: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+const EventSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  image: {
+    type: String,
+    required: true
+  }
+});
+
+const FaqSchema = new mongoose.Schema({
+  question: {
+    type: String,
+    required: true
+  },
+  answer: {
+    type: String,
+    required: true
+  }
+});
+
+const GallerySchema = new mongoose.Schema({
+  image: {
+    type: String,
+    required: true
+  }
+});
+
+const InstructorSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  faculty: {
+    type: String,
+    required: true
+  }
+});
+
+```
 
 
 
