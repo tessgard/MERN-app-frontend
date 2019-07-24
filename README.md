@@ -43,6 +43,10 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
     - [Version 2.0 Wireframe](#version-20-wireframe)
     - [Version 3.0 Wireframe](#version-30-wireframe)
   - [User Stories](#user-stories)
+  - [Workflow Diagram - User Journeys](#workflow-diagram---user-stories)
+    - [User Journey for Normal User](#user-journey-for-normal-user)
+    - [User Journey for Admin User](#user-journey-for-admin-user)
+  - [Database Schemas](#database-schemas)
 
 ## About The Project
 
@@ -149,7 +153,7 @@ Below is an image that explains the process quite clearly:
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/jwt%20.png)
 
-This way a website page that looked like this:
+Once we were able to differentiate between a normal and an admin user, we would be able to populate the content fields with CRUD functionality. That way, a page that would normally look like this:
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/about-us-normal.png)
 
@@ -198,9 +202,149 @@ Our client again was very clear that she thought our design was still too busy. 
 
 Our final version of the design turned out to be much simpler and displayed a much more classical look than we had previously designed. We were very conscious of making BCMA's content be the shining light and refrain from adding any unnescessary bells and whistles that might detract from the content. Our layout was very similar as version 2.0 but we added the company logo in the navbar which added authenticity to the site. We had previously tried to clean up the logo in order to make it simpler and more modern but again, we were probably trying to reinvent the wheel and go against the true heart and character of BCMA. The absence of colour in our desing meant the main soiurce of colour would be the images and content displayed on the website - something that was seen as crucial to our client.
 
-
 ### User Stories
 
+Our User stories were written up using Cardboard, a user-story mapping tool, which provided us with a clear outline of what our MVP would be. We agreed on focusing on two user-story flows: that of the normal user and user as admin.
+
+- As a normal user, we would want them to be able to read all content available on the website including classes, gallery,       about, faculty, whats-on, faqs nad contact
+
+- As an admin user, we would want them to be able to login via a admin page, which would redirect them to the home page. Once   logged in, the admin user would have free rein to create, read, update and delete all contant available on the website. Once   logged out, the website would revert back to the normal webiste with any changes saved on the database and thus the website   updated
+
+#### First Version of User Stories
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user%20story1.png)
+
+#### Second Version of User Stories
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user%20story%202.png)
+
+Our second version of the user stories was much more pared back in terms of content than the first. This was as per the client's request. She suggested that there was no need for as many different kinds of content to be viewed or altered on the website.
+
+### Workflow Diagram - User Stories
+
+We created our user story workflow diagrams in Figma to provide clarity on the options available to the user and views required to be built.
+
+#### User Journey for Normal User
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user-workflow-normal.png)
+
+#### User Journey for Admin User
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user-workflow-admin.png)
+
+## Database Schemas
+
+In order to facilitate the ability for the Admin user to update and delete all the content available on the website, we proceeded to make schemas for all the content. The use of MongoDb as the database was very helpful as there was no need to establish any relationships between documents or schemas. 
+
+We had two types of Schemas. The first was the User schema. This was used to reperesent Admin. We decided to not call it Admin because we only had one type of user schema and there was no need to differentiate it from any other schemas.
+
+```javascript
+const UserSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  }
+});
+```
+
+The other schemas represented all the updateable content on the website. These ranged from the faqs, contact and about, even up to images in the gallery
+
+```javascript
+const AboutSchema = new mongoose.Schema({
+  description: {
+    type: String,
+    required: true
+  }
+});
+const CarouselImageSchema = new mongoose.Schema({
+  image: {
+    type: String,
+    required: true
+  }
+});
+const ClassSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  category: {
+    type: String,
+    required: true
+  },
+  image: {
+    type: String,
+    required: true
+  }
+});
+const ContactSchema = new mongoose.Schema({
+  email: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+const EventSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  image: {
+    type: String,
+    required: true
+  }
+});
+const FaqSchema = new mongoose.Schema({
+  question: {
+    type: String,
+    required: true
+  },
+  answer: {
+    type: String,
+    required: true
+  }
+});
+const GallerySchema = new mongoose.Schema({
+  image: {
+    type: String,
+    required: true
+  }
+});
+const InstructorSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  faculty: {
+    type: String,
+    required: true
+  }
+});
+```
 
 
 
