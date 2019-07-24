@@ -22,7 +22,7 @@ import UpdateInstructor from "./components/Admin/Instructor/UpdateInstructor";
 import NewInstructor from "./components/Admin/Instructor/NewInstructor";
 import NewAbout from "./components/Admin/About/NewAbout";
 import UpdateHomePhotos from "./components/Admin/Home/UpdateHomePhotos";
-import Faqs from "./components/Faqs";
+import Faqs from "./components/Faqs/Faqs";
 import NewFaq from "./components/Admin/Faq/NewFaq";
 import UpdateFaq from "./components/Admin/Faq/UpdateFaq";
 import Loader from "./components/Shared/Loader";
@@ -122,13 +122,15 @@ class Routes extends React.Component {
                   onContentSelect={onContentSelect}
                   history={history}
                   authentication={authentication}
+                  handleLoading={this.handleLoading}
+
                 />
               );
             }}
           />
           <Route
             exact
-            path="/about/instructors"
+            path="/about/faculty"
             render={history => {
               return (
                 <Instructors

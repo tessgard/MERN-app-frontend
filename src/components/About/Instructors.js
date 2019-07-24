@@ -3,6 +3,8 @@ import "./Instructors.css";
 import axios from "axios";
 import { Link, withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
 
 class Instructors extends React.Component {
   state = {
@@ -54,23 +56,23 @@ class Instructors extends React.Component {
                 <div className="instructor-detail-main" key={index}>
                   <div className="instructor-detail-content">
                     <h2>{item.name}</h2>
-                    <h4>Expertise: {item.description}</h4>
-                    <h4>Faculty : {item.faculty}</h4>
+                    <p>Expertise: {item.description}</p>
+                    <p>Faculty : {item.faculty}</p>
                     <div>
                       <Link
                         to="/admin/instructor/update"
                         onClick={() => onContentSelect(item)}
                       >
-                        <button className="instructors-update-button">
-                          Update Details
+                        <button className="class-update-button">
+                          Update
                         </button>
                       </Link>
                       <button
                         id="instructor-delete"
-                        className="instructors-delete-button"
+                        className="class-delete-button"
                         onClick={() => this.deleteInstructor(item)}
                       >
-                        Delete Instructor
+                        Delete
                       </button>
                     </div>
                   </div>
@@ -93,8 +95,8 @@ class Instructors extends React.Component {
                 <div className="instructor-detail-main" key={index}>
                   <div className="instructor-detail-content">
                     <h2>{item.name}</h2>
-                    <h4>Expertise: {item.description}</h4>
-                    <h4>Faculty : {item.faculty}</h4>
+                    <p>Expertise: {item.description}</p>
+                    <p>Faculty : {item.faculty}</p>
                   </div>
                 </div>
               ))}

@@ -3,6 +3,9 @@ import "./Classes.css";
 import axios from "axios";
 import { Link, withRouter } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
 
 class Classes extends React.Component {
   state = {
@@ -67,16 +70,6 @@ class Classes extends React.Component {
   render() {
     const { onContentSelect, authentication } = this.props;
     console.log(this.state.data);
-
-    // if (this.state.isLoading) {
-    //   return (
-    //     <div className="main-container">
-    //       <div className="inner-main-container">
-    //         <h1>Loading</h1>
-    //       </div>
-    //     </div>
-    // );
-    // } else {
     if (authentication) {
       return (
         <div className="main-container">
@@ -105,6 +98,7 @@ class Classes extends React.Component {
                   >
                     <h3>{item.name}</h3>
                   </div>
+                  
                   <div className="buttons-container">
                     <Link
                       to="/admin/class/update"
