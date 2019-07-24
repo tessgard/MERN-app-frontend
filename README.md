@@ -43,7 +43,9 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
     - [Version 2.0 Wireframe](#version-20-wireframe)
     - [Version 3.0 Wireframe](#version-30-wireframe)
   - [User Stories](#user-stories)
-  - [Workflow Diagram - User Journeys](#workflow-diagram)
+  - [Workflow Diagram - User Journeys](#workflow-diagram---user-stories)
+    - [User Journey for Normal User](#user-journey-for-normal-user)
+    - [User Journey for Admin User](#user-journey-for-admin-user)
 
 ## About The Project
 
@@ -210,12 +212,23 @@ Our User stories were written up using Cardboard, a user-story mapping tool, whi
 #### First Version of User Stories
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user%20story1.png)
 
-#### Second Version of USer Stories
+#### Second Version of User Stories
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user%20story%202.png)
 
 Our second version of the user stories was much more pared back in terms of content than the first. This was as per the client's request. She suggested that there was no need for as many different kinds of content to be viewed or altered on the website.
 
 ### Workflow Diagram - User Stories
+
+We created our user story workflow diagrams in Figma to provide clarity on the options available to the user and views required to be built.
+
+#### User Journey for Normal User
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user-workflow-normal.png)
+
+#### User Journey for Admin User
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user-workflow-admin.png)
+
 
 
 ### Short Answer Questions
