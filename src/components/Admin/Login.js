@@ -21,8 +21,8 @@ class Login extends React.Component {
   };
 
   render() {
-    const { authentication } = this.props;
-
+    const { authentication, failed, errors } = this.props;
+    console.log(this.props);
     if (authentication) {
       return <Redirect to="/" />;
     }
@@ -32,6 +32,17 @@ class Login extends React.Component {
         <div className="new-class-header">
           <h1>Admin Login</h1>
         </div>
+        {failed && (
+          <div
+            class="alert alert-danger"
+            id="alert-message-container"
+            role="alert"
+          >
+            {errors.map((item, index) => {
+              return <div key={index}>{item.msg}</div>;
+            })}
+          </div>
+        )}
         <div className="new-class-form-container">
           <form className="new-class-form">
             <label id="first-label" htmlFor="email">

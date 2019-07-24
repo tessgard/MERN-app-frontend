@@ -9,7 +9,7 @@ class MapContainer extends React.Component {
       <Map
         className="markercluster-map"
         center={position}
-        zoom={14}
+        zoom={15}
         minZoom={9}
         maxZoom={17}
       >

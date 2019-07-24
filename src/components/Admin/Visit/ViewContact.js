@@ -33,13 +33,25 @@ class ViewContact extends React.Component {
       return (
         <div className="main-container" id="new-class-main-container">
           <div className="new-class-header">
-            <h1>To Contact List</h1>
+            <h1>Contact List</h1>
           </div>
           <div className="contact-list-container">
             {this.state.data.map((item, index) => {
               return (
                 <div className="contact-item-container" key={index}>
-                  <p className="contact-show">{item.email}</p>
+                  <p className="contact-show">
+                    Email: <br /> {item.email}
+                  </p>
+                  <br />
+                  <p className="contact-show">
+                    Description:
+                    <br /> {item.description}
+                  </p>
+                  <br />
+                  <p className="contact-show">
+                    Date Created: <br />
+                    {item.createdAt.split("T")[0]}
+                  </p>
                 </div>
               );
             })}

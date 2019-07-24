@@ -14,9 +14,21 @@
 
 .contact-item-container {
   margin: 10px;
-  width: 30%;
-  height: 70px;
+  width: 80%;
+  height: 100%;
+  min-height: 100px;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px;
+  padding-left: 10%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: start;
+}
+
+.alert {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
