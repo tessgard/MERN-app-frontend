@@ -26,6 +26,7 @@ import Faqs from "./components/Faqs";
 import NewFaq from "./components/Admin/Faq/NewFaq";
 import UpdateFaq from "./components/Admin/Faq/UpdateFaq";
 import Loader from "./components/Shared/Loader";
+import NotFound from "./components/Shared/NotFound";
 import NavBar from "./components/Shared/NavBar";
 
 class Routes extends React.Component {
@@ -47,11 +48,11 @@ class Routes extends React.Component {
     } = this.props;
 
     return (
-      <Switch>
-        <div className="app-outer-container">
-          <NavBar authentication={authentication} logout={logout} />
-          {this.state.isLoading && <Loader />}
+      <div className="app-outer-container">
+        <NavBar authentication={authentication} logout={logout} />
+        {this.state.isLoading && <Loader />}
 
+        <Switch>
           <Route
             exact
             path="/"
@@ -373,8 +374,19 @@ class Routes extends React.Component {
               );
             }}
           />
-        </div>
-      </Switch>
+
+          <Route
+            render={history => {
+              return (
+                <NotFound
+                  history={history}
+                  handleLoading={this.handleLoading}
+                />
+              );
+            }}
+          />
+        </Switch>
+      </div>
     );
   }
 }

@@ -4,7 +4,12 @@ import Routes from "./Routes";
 import axios from "axios";
 
 class App extends React.Component {
-  state = { authentication: false, errors: [], currentUser: null, selectedContent: null };
+  state = {
+    authentication: false,
+    errors: [],
+    currentUser: null,
+    selectedContent: null
+  };
 
   login = async userCredentials => {
     try {
@@ -42,19 +47,24 @@ class App extends React.Component {
         authentication: true,
         currentUser: authenticated.data
       });
-    } catch (error) {
-    }
+    } catch (error) {}
   };
 
-  onContentSelect = (content) => {
-    this.setState({ selectedContent: content })
-  }
+  onContentSelect = content => {
+    this.setState({ selectedContent: content });
+  };
 
   render() {
     const { login, logout, onContentSelect } = this;
     const { authentication, selectedContent } = this.state;
     return (
-      <Routes authentication={authentication} login={login} logout={logout} selectedContent={selectedContent} onContentSelect={onContentSelect}/>
+      <Routes
+        authentication={authentication}
+        login={login}
+        logout={logout}
+        selectedContent={selectedContent}
+        onContentSelect={onContentSelect}
+      />
     );
   }
 }
