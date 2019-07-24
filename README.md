@@ -25,7 +25,7 @@ https://github.com/tessgard | https://github.com/jieyiphua | https://github.com/
 
 ## Summary
 
-Our client was the Ballarat Centre of Music and the Arts. In our conversations wth them we were asked to build a website that could be updated and changed on a contant basis. We wanted to create a Content Management System that was easy to use and wouldn't require the upskill of using something like Wordpress or Kentico. Using the full MERN Stack (MongoDB, ExpressJS, ReactJS, NodeJS) we set upon creating an application that was fully customizable through the main CRUD features(Create, Read, Update, Delete).
+Our client was the Ballarat Centre of Music and the Arts. In our conversations with them we were asked to build a website that could be updated and changed on a constant basis. We wanted to create a Content Management System that was easy to use and wouldn't require the upskill of using something like Wordpress or Kentico. Using the full MERN Stack (MongoDB, ExpressJS, ReactJS, NodeJS) we set upon creating an application that was fully customisable through the main CRUD features(Create, Read, Update, Delete).
 
 ## Contents
 
@@ -43,10 +43,6 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
     - [Version 2.0 Wireframe](#version-20-wireframe)
     - [Version 3.0 Wireframe](#version-30-wireframe)
   - [User Stories](#user-stories)
-  - [Workflow Diagram - User Journeys](#workflow-diagram---user-stories)
-    - [User Journey for Normal User](#user-journey-for-normal-user)
-    - [User Journey for Admin User](#user-journey-for-admin-user)
-  - [Database Schemas](#database-schemas)
 
 ## About The Project
 
@@ -54,7 +50,7 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
 
 We were tasked with finding a real world client for our final assingment as Coder Academy students. The application that we were asked to build had to use the MERN stack as the basis for its foundation. The BCMA website that we ultimately built was shaped around the requirements of our client, Paula Heenan, Director at BCMA.
 
-We initially has issues finding a client. In fact, we were at the initial stages with another client at the beginning of the first week, until we realised that the scope of that project didn't quite fit the assignment requirements. Luckily, one of our classmates had multiple client options presented to us. The choice came down to two considerations: build a website application for a Jim's Mowing franchise owner or build a website application for the Ballarat Centre of Music and the Arts. After a short deliberation, we decided to proceed with the latter.
+We initially has issues finding a client. In fact, we were in the initial stages with another client at the beginning of the first week, until we realised that the scope of that project didn't quite fit the assignment requirements. Luckily, one of our classmates had multiple client options and presented some to us. The choice came down to two considerations: build a website application for a Jim's Mowing franchise owner or build a website application for the Ballarat Centre of Music and the Arts. After a short deliberation, we decided to proceed with the latter.
 
 Our reasoning was very simple. The BCMA facebook page demonstrated a vibrant ecosystem full of life and colour and we were able to draw inspiration from the artistic creativity of the productions and performances described in the feed. It was clear that the main source of business for BCMA was through their facebook feed. What was also clear was that BCMA lacked a portal/outlet whereby they could display their content in a more organised and streamlined way. We were excited by the possibilities presented to us by BCMA's dilemma.
 
@@ -117,13 +113,13 @@ BCMA is a Arts academy catering for all sorts of classes for the vibrant arts co
 
 There were two main considerations that we had to work through during our application build. These two considerations were the main driving force behind most of our design decisions and helped direct us on the way to generating our final outcome.
 
-Whilst BCMA had a very successful method of communicating with their current clients and members, they were very aware that apart from their Facebook profile, they had no substantial digital footprint. In order to communicate with the general public about the content they produce and provide, it was clear to BCMA that they had to branch out and build a website. With 31 professional instructors and a multitude of classes and productions on offer across multiple venues, BCMA were after a way to centralize all this information for current and prospective clients. 
+Whilst BCMA had a very successful method of communicating with their current clients and members, they were very aware that apart from their Facebook profile, they had no substantial digital footprint. In order to communicate with the general public about the content they produce and services they provide, it was clear to BCMA that they had to branch out and build a website. With 31 professional instructors and a multitude of classes and productions on offer across multiple venues, BCMA were after a way to centralize all this information for current and prospective clients. 
 
 The second consideration that we had to assess was that BCMA's portfolio of content was ever changing and non-static. Many of the details for venues and dates for BCMA's offerings are not known until the very last minute and so it was important to them to have an application that was updateable at the click of a button.
 
 ### The Solution
 
-We wanted to create a very simple to use Content Management System for BCMA in order to facilitate a seamless user experience during the creating and updating of content on their website. We set out to make the webiste completely updateable and deletable barring a few exceptiops. These exceptions were purporseful design decisions that were made in order to maintain a comprehensive structure for the website.
+We wanted to create a very simple to use Content Management System for BCMA in order to facilitate a seamless user experience during the creating and updating of content on their website. We set out to make the webiste completely updateable and all the content deletable barring a few exceptiops. These exceptions were purposeful design decisions that were made in order to maintain a comprehensive structure for the website (eg. the landing page image slider was only able to be updated but images could not be deleted).
 
 We were provided with a basic outline of categories to focus on through a word document provided by the client. A small section of these documents are detailed as follows:
 
@@ -153,7 +149,7 @@ Below is an image that explains the process quite clearly:
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/jwt%20.png)
 
-Once we were able to differentiate between a normal and an admin user, we would be able to populate the content fields with CRUD functionality. That way, a page that would normally look like this:
+This way a website page that looked like this:
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/about-us-normal.png)
 
@@ -204,159 +200,6 @@ Our final version of the design turned out to be much simpler and displayed a mu
 
 ### User Stories
 
-Our User stories were written up using Cardboard, a user-story mapping tool, which provided us with a clear outline of what our MVP would be. We agreed on focusing on two user-story flows: that of the normal user and user as admin.
-
-- As a normal user, we would want them to be able to read all content available on the website including classes, gallery,       about, faculty, whats-on, faqs nad contact
-
-- As an admin user, we would want them to be able to login via a admin page, which would redirect them to the home page. Once   logged in, the admin user would have free rein to create, read, update and delete all contant available on the website. Once   logged out, the website would revert back to the normal webiste with any changes saved on the database and thus the website   updated
-
-#### First Version of User Stories
-![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user%20story1.png)
-
-#### Second Version of User Stories
-![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user%20story%202.png)
-
-Our second version of the user stories was much more pared back in terms of content than the first. This was as per the client's request. She suggested that there was no need for as many different kinds of content to be viewed or altered on the website.
-
-### Workflow Diagram - User Stories
-
-We created our user story workflow diagrams in Figma to provide clarity on the options available to the user and views required to be built.
-
-#### User Journey for Normal User
-
-![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user-workflow-normal.png)
-
-#### User Journey for Admin User
-
-![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/user-workflow-admin.png)
-
-## Database Schemas
-
-In order to facilitate the ability for the Admin user to update and delete all the content available on the website, we proceeded to make schemas for all the content. The use of MongoDb as the database was very helpful as there was no need to establish any relationships between documents or schemas. 
-
-We had two types of Schemas. The first was the User schema. This was used to reperesent Admin. We decided to not call it Admin because we only had one type of user schema and there was no need to differentiate it from any other schemas.
-
-```javascript
-
-const UserSchema = new mongoose.Schema({
-  username: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  password: {
-    type: String,
-    required: true
-  }
-});
-
-
-```
-
-The other schemas represented all the updateable content on the website. These ranged from the faqs, contact and about, even up to images in the gallery
-
-```javascript
-
-const AboutSchema = new mongoose.Schema({
-  description: {
-    type: String,
-    required: true
-  }
-});
-
-const CarouselImageSchema = new mongoose.Schema({
-  image: {
-    type: String,
-    required: true
-  }
-});
-
-const ClassSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    required: true
-  },
-  category: {
-    type: String,
-    required: true
-  },
-  image: {
-    type: String,
-    required: true
-  }
-});
-
-const ContactSchema = new mongoose.Schema({
-  email: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    required: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  }
-});
-
-const EventSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    required: true
-  },
-  image: {
-    type: String,
-    required: true
-  }
-});
-
-const FaqSchema = new mongoose.Schema({
-  question: {
-    type: String,
-    required: true
-  },
-  answer: {
-    type: String,
-    required: true
-  }
-});
-
-const GallerySchema = new mongoose.Schema({
-  image: {
-    type: String,
-    required: true
-  }
-});
-
-const InstructorSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    required: true
-  },
-  faculty: {
-    type: String,
-    required: true
-  }
-});
-
-```
 
 
 
