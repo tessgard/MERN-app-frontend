@@ -57,6 +57,8 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
     - [Team Communication](#team-communication)
     - [Code Review](#code-review)
     - [Agile Methodology](#agile-methodology)
+    - [Questionnaire](#questionnaire)
+    - [Manual](#manual)
 - [Short Answer Questions](#short-answer-questions)
   - [What are the most important aspects of quality software?](#what-are-the-most-important-aspects-of-quality-software)
   - [What libraries are being used in the app and why?](#what-libraries-are-being-used-in-the-app-and-why)
@@ -453,6 +455,14 @@ We used Trello to split tasks and responsibilities to team members and to track 
 Customer Satisfaction was a priority for our team and we aimed to adapt to our client's requirements. We maintained a good communication channel and collaboration with our client.
 
 We created User stories early in the project as part of our planning and used these during sprints to complete features we hadn't done while maintaining a fast, efficient development pace.
+
+### Questionnaire 
+
+https://docs.google.com/forms/d/e/1FAIpQLSd3e_8YQ-wM9vBVT3XXZYxUlhao6ZfSnVMLW74PCe0naJq7pw/viewform?usp=sf_link
+
+### Manual 
+
+https://github.com/tessgard/MERN-app-frontend/blob/master/docs/BCMA%20WEBSITE%20MANUAL.docx
 
 ## Short Answer Questions
 
