@@ -356,6 +356,12 @@ Below is a graphical representation of the Data Flow of our application
 
 ## OO Design Documentation
 
+We wanted to manage our main state from App.js and pass it down as properties to all the opther components. We extracted all the routes out of App and made a Routes Component. This was to declutter App and to adhere to a classical version of a separation of concerns.
+
+We had two user experiences that we had to cater for in our application. Authentication was passed down to all components that had content that was updateable. Our Form components were also passed down authentication as only Admin users have access to add and update content.
+
+
+
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/OO-diagram-mern.png)
 
 
