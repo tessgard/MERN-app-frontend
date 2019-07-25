@@ -451,10 +451,10 @@ There are 6 important software quality characteristics - namely (yes)Maintainabi
   -  "leaflet": "^1.5.1" : JavaScript library for mobile-friendly interactive maps. 
   -  "mdbootstrap": "^4.8.5" : material desgin for bootstrap 4
   -  "node-sass": "^4.12.0" : 
-  -  "react": "^16.8.6"
-  -  "react-bootstrap": "^1.0.0-beta.9"
-  -  "react-bootstrap-carousel": "^3.4.2"
-  -  "react-dom": "^16.8.6"
+  -  "react": "^16.8.6" : JavaScript library for building user interfaces.
+  -  "react-bootstrap": "^1.0.0-beta.9" : Bootstrap 4 components built with React.
+  -  "react-bootstrap-carousel": "^3.4.2" : React port of bootstrap carousel
+  -  "react-dom": "^16.8.6" : 
   -  "react-leaflet": "^2.4.0"
   -  "react-leaflet-markercluster": "^1.1.8"
   -  "react-router": "^5.0.1"
