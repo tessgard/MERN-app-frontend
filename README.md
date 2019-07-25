@@ -6,7 +6,7 @@ This is our final assignment as Coder Academy Students. We have built a MERN sta
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/ballarat-centre-of-music-and-the-arts-ballarat-dance-schools-e30a-938x704.jpg)
 
 ## Contributors
-Tess | Jiey | Ivan
+Tess | Jieyi | Ivan
 --- | --- | ---
 https://github.com/tessgard | https://github.com/jieyiphua | https://github.com/donatoivan
 
@@ -55,9 +55,14 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
     - [Project plan and timeline](#project-plan-and-timeline)
     - [Communication with Client](#communication-with-client)
     - [Team Communication](#team-communication)
+    - [Code Review](#code-review)
+    - [Agile Methodology](#agile-methodology)
 - [Short Answer Questions](#short-answer-questions)
   - [What are the most important aspects of quality software?](#what-are-the-most-important-aspects-of-quality-software)
   - [What libraries are being used in the app and why?](#what-libraries-are-being-used-in-the-app-and-why)
+  - [A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?](#a-team-is-about-to-engage-in-a-project-developing-a-website-for-a-small-business-what-knowledge-and-skills-would-they-need-in-order-to-develop-the-project)
+  - [Within your own project what knowledge or skills were required to complete your project, and overcome challenges?](#within-your-own-project-what-knowledge-or-skills-were-required-to-complete-your-project-and-overcome-challenges)
+  -[Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?](#evaluate-how-effective-your-knowledge-and-skills-were-this-project-using-examples-and-suggest-changes-or-improvements-for-future-projects-of-a-similar-nature)
 
 ## About The Project
 
@@ -415,6 +420,9 @@ Our team utilized Slack, Trello and email to communicate with each other and the
 
 We first got into contact with our client (Paula) via a phone call. Subsequently, we stayed in touch with feedback and questions via email.
 
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Email%201.png)
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Email%202.png)
+
 ### Team Communication
 
 After confirming our client and obtained initial sign-off during the first week of the project, our team's planning methodology involved:
@@ -426,11 +434,31 @@ After confirming our client and obtained initial sign-off during the first week 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Trello%201.PNG)
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Slack%201.PNG)
 
+### Code Review
+
+On Github, team members raised and merged pull request in the presence of and under approval from another team member. This approach worked well for us and helped to reduce merge conflicts and merged to master branch correctly. We were able to resolve merge conflicts relatively quickly and correctly.
+
+The conflict solving process was as follows:
+
+1. Create a pull request.
+2. If merge conflicts exists, resolve conflicts on Github with another team member.
+3. Merge pull request.
+4. All team members git pull from master branch.
+
+
+### Agile Methodology
+
+We used Trello to split tasks and responsibilities to team members and to track our progress. We performed daily standups where we had to discuss on the current status of our progress on the project. During the project timeline, we set realistic goals and appropriately assigned tasks to team members.
+
+Customer Satisfaction was a priority for our team and we aimed to adapt to our client's requirements. We maintained a good communication channel and collaboration with our client.
+
+We created User stories early in the project as part of our planning and used these during sprints to complete features we hadn't done while maintaining a fast, efficient development pace.
+
 ## Short Answer Questions
 
 ### What are the most important aspects of quality software?
 
-There are 6 important software quality characteristics - namely (yes)Maintainability, Correctness/Functionality, (yes)usability, (yes)Reliability, (yes)Portability and (yes)Efficiency.
+There are 6 important software quality characteristics - namely Maintainability, Correctness/Functionality, Usability, Reliability, Portability and Efficiency.
 
 
 **Maintainability** is "the ease with which changes can be made to satisfy new requirements or to correct deficiencies" [Balci 1997]. Well designed software should be flexible enough to accommodate future changes that will be needed as new requirements come to light. Since maintenance accounts for nearly 70% of the cost of the software life cycle [Schach 1999], the importance of this quality characteristic cannot be overemphasized. Quite often the programmer responsible for writing a section of code is not the one who must maintain it. For this reason, the quality of the software documentation significantly affects the maintainability of the software product.
@@ -492,3 +520,36 @@ There are 6 important software quality characteristics - namely (yes)Maintainabi
   -  "react-router-dom": "^5.0.1"
   -  "react-scripts": "3.0.1"
 
+### A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
+
+In order to be successful when taking on a project with a small business the most important aspect is good communication. It’s important to establish a communication channel and to keep checking in with the client. It’s imperative to discuss expectations, the scope of the project, and the timeline.
+
+Teamwork, resilience, and a positive attitude will go a long way.
+
+Attention to detail is key when building a web application, as small errors can create large issues.
+
+The ability to troubleshoot bugs and to get to the root of the problem. The ability to adapt the application if there is a need to reconfigure to suit the client’s needs.
+
+Understanding the business needs is vital, as this will direct the purpose of the application. Every feature implemented should be questioned in terms of how it will be adding value to the target user.
+
+
+### Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
+Technical knowledge required included:
+- React
+- Javascript
+- MongoDB
+- Html CSS
+- Bootstrap
+- Netlify / Herolku
+- ZEIT now
+
+The ability to troubleshoot issues and trace them back to the root cause to debug.
+We experienced some issues with our final deploy with Netlify, after 3 hours of troubleshooting with no luck in finding a fix, we decided to test other deploy options to see if we could bypass this bug. We then deployed through Heroku with no issues. Whilst we still don’t know what caused this issue, the important take away is that unless a certain method of doing something is absolutely necessary, then it’s ok to forget about a bug and try again with something else. 
+
+### Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
+
+In the end we were happy with our ability to produce a clean and simple application that delivered on what it claims to. 
+We encountered minimal issues until the last day when we dealt with some deployment setbacks.
+We worked well within our team and communicated well, always working side by side and talking through issues, asking questions, double checking things as needed.
+One way our app could be more effective is to take a more component based approach to building the front end in react.
+We could have pushed our client more for feedback by employing different communication channels, rather than just over email. We had very slow response rates from our client and not much constructive input to work with.
