@@ -59,6 +59,7 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
     - [Agile Methodology](#agile-methodology)
     - [Questionnaire](#questionnaire)
     - [Manual](#manual)
+    
 - [Short Answer Questions](#short-answer-questions)
   - [What are the most important aspects of quality software?](#what-are-the-most-important-aspects-of-quality-software)
   - [What libraries are being used in the app and why?](#what-libraries-are-being-used-in-the-app-and-why)
