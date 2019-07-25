@@ -6,7 +6,7 @@ This is our final assignment as Coder Academy Students. We have built a MERN sta
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/ballarat-centre-of-music-and-the-arts-ballarat-dance-schools-e30a-938x704.jpg)
 
 ## Contributors
-Tess | Jiey | Ivan
+Tess | Jieyi | Ivan
 --- | --- | ---
 https://github.com/tessgard | https://github.com/jieyiphua | https://github.com/donatoivan
 
@@ -53,6 +53,8 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
     - [Project plan and timeline](#project-plan-and-timeline)
     - [Communication with Client](#communication-with-client)
     - [Team Communication](#team-communication)
+    - [Questionnaire](#questionnaire)
+    - [Manual](#manual)
 - [Short Answer Questions](#short-answer-questions)
   - [What are the most important aspects of quality software?](#what-are-the-most-important-aspects-of-quality-software)
   - [What libraries are being used in the app and why?](#what-libraries-are-being-used-in-the-app-and-why)
@@ -393,6 +395,14 @@ After confirming our client and obtained initial sign-off during the first week 
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Trello%201.PNG)
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Slack%201.PNG)
+
+### Questionnaire 
+
+https://docs.google.com/forms/d/e/1FAIpQLSd3e_8YQ-wM9vBVT3XXZYxUlhao6ZfSnVMLW74PCe0naJq7pw/viewform?usp=sf_link
+
+### Manual 
+
+https://github.com/tessgard/MERN-app-frontend/blob/master/docs/BCMA%20WEBSITE%20MANUAL.docx
 
 ## Short Answer Questions
 
