@@ -49,6 +49,10 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
   - [Database Schemas](#database-schemas)
   - [Data Flow Diagram](#data-flow-diagram)
   - [OO Design Documentation](#oo-design-documentation)
+  - [Project Management and Planning](#project-management-and-planning)
+    - [Project plan and timeline](#project-plan-and-timeline)
+    - [Communication with Client](#communication-with-client)
+    - [Team Communication](#team-communication)
 
 ## About The Project
 
@@ -364,9 +368,9 @@ We had two user experiences that we had to cater for in our application. Authent
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/OO-diagram-mern.png)
 
-## Project Management & Planning
+## Project Management and Planning
 
-### Project plan & timeline
+### Project plan and timeline
 
 Our team utilized Slack, Trello and email to communicate with each other and the client and to delegate and keep track of tasks.
 
