@@ -6,7 +6,7 @@ This is our final assignment as Coder Academy Students. We have built a MERN sta
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/ballarat-centre-of-music-and-the-arts-ballarat-dance-schools-e30a-938x704.jpg)
 
 ## Contributors
-Tess | Jieyi | Ivan
+Tess | Jiey | Ivan
 --- | --- | ---
 https://github.com/tessgard | https://github.com/jieyiphua | https://github.com/donatoivan
 
@@ -33,6 +33,8 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
 - [About The Project](#about-the-project)
   - [Background](#background)
   - [Functionality and Features](#functionality-and-features)
+  - [Tech stack](#tech-stack)
+  - [Setup, configure, deploy](#setup-configure-deploy)
 - [The Brief](#the-brief)
   - [The Client](#the-client)
   - [The Problem](#the-problem)
@@ -49,15 +51,6 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
   - [Database Schemas](#database-schemas)
   - [Data Flow Diagram](#data-flow-diagram)
   - [OO Design Documentation](#oo-design-documentation)
-  - [Project Management and Planning](#project-management-and-planning)
-    - [Project plan and timeline](#project-plan-and-timeline)
-    - [Communication with Client](#communication-with-client)
-    - [Team Communication](#team-communication)
-    - [Questionnaire](#questionnaire)
-    - [Manual](#manual)
-- [Short Answer Questions](#short-answer-questions)
-  - [What are the most important aspects of quality software?](#what-are-the-most-important-aspects-of-quality-software)
-  - [What libraries are being used in the app and why?](#what-libraries-are-being-used-in-the-app-and-why)
 
 ## About The Project
 
@@ -81,6 +74,36 @@ The BCMA website is a portal whereby future or current BCMA clients and customer
   - BCMA admin users can login via a route to have full admin access to the website. Being an admin gives the user                 access to create, read, update and delete all available content on the website including images on the home page carousel     and images associated with upcoming events.
   - The images on the website are stored on AWS
   - The website uses Json Web tokens for login/logout which are stored on local storage.
+
+### Tech Stack
+
+Our MERN tech stack includes:
+
+  MongoDB
+  Express
+  React
+  Node.js
+  Html
+  CSS
+  SCSS
+  Bootsrap
+  Heroku
+  Now.sh
+  
+  
+### Setup, configure, deploy
+
+The app is broken down into 2 repositories;
+
+The front end: https://github.com/tessgard/MERN-app-frontend
+The back end: https://github.com/donatoivan/mern-backend
+
+to run the app: clone both repositories and run npm install, and npm start. App will now be running locally and accessible through localhost.
+
+The backend is deployed through ZEIT now which is a cloud platform that deploys instantly and requires no configuration. To deploy we followed the steps in the documentation. 
+
+The frontend is deployed through Heroku.
+
 
 ### Home Page
 
@@ -373,9 +396,9 @@ We had two user experiences that we had to cater for in our application. Authent
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/OO-diagram-mern.png)
 
-## Project Management and Planning
+## Project Management & Planning
 
-### Project plan and timeline
+### Project plan & timeline
 
 Our team utilized Slack, Trello and email to communicate with each other and the client and to delegate and keep track of tasks.
 
@@ -396,17 +419,9 @@ After confirming our client and obtained initial sign-off during the first week 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Trello%201.PNG)
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Slack%201.PNG)
 
-### Questionnaire 
+### Short Answer Questions
 
-https://docs.google.com/forms/d/e/1FAIpQLSd3e_8YQ-wM9vBVT3XXZYxUlhao6ZfSnVMLW74PCe0naJq7pw/viewform?usp=sf_link
-
-### Manual 
-
-https://github.com/tessgard/MERN-app-frontend/blob/master/docs/BCMA%20WEBSITE%20MANUAL.docx
-
-## Short Answer Questions
-
-### What are the most important aspects of quality software?
+#### What are the most important aspects of quality software?
 
 There are 6 important software quality characteristics - namely (yes)Maintainability, Correctness/Functionality, (yes)usability, (yes)Reliability, (yes)Portability and (yes)Efficiency.
 
@@ -425,49 +440,3 @@ There are 6 important software quality characteristics - namely (yes)Maintainabi
 
 
 **Efficiency** is "the degree with which software fulfills its purpose without waste of resources" [Balci 1997]. Efficiency is really a multifaceted quality characteristic and must be assessed with respect to a particular resource such as execution time or storage space. One measure of efficiency is the speed of a program's execution. Another measure is the amount of storage space the program requires for execution. Often these two measures are inversely related, that is, increasing the execution efficiency causes a decrease in the space efficiency. This relationship is known as the space-time tradeoff. When it is not possible to design a software product with efficiency in every aspect, the most important resources of the software are given priority.
-
-
-### What libraries are being used in the app and why?
-
-#### Backend Libraries
-
-  -  "aws-sdk": "^2.493.0" : software dev kit to assist in implementing image uploads with S3 bucket
-  -  "bcryptjs": "^2.4.3" : hashing password with salt
-  -  "chai": "^4.2.0" :  BDD / TDD assertion library for node 
-  -  "chai-http": "^4.3.0" : provides an interface for live integration testing via superagent
-  -  "cors": "^2.8.5" : enables Cross Origin Resource Sharing
-  -  "dotenv": "^8.0.0" : loads environment variables from a .env file into process.env
-  -  "express": "^4.17.1" : To configure and develop the app API
-  -  "express-validator": "^6.1.1" : a set of middlewares to provide basic validation
-  -  "jsonwebtoken": "^8.5.1" : enables us to use JSON Web Tokens
-  -  "mocha": "^6.1.4" : JavaScript test framework for Node.js & The Browser
-  -  "mongoose": "^5.6.4" : schema-based solution to model our application data
-  -  "nodemon": "^1.19.1" : automatically restarts the node application when file changes in the directory are detected.
-  -  "nyc": "^14.1.1" : A collection of reporters, providing both terminal and HTML output for tests in Mocha
-  -  "sinon": "^7.3.2" : JavaScript test spies, stubs and mocks for our backend testing
-  -  "supertest": "^4.0.2" : high-level abstraction for testing HTTP
-  -  "lodash": ">=4.17.13" : installed to avoid security risk due to lodash vulnerability
-  
-#### Frontend Libraries
-
-  -  "@babel/runtime-corejs2": "^7.5.5"
-  -  "@fortawesome/fontawesome-svg-core": "^1.2.19"
-  -  "@fortawesome/free-brands-svg-icons": "^5.9.0"
-  -  "@fortawesome/free-regular-svg-icons": "^5.9.0"
-  -  "@fortawesome/free-solid-svg-icons": "^5.9.0"
-  -  "@fortawesome/react-fontawesome": "^0.1.4"
-  -  "axios": "^0.19.0" : HTTP client for the browser and node.js
-  -  "bootstrap": "^4.3.1" : front-end development framework
-  -  "leaflet": "^1.5.1" : JavaScript library for mobile-friendly interactive maps. 
-  -  "mdbootstrap": "^4.8.5" : material desgin for bootstrap 4
-  -  "node-sass": "^4.12.0" : 
-  -  "react": "^16.8.6" : JavaScript library for building user interfaces.
-  -  "react-bootstrap": "^1.0.0-beta.9" : Bootstrap 4 components built with React.
-  -  "react-bootstrap-carousel": "^3.4.2" : React port of bootstrap carousel
-  -  "react-dom": "^16.8.6" : 
-  -  "react-leaflet": "^2.4.0"
-  -  "react-leaflet-markercluster": "^1.1.8"
-  -  "react-router": "^5.0.1"
-  -  "react-router-dom": "^5.0.1"
-  -  "react-scripts": "3.0.1"
-
