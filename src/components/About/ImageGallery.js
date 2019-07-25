@@ -11,7 +11,7 @@ class ImageGallery extends React.Component {
 
   async componentDidMount() {
     const response = await axios.get(
-      "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/image/get-objects"
+      "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/images/get-objects"
     );
 
     // lazy loading to load up only images in viewport to optimise load time
