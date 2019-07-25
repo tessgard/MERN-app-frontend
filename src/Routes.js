@@ -125,6 +125,7 @@ class Routes extends React.Component {
                   onContentSelect={onContentSelect}
                   history={history}
                   authentication={authentication}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}

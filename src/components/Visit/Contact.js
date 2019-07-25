@@ -34,6 +34,15 @@ class Contact extends React.Component {
         newContact
       );
       console.log(response);
+      try {
+        const emailResponse = await axios.post(
+          "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/send-email",
+          newContact
+        );
+        console.log(emailResponse);
+      } catch (error) {
+        console.log(error.response);
+      }
 
       if (response.status === 201) {
         this.setState({ submitted: true, failed: false });
@@ -133,6 +142,7 @@ class Contact extends React.Component {
                 Submitted Contact Form
               </div>
             )}
+            {console.log(this.state)}
             {this.state.failed && (
               <div class="alert alert-danger" role="alert">
                 {this.state.errors.data.errors[0].msg}
