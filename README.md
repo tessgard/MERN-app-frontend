@@ -437,4 +437,27 @@ There are 6 important software quality characteristics - namely (yes)Maintainabi
   -  "sinon": "^7.3.2" : JavaScript test spies, stubs and mocks for our backend testing
   -  "supertest": "^4.0.2" : high-level abstraction for testing HTTP
   -  "lodash": ">=4.17.13" : installed to avoid security risk due to lodash vulnerability
+  
+#### Frontend Libraries
+
+  -  "@babel/runtime-corejs2": "^7.5.5"
+  -  "@fortawesome/fontawesome-svg-core": "^1.2.19"
+  -  "@fortawesome/free-brands-svg-icons": "^5.9.0"
+  -  "@fortawesome/free-regular-svg-icons": "^5.9.0"
+  -  "@fortawesome/free-solid-svg-icons": "^5.9.0"
+  -  "@fortawesome/react-fontawesome": "^0.1.4"
+  -  "axios": "^0.19.0" : HTTP client for the browser and node.js
+  -  "bootstrap": "^4.3.1" : front-end development framework
+  -  "leaflet": "^1.5.1" : JavaScript library for mobile-friendly interactive maps. 
+  -  "mdbootstrap": "^4.8.5" : material desgin for bootstrap 4
+  -  "node-sass": "^4.12.0" : 
+  -  "react": "^16.8.6"
+  -  "react-bootstrap": "^1.0.0-beta.9"
+  -  "react-bootstrap-carousel": "^3.4.2"
+  -  "react-dom": "^16.8.6"
+  -  "react-leaflet": "^2.4.0"
+  -  "react-leaflet-markercluster": "^1.1.8"
+  -  "react-router": "^5.0.1"
+  -  "react-router-dom": "^5.0.1"
+  -  "react-scripts": "3.0.1"
 
