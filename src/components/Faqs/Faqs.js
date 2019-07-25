@@ -1,7 +1,16 @@
 import React from "react";
 import axios from "axios";
+import "./Faqs.css";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD:src/components/Faqs.js
 import { Button } from "react-bootstrap";
+=======
+import {Button} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
+
+>>>>>>> 6ece29588d16827150572b7c0e6817477247c64c:src/components/Faqs/Faqs.js
 
 class Faqs extends React.Component {
   state = {
@@ -20,6 +29,8 @@ class Faqs extends React.Component {
     this.setState({
       data: response.data
     });
+    this.props.handleLoading();
+
   };
 
   deleteFaq = async item => {
@@ -50,6 +61,7 @@ class Faqs extends React.Component {
               </Button>
             </Link>
             {this.state.data.map((item, index) => (
+<<<<<<< HEAD:src/components/Faqs.js
               <div className="about-description-container" key={index}>
                 <div className="about-description" />
                 <div className="about-button-container">
@@ -60,10 +72,21 @@ class Faqs extends React.Component {
                       key={index}
                     >
                       <div className="about-description">
+=======
+              <div className="faqs-container" key={index}>
+                <div className="">
+                  {this.state.data.map((item, index) => (
+                    <div
+                      className=""
+                      key={index}
+                    >
+                      <div className="faqs-inner-container">
+>>>>>>> 6ece29588d16827150572b7c0e6817477247c64c:src/components/Faqs/Faqs.js
                         <p>question:</p>
                         <p>{item.question}</p>
                         <p>answer:</p>
                         <p>{item.answer}</p>
+<<<<<<< HEAD:src/components/Faqs.js
                         <Link
                           to="/admin/faq/update"
                           onClick={() => onContentSelect(item)}
@@ -78,6 +101,22 @@ class Faqs extends React.Component {
                         >
                           Delete
                         </button>
+=======
+                          <div className="">
+                            <Link
+                              to="/admin/faq/update"
+                              onClick={() => onContentSelect(item)}
+                            >
+                              <div className="plain-button"
+                              >update</div>
+                            </Link>
+                            <div
+                              id="instructor-delete"
+                              className="delete-button"
+                              onClick={() => this.deleteFaq(item)}
+                            >delete</div>
+                          </div>
+>>>>>>> 6ece29588d16827150572b7c0e6817477247c64c:src/components/Faqs/Faqs.js
                       </div>
                     </div>
                   ))}
@@ -96,11 +135,11 @@ class Faqs extends React.Component {
             </div>
             {this.state.data.map((item, index) => (
               <div
-                className="about-description-container"
-                id="about-description-container"
+                className="faqs-container"
+                
                 key={index}
               >
-                <div className="about-description">
+                <div className="faqs-inner-container">
                   <p>question:</p>
                   <p>{item.question}</p>
                   <p>answer:</p>
