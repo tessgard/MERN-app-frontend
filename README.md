@@ -55,6 +55,9 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
     - [Project plan and timeline](#project-plan-and-timeline)
     - [Communication with Client](#communication-with-client)
     - [Team Communication](#team-communication)
+- [Short Answer Questions](#short-answer-questions)
+  - [What are the most important aspects of quality software?](#what-are-the-most-important-aspects-of-quality-software)
+  - [What libraries are being used in the app and why?](#what-libraries-are-being-used-in-the-app-and-why)
 
 ## About The Project
 
