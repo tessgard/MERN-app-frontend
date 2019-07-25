@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> renders component 1`] = `
+<div
+  className="landing-main-container"
+>
+  <div
+    className="alert-box"
+  >
+    <div
+      className="free-trial"
+    >
+      <Link
+        to="/visit/contact"
+      >
+        We offer free trials for your first group class, contact us today to get started!
+      </Link>
+    </div>
+  </div>
+  <div
+    className="hero-content-home"
+  >
+    <div>
+      <Bootstrap(undefined)>
+        <CarouselItem>
+          <img
+            alt="First slide"
+            className="d-block w-100"
+            src={false}
+          />
+          <CarouselCaption />
+        </CarouselItem>
+        <CarouselItem>
+          <img
+            alt="Third slide"
+            className="d-block w-100"
+            src={false}
+          />
+          <CarouselCaption />
+        </CarouselItem>
+        <CarouselItem>
+          <img
+            alt="Third slide"
+            className="d-block w-100"
+            src={false}
+          />
+          <CarouselCaption />
+        </CarouselItem>
+      </Bootstrap(undefined)>
+    </div>
+    <h3
+      id="punch-line"
+    >
+      Professional Exciting Positive Friendly Fun
+    </h3>
+  </div>
+  <div
+    className="footer-container"
+  >
+    <div
+      className="footerBox"
+    >
+      <Link
+        className="admin-link"
+        to="/admin/login/"
+      >
+        <p
+          id="admin-link"
+        >
+          admin login &gt;
+        </p>
+      </Link>
+    </div>
+  </div>
+</div>
+`;

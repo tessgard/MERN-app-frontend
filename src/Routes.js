@@ -126,7 +126,6 @@ class Routes extends React.Component {
                   history={history}
                   authentication={authentication}
                   handleLoading={this.handleLoading}
-
                 />
               );
             }}
