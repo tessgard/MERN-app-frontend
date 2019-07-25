@@ -53,6 +53,9 @@ Our client was the Ballarat Centre of Music and the Arts. In our conversations w
     - [Project plan and timeline](#project-plan-and-timeline)
     - [Communication with Client](#communication-with-client)
     - [Team Communication](#team-communication)
+- [Short Answer Questions](#short-answer-questions)
+  -[What are the most important aspects of quality software?](#what-are-the-most-important-aspects-of-quality-software?)
+  -[What libraries are being used in the app and why?](#what-libraries-are-being-used-in-the-app-and-why?)
 
 ## About The Project
 
@@ -391,9 +394,9 @@ After confirming our client and obtained initial sign-off during the first week 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Trello%201.PNG)
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Slack%201.PNG)
 
-### Short Answer Questions
+## Short Answer Questions
 
-#### What are the most important aspects of quality software?
+### What are the most important aspects of quality software?
 
 There are 6 important software quality characteristics - namely (yes)Maintainability, Correctness/Functionality, (yes)usability, (yes)Reliability, (yes)Portability and (yes)Efficiency.
 
@@ -412,3 +415,26 @@ There are 6 important software quality characteristics - namely (yes)Maintainabi
 
 
 **Efficiency** is "the degree with which software fulfills its purpose without waste of resources" [Balci 1997]. Efficiency is really a multifaceted quality characteristic and must be assessed with respect to a particular resource such as execution time or storage space. One measure of efficiency is the speed of a program's execution. Another measure is the amount of storage space the program requires for execution. Often these two measures are inversely related, that is, increasing the execution efficiency causes a decrease in the space efficiency. This relationship is known as the space-time tradeoff. When it is not possible to design a software product with efficiency in every aspect, the most important resources of the software are given priority.
+
+
+### What libraries are being used in the app and why?
+
+#### Backend Libraries
+
+  -  "aws-sdk": "^2.493.0" : software dev kit to assist in implementing image uploads with S3 bucket
+  -  "bcryptjs": "^2.4.3" : hashing password with salt
+  -  "chai": "^4.2.0" :  BDD / TDD assertion library for node 
+  -  "chai-http": "^4.3.0" : provides an interface for live integration testing via superagent
+  -  "cors": "^2.8.5" : enables Cross Origin Resource Sharing
+  -  "dotenv": "^8.0.0" : loads environment variables from a .env file into process.env
+  -  "express": "^4.17.1" : To configure and develop the app API
+  -  "express-validator": "^6.1.1" : a set of middlewares to provide basic validation
+  -  "jsonwebtoken": "^8.5.1" : enables us to use JSON Web Tokens
+  -  "mocha": "^6.1.4" : JavaScript test framework for Node.js & The Browser
+  -  "mongoose": "^5.6.4" : schema-based solution to model our application data
+  -  "nodemon": "^1.19.1" : automatically restarts the node application when file changes in the directory are detected.
+  -  "nyc": "^14.1.1" : A collection of reporters, providing both terminal and HTML output for tests in Mocha
+  -  "sinon": "^7.3.2" : JavaScript test spies, stubs and mocks for our backend testing
+  -  "supertest": "^4.0.2" : high-level abstraction for testing HTTP
+  -  "lodash": ">=4.17.13" : installed to avoid security risk due to lodash vulnerability
+
