@@ -15,7 +15,7 @@ https://github.com/tessgard | https://github.com/jieyiphua | https://github.com/
 
 ### Deployment
 
-- Client: https://bcma.netlify.com/
+- Client:  http://bcma-site.herokuapp.com/
 - Server: https://deployment-mern-backend-tessivanjayz.gardtess.now.sh
 
 ### Github Repos
@@ -364,7 +364,28 @@ We had two user experiences that we had to cater for in our application. Authent
 
 ![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/OO-diagram-mern.png)
 
+## Project Management & Planning
 
+### Project plan & timeline
+
+Our team utilized Slack, Trello and email to communicate with each other and the client and to delegate and keep track of tasks.
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Project%20Timeline.PNG)
+
+### Communication with Client
+
+We first got into contact with our client (Paula) via a phone call. Subsequently, we stayed in touch with feedback and questions via email.
+
+### Team Communication
+
+After confirming our client and obtained initial sign-off during the first week of the project, our team's planning methodology involved:
+
+- Allocation of responsibilities to team members via Trello.
+- Utilising both Trello and GitHub to monitor team member's work based on project requirements.
+- Reassessing project scopes based on risks, blockers and changes.
+
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Trello%201.PNG)
+![](https://github.com/tessgard/MERN-app-frontend/blob/master/docs/Slack%201.PNG)
 
 ### Short Answer Questions
 
