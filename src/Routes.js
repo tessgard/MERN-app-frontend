@@ -44,7 +44,9 @@ class Routes extends React.Component {
       login,
       logout,
       selectedContent,
-      onContentSelect
+      onContentSelect,
+      errors,
+      failed
     } = this.props;
 
     return (
@@ -123,6 +125,7 @@ class Routes extends React.Component {
                   onContentSelect={onContentSelect}
                   history={history}
                   authentication={authentication}
+                  handleLoading={this.handleLoading}
                 />
               );
             }}
@@ -179,6 +182,8 @@ class Routes extends React.Component {
                   history={history}
                   login={login}
                   handleLoading={this.handleLoading}
+                  errors={errors}
+                  failed={failed}
                 />
               );
             }}

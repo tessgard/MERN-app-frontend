@@ -7,7 +7,10 @@ import "./Contact.css";
 class Contact extends React.Component {
   state = {
     email: "",
-    errors: []
+    description: "",
+    errors: [],
+    submitted: false,
+    failed: false
   };
   componentDidMount() {
     this.props.handleLoading();
@@ -22,7 +25,8 @@ class Contact extends React.Component {
     event.preventDefault();
     console.log(this.state);
     const newContact = {
-      email: this.state.email
+      email: this.state.email,
+      description: this.state.description
     };
     try {
       const response = await axios.post(
@@ -30,16 +34,36 @@ class Contact extends React.Component {
         newContact
       );
       console.log(response);
+      try {
+        const emailResponse = await axios.post(
+          "https://deployment-mern-backend-tessivanjayz.gardtess.now.sh/send-email",
+          newContact
+        );
+        console.log(emailResponse);
+      } catch (error) {
+        console.log(error.response);
+      }
+
+      if (response.status === 201) {
+        this.setState({ submitted: true, failed: false });
+      }
+      console.log(this.state);
     } catch (error) {
       this.setState({
-        errors: error.response
+        errors: error.response,
+        submitted: false,
+        failed: true
       });
-      console.log(error.response);
+      console.log(this.state.errors);
+      console.log(this.state.errors.data.errors[0].msg);
+      console.log(this.state.errors.length);
     }
   };
 
   render() {
     const { onContentSelect, authentication } = this.props;
+    console.log(this.state);
+
     if (authentication) {
       return (
         <div className="main-container">
@@ -47,6 +71,17 @@ class Contact extends React.Component {
             <div className="new-class-header" id="about-header">
               <h1>Contact Us</h1>
             </div>
+            {this.state.submitted && (
+              <div class="alert alert-success" role="alert">
+                Submitted Contact Form
+              </div>
+            )}
+            {this.state.failed && (
+              <div class="alert alert-danger" role="alert">
+                {this.state.errors.data.errors[0].msg}
+              </div>
+            )}
+
             <Link id="admin-contact-button" to="/admin/visit/contact">
               View Contacts
             </Link>
@@ -60,6 +95,17 @@ class Contact extends React.Component {
                   name="email"
                   value={this.state.email}
                   placeholder="Enter Email"
+                  onChange={this.onInputChange}
+                />
+                <label htmlFor="description">
+                  Write a short description about your inquiry.
+                </label>
+                <textarea
+                  id="contact-description-box"
+                  type="text"
+                  name="description"
+                  value={this.state.description}
+                  placeholder="Enter a Short Description"
                   onChange={this.onInputChange}
                 />
                 <div className="classes-buttons">
@@ -91,6 +137,17 @@ class Contact extends React.Component {
             <div className="new-class-header" id="about-header">
               <h1>Contact Us</h1>
             </div>
+            {this.state.submitted && (
+              <div class="alert alert-success" role="alert">
+                Submitted Contact Form
+              </div>
+            )}
+            {console.log(this.state)}
+            {this.state.failed && (
+              <div class="alert alert-danger" role="alert">
+                {this.state.errors.data.errors[0].msg}
+              </div>
+            )}
             <div className="contact-grid-container">
               <form onSubmit={this.onFormSubmit}>
                 <label htmlFor="email">
@@ -101,6 +158,17 @@ class Contact extends React.Component {
                   name="email"
                   value={this.state.email}
                   placeholder="Enter Email"
+                  onChange={this.onInputChange}
+                />
+                <label htmlFor="description">
+                  Write a short description about your inquiry.
+                </label>
+                <textarea
+                  id="contact-description-box"
+                  type="text"
+                  name="description"
+                  value={this.state.description}
+                  placeholder="Enter a Short Description"
                   onChange={this.onInputChange}
                 />
                 <div className="classes-buttons">

@@ -28,7 +28,9 @@ class NotFound extends React.Component {
           <br />
           <br />
           <Link to="/" className="">
-            <button className="plain-button" id="not-found-button">Go Back To Home Page</button>
+            <button className="plain-button" id="not-found-button">
+              Go Back To Home Page
+            </button>
           </Link>
         </div>
         <img

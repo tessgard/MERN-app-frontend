@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar /> renders component 1`] = `
+<div
+  className="nav-bar"
+>
+  <Link
+    className="company-logo"
+    to="/"
+  />
+  <div
+    className="nav-bar-right-box"
+  >
+    <Bootstrap(undefined)
+      bg="light"
+      expand="lg"
+      id="nav-background"
+    >
+      <NavbarToggle
+        aria-controls="basic-navbar-nav"
+        label="Toggle navigation"
+      />
+      <NavbarCollapse
+        id="basic-navbar-nav"
+      >
+        <Nav
+          className="mr-auto"
+          fill={false}
+          justify={false}
+        >
+          <NavLink
+            as={[Function]}
+            disabled={false}
+            href="/"
+          >
+            Home
+          </NavLink>
+          <NavDropdown
+            id="basic-nav-dropdown"
+            title="About"
+          >
+            <DropdownItem
+              as={[Function]}
+              disabled={false}
+              href="/about/our-story"
+            >
+              About us
+            </DropdownItem>
+            <DropdownItem
+              as={[Function]}
+              disabled={false}
+              href="/about/instructors"
+            >
+              Faculty
+            </DropdownItem>
+            <DropdownItem
+              as={[Function]}
+              disabled={false}
+              href="/faqs"
+            >
+              FAQs
+            </DropdownItem>
+          </NavDropdown>
+          <NavLink
+            as={[Function]}
+            disabled={false}
+            href="/classes"
+          >
+            Classes
+          </NavLink>
+          <NavLink
+            as={[Function]}
+            disabled={false}
+            href="/about/gallery"
+          >
+            Gallery
+          </NavLink>
+          <NavLink
+            as={[Function]}
+            disabled={false}
+            href="/whats-on/events"
+          >
+            What's on
+          </NavLink>
+          <NavLink
+            as={[Function]}
+            disabled={false}
+            href="/visit/contact"
+          >
+            Contact us
+          </NavLink>
+          <NavLink
+            as={[Function]}
+            disabled={false}
+            href="https://www.facebook.com/ballaratcentreofmusicandthearts/"
+            target="none"
+          >
+            <FontAwesomeIcon
+              border={false}
+              className=""
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    512,
+                    512,
+                    Array [],
+                    "f09a",
+                    "M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z",
+                  ],
+                  "iconName": "facebook",
+                  "prefix": "fab",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+          </NavLink>
+        </Nav>
+      </NavbarCollapse>
+    </Bootstrap(undefined)>
+  </div>
+</div>
+`;

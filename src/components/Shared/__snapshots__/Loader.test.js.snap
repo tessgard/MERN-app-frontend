@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> renders component 1`] = `
+<div
+  className="main-container"
+  id="main-container"
+>
+  <div
+    id="loader-container"
+  >
+    <div
+      class="spinner-border text-info"
+      style={
+        Object {
+          "height": "100px",
+          "width": "100px",
+        }
+      }
+    />
+    <div>
+      <h1>
+        B
+      </h1>
+      <h1>
+        C
+      </h1>
+      <h1>
+        M
+      </h1>
+      <h1>
+        A
+      </h1>
+    </div>
+  </div>
+</div>
+`;

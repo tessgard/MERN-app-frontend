@@ -5,3 +5,11 @@
   flex-direction: column;
   margin-top: 250px;
 }
+
+#alert-message-container {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin-top: 10px;
+}

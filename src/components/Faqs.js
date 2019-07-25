@@ -1,8 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import {Button} from 'react-bootstrap';
-
+import { Button } from "react-bootstrap";
 
 class Faqs extends React.Component {
   state = {
@@ -11,6 +10,7 @@ class Faqs extends React.Component {
 
   async componentDidMount() {
     this.getFaqs();
+    this.props.handleLoading();
   }
 
   getFaqs = async () => {
@@ -51,36 +51,36 @@ class Faqs extends React.Component {
             </Link>
             {this.state.data.map((item, index) => (
               <div className="about-description-container" key={index}>
-                <div className="about-description">
-                </div>
+                <div className="about-description" />
                 <div className="about-button-container">
-                {this.state.data.map((item, index) => (
-              <div
-                className="about-description-container"
-                id="about-description-container"
-                key={index}
-              >
-                <div className="about-description">
-                  <p>question:</p>
-                  <p>{item.question}</p>
-                  <p>answer:</p>
-                  <p>{item.answer}</p>
-                  <Link
-                    to="/admin/faq/update"
-                    onClick={() => onContentSelect(item)}
-                  >
-                    <button className="class-update-button">Update</button>
-                  </Link>
-                  <button
-                    className="class-delete-button"
-                    onClick={() => this.deleteFaq(item)}
-                  >
-                    Delete
-                  </button>
-
-                </div>
-              </div>
-            ))}
+                  {this.state.data.map((item, index) => (
+                    <div
+                      className="about-description-container"
+                      id="about-description-container"
+                      key={index}
+                    >
+                      <div className="about-description">
+                        <p>question:</p>
+                        <p>{item.question}</p>
+                        <p>answer:</p>
+                        <p>{item.answer}</p>
+                        <Link
+                          to="/admin/faq/update"
+                          onClick={() => onContentSelect(item)}
+                        >
+                          <button className="class-update-button">
+                            Update
+                          </button>
+                        </Link>
+                        <button
+                          className="class-delete-button"
+                          onClick={() => this.deleteFaq(item)}
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
@@ -107,7 +107,7 @@ class Faqs extends React.Component {
                   <p>{item.answer}</p>
                 </div>
               </div>
-            ))} 
+            ))}
           </div>
         </div>
       );
