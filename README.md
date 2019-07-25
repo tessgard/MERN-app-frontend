@@ -79,16 +79,16 @@ The BCMA website is a portal whereby future or current BCMA clients and customer
 
 Our MERN tech stack includes:
 
-  MongoDB
-  Express
-  React
-  Node.js
-  Html
-  CSS
-  SCSS
-  Bootsrap
-  Heroku
-  Now.sh
+  - MongoDB
+  - Express
+  - React
+  - Node.js
+  - Html
+  - CSS
+  - SCSS
+  - Bootsrap
+  - Heroku
+  - Now.sh
   
   
 ### Setup, configure, deploy
